@@ -4,7 +4,7 @@ service:
   title : Our Services
   service_item :
     # service item loop
-    - name : Cybersecurity Operations
+    - name : Managed Cybersecurity
       icon : ti-layers-alt # themify icon pack : https://themify.me/themify-icons
       content : Secure your critically connected systems and business assets in today's data driven world. 
 
