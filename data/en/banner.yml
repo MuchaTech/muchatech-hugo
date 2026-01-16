@@ -1,0 +1,12 @@
+############################### Banner ################################
+banner:
+  enable : true
+  bg_image_webp : "images/backgrounds/david-taffet.webp"
+  bg_image : "images/backgrounds/david-taffet.jpg"
+  icon : ""
+  title : "watch`.` safeguard. your assets`.` the new reality."
+  content : "`{}` We confidently protect your business assets."
+  button:
+    enable : true
+    label : "Explore MuchaTech" 
+    link : "#services"

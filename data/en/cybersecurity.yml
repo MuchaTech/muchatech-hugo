@@ -1,0 +1,32 @@
+################################# Service #################################
+cybersecurity:
+  enable: true
+  image: images/services/cybersecurity/derenda.jpg #cyber-security.jpg #locks.jpg
+  image_webp: images/services/cybersecurity/derenda.webp #cyber-security.webp #locks.webp
+  title: Cybersecurity Operations
+  content: "Securing your business assets from all domains without a fail."
+  security_domains:
+    # service item loop
+    - title: Security Architecture & Engineeeing
+      icon: ti-shield # themify icon pack : https://themify.me/themify-icons
+      content: Redesign and implementation of zero trust security measures to protect organization's assets.
+         
+    - title: 24/7 Security Operation Center - SOC 
+      icon: ti-shield 
+      content: Day-to-day monitoring, threat detection, incidents and threats response.
+      
+    - title: Security Assessments & Testing
+      icon: ti-shield
+      content:  Proactively finding weaknesses through audits, pen-testing and scanning of business environments.
+
+    - title: Privacy and Anonymity 
+      icon: ti-shield 
+      content: Ensuring individuals' personal information and online activities remain secure and protected.
+      
+    - title: Dark Web Monitoring
+      icon: ti-shield
+      content:  Monitor, detect, and respond to security-related events and incidents.
+
+    - title: Enterprise Risk Management 
+      icon: ti-shield 
+      content: Identify, assess, and mitigate risks that could impact organization's objectives.

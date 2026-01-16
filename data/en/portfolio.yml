@@ -1,0 +1,29 @@
+#################################### portfolio ###############################
+portfolio:
+  enable : true
+  title : Our Works
+  portfolio_item :
+
+    # portfolio item loop
+    - name : Temo Process Technologies - Secure IT Infranstruture
+      image : images/portfolio/Temo Process.jpg
+      image_webp : images/portfolio/Temo Process.webp
+      categories : ["development", "cybersecurity"]
+      content : Minerals processing solutions provider.
+      link : "https://www.temoprocess.co.za"
+      
+    # portfolio item loop
+    - name : Hydrosizer PLC
+      image : images/portfolio/metq.jpg
+      image_webp : images/portfolio/metq.webp
+      categories : ["cybersecurity", "development"]
+      content : Minerals processing technology provider.
+      link : "https://www.metq.co.za"
+
+    # portfolio item loop
+    - name : Oaklapine
+      image : images/portfolio/oaklapine.jpg
+      image_webp : images/portfolio/oaklapine.webp
+      categories : ["development"]
+      content : Custom build and modern furniture to create mesmerizing spaces.
+      link : "https://www.oaklapine.com"

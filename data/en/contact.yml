@@ -1,0 +1,27 @@
+############################## Contact #############################
+contact:
+  enable : true
+  title : Contact Us
+  subtitle : Contact Details
+  content : "Secure your business and software applications today."
+  
+  contact_list:
+    - icon : ti-location-pin 
+      info : "10520 Dungeni Street, Daveyton, Benoni, Gauteng, South Africa"
+      
+    - icon : ti-mobile
+      info : "Phone: +2760-52-688-820"
+           
+    - icon : ti-email
+      info : "Email: support@muchatech.com"
+
+
+  # Contact form
+  contact_form:
+    enable : true
+    form_action : "https://formspree.io/f/xgebrdlg"
+    name : "Your Name"
+    email : "Your Email"
+    subject : "Subject"
+    message : "Message"
+    submit : "Submit"

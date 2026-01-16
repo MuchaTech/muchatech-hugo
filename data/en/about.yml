@@ -1,0 +1,20 @@
+############################# About ###################################
+about:
+  enable : true
+  title : About Us
+  about_item :
+  - icon : ti-ruler-pencil # themify icon pack : https://themify.me/themify-icons
+    title : We're Red Pentesters.
+    content : #Certified hackers striving to create a safer and more secure connected world.
+              Certified hackers dedicated to making the connected world as safe and secure as possible.
+
+  - icon : ti-cup # themify icon pack : https://themify.me/themify-icons
+    title : We're Progressive.
+    content : #Security is a process, and we strive to stay current through research and hands-on testing.
+              Security is a process, we aim to stay current by conducting research and hands-on testing.
+              #Security is an ongoing process, and our commitment to staying current through rigorous research, development, and hands-on testing sets us apart.
+
+  - icon : ti-thought # themify icon pack : https://themify.me/themify-icons
+    title : We're Agile.
+    content : Embrace dynamic methodologies to thrive in our ever-evolving, interconnected, and data-fueled world.
+              #Explore dynamic methodologies to conquer the challenges of our ever-evolving and interconnected data-driven world.

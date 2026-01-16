@@ -1,0 +1,19 @@
+################################# Testimonial #########################
+testimonial:
+  enable : true
+  bg_image : images/backgrounds/zanyar-ibrahim.jpg
+  bg_image_webp : images/backgrounds/zanyar-ibrahim.webp
+  testimonial_item :
+      # testimonial item loop
+    - name : Lemos Kail
+      image : images/client/client-1.jpg
+      image_webp : images/client/client-1.webp
+      date : Sep 26, 2021
+      content : MuchaTech understands the importance of client satisfaction and client retention by paying attention to details!
+
+    # testimonial item loop
+    - name : Lefa Morabe
+      image : images/client/client-oaklapine.jpg
+      image_webp : images/client/client-oaklapine.webp
+      date : Aug 26, 2025
+      content : I have never worked with such talented individuals who are passionate about their work!

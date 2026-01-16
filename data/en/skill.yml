@@ -1,0 +1,35 @@
+################################# Skill ##################################
+skill:
+  enable : true
+  title : Our Skills
+  subtitle : We excel in a wide range of Cybersecurity and Automation`{domains}`.
+  content : Effective and reliable teamwork through our inhouse talent and professionals.
+  image : images/about/company-growth.webp
+  skill_item :
+    # skill item loop
+    - name :  Application Pen Tests
+      percent : 85%      
+
+    # skill item loop      
+    - name :  Exploit Development
+      percent : 85%
+
+    # skill item loop
+    - name :  Threat Intelligence
+      percent : 75%
+
+    # skill item loop
+    - name :  Incident Response
+      percent : 90%
+      
+    # skill item loop
+    - name :  Bug Bounty
+      percent : 70%
+
+    # skill item loop
+    - name :  Lines of Defense
+      percent : 80%
+
+    # skill item loop
+    - name :  User Education
+      percent : 75%

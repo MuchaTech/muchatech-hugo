@@ -1,0 +1,20 @@
+################################# Service #################################
+automation_tools:
+  enable: true
+  image: images/services/automation/julien-tromeur.jpg # eli-alvarez.jpg # julien-tromeur.jpg
+  image_webp: images/services/automation/julien-tromeur.webp #eli-alvarez.webp # julien-tromeur.webp
+  title: Automation & Tools
+  content: "Automating repeatitive business tasks and workflows for productivity and faster product delivery."
+  automation_domains:
+    # service item loop
+    - title: ICS Automation 
+      icon: ti-shield
+      content: Automate physical processes through hardware and software to monitor and control machinery with minimal human intervention.
+     
+    - title: Robotic Process Automation
+      icon: ti-shield 
+      content: Improve efficienncy and accuracy while reducing costs and time consuming tasks.
+      
+    - title: Exploit Development
+      icon: ti-shield 
+      content: Leverage software flaws for a desired result bere they land in the hands of unethical hackers.

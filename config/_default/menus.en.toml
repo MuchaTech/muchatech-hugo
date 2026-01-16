@@ -1,0 +1,55 @@
+
+################### English Navigation ########################
+[[main]]
+name = "about"
+url = "#about"
+weight = 1
+
+[[main]]
+name = "services"
+url = "#services"
+weight = 2
+hasChildren = true
+
+[[main]]
+parent = "services"
+name = "Cybersecurity"
+url = "#cybersecurity"
+weight = 1
+
+[[main]]
+parent = "services"
+name = "Automation & Tools"
+url = "#automation-tools"
+weight = 2
+
+[[main]]
+parent = "services"
+name = "Research & Development"
+url = "#research-development"
+weight = 3
+
+[[main]]
+name = "portfolio"
+url = "#portfolio"
+weight = 3
+
+[[main]]
+name = "team"
+url = "#team"
+weight = 4
+
+# [[main]]
+# name = "pricing"
+# url = "#pricing"
+# weight = 5
+
+#[[main]]
+#name = "blog"
+#url = "#blog"
+#weight = 4
+
+[[main]]
+name = "contact"
+url = "#contact"
+weight = 5

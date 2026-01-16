@@ -1,0 +1,28 @@
+############################# feature ###################################
+feature:
+  enable : true
+  title : We’re a Cybersecurity Ops Focused Company.
+  content : "Services that confidently and securely scale up with your data-driven business."
+  image : images/about/cytonn-photography.jpg
+  image_webp : images/about/cytonn-photography.webp  
+  feature_item : 
+
+      # feature item loop
+    - title : Security Assessments
+      icon : ti-panel # themify icon pack : https://themify.me/themify-icons
+      content : A cybersecurity health-check for your thriving organisation before adversaries find weaknesses.
+
+      # feature item loop
+    - title : Penetration Testing
+      icon : ti-announcement # themify icon pack : https://themify.me/themify-icons
+      content : Simulating a comprehensive cyber-attack to test the security of your systems and identify vulnerabilities to business environments.
+
+      # feature item loop
+    - title : Applications Security
+      icon : ti-world # themify icon pack : https://themify.me/themify-icons
+      content : Reduce the risk of data breach within your business network and applications.
+      
+      # feature item loop
+    - title : Security Automation
+      icon : ti-panel # themify icon pack : https://themify.me/themify-icons
+      content : Implement security workflow controls to your automation processes.

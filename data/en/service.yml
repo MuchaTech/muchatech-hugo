@@ -1,0 +1,19 @@
+################################# Service #################################
+service:
+  enable : true
+  title : Our Services
+  service_item :
+    # service item loop
+    - name : Cybersecurity Operations
+      icon : ti-layers-alt # themify icon pack : https://themify.me/themify-icons
+      content : Secure your critically connected systems and business assets in today's data driven world. 
+
+    # service item loop
+    - name : Automation & Tools
+      icon : ti-palette
+      content : Enhance productivity and streamline operational workflows to improve client service and speed up delivery.
+
+    # service item loop
+    - name : Research & Development
+      icon : ti-package
+      content : Spark and ignite any idea into reality through a Secure Software Development Life Cycle `{SSDLC}`. 
