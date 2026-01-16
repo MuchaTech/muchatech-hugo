@@ -7,7 +7,7 @@ cybersecurity:
   content: "Securing your business assets from all domains without a fail."
   security_domains:
     # service item loop
-    - title: Security Architecture & Engineeeing
+    - title: Security Architecture & Engineering
       icon: ti-shield # themify icon pack : https://themify.me/themify-icons
       content: Redesign and implementation of zero trust security measures to protect organization's assets.
          
