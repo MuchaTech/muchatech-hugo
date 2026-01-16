@@ -14,6 +14,6 @@ service:
       content : Enhance productivity and streamline operational workflows to improve client service and speed up delivery.
 
     # service item loop
-    - name : Research & Development
+    - name : Cybersecurity R&D
       icon : ti-package
       content : Spark and ignite any idea into reality through a Secure Software Development Life Cycle `{SSDLC}`. 
