@@ -2,7 +2,7 @@ import { createRoot } from "react-dom/client";
 
 function DevelopedTools() {
   // TODO: Actually implement a Cybersecurity Tools
-  return <h1>Hello Tools from React :)!</h1>;
+  return <h1>Hello Tools from React Tools :)!</h1>;
 }
 
 const devTools = document.getElementById("tools");
