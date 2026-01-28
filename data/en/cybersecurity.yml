@@ -10,23 +10,23 @@ cybersecurity:
     - title: Security Architecture & Engineering
       icon: ti-shield # themify icon pack : https://themify.me/themify-icons
       content: Redesign and implementation of zero trust security measures to protect organization's assets.
-         
-    - title: 24/7 Security Operation Center - SOC 
-      icon: ti-shield 
-      content: Day-to-day monitoring, threat detection, incidents and threats response.
-      
-    - title: Security Assessments & Testing
-      icon: ti-shield
-      content:  Proactively finding weaknesses through audits, pen-testing and scanning of business environments.
 
-    - title: Privacy and Anonymity 
-      icon: ti-shield 
+    - title: MDR - 24/7 Security Operation Center `{SOC}`
+      icon: ti-shield
+      content: Day-to-day monitoring, threat detection, incidents and threats response.
+
+    - title: Continous Security Assessments
+      icon: ti-shield
+      content: Proactively finding weaknesses through audits, pen-testing and scanning of business environments.
+
+    - title: Security Penetration Testing
+      icon: ti-shield
+      content: Strengthen defenses proactively by simulating Black Box cyberattacks to uncover vulnerabilities in systems, networks, or applications.
+
+    - title: Privacy and Anonymity
+      icon: ti-shield
       content: Ensuring individuals' personal information and online activities remain secure and protected.
-      
+
     - title: Dark Web Monitoring
       icon: ti-shield
-      content:  Monitor, detect, and respond to security-related events and incidents.
-
-    - title: Enterprise Risk Management 
-      icon: ti-shield 
-      content: Identify, assess, and mitigate risks that could impact organization's objectives.
+      content: Monitor, detect, and respond to security-related events and incidents.

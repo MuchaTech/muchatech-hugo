@@ -25,3 +25,14 @@ contact:
     subject : "Subject"
     message : "Message"
     submit : "Submit"
+
+  contact_spree_form:
+    enable : true
+    form_action : "https://formspree.io/f/xgebrdlg"
+    name : "Your Name"
+    email : "Your Email"
+    number : "Your Number"
+    company : "Your Company"
+    subject : "Subject"
+    message : "Message"
+    submit : "Submit"

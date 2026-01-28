@@ -1,0 +1,20 @@
+  developed_tools:
+    enable: true
+    # tools item loop
+    cybersecurity:
+      - name: Cybersecurity ROI Calculator
+        embbed_code_url: "https://claude.site/public/artifacts/a0da6cb8-b011-4df2-9dfc-279a74d2b274/embed/"
+        image: ""
+        tag: cybersecurity
+
+      - name: Email Pawned Status
+        embbed_code_url: ""
+        image: ""
+        breaches: 2
+        tag: cybersecurity
+
+    trading-robots:
+      - name: Position Size Calculator
+        embbed_code_url: "/#"
+        image: ""
+        tag: trading-robots

@@ -34,22 +34,40 @@ name = "portfolio"
 url = "#portfolio"
 weight = 3
 
+#[[main]]
+#name = "team"
+#url = "#team"
+#weight = 4
+
 [[main]]
-name = "team"
-url = "#team"
+name = "pricing"
+url = "#pricing"
 weight = 4
 
-# [[main]]
-# name = "pricing"
-# url = "#pricing"
-# weight = 5
+#[[main]]
+#name = "tools"
+#url = "#developed-tools"
+#weight = 5
+#hasChildren = true
 
 #[[main]]
-#name = "blog"
-#url = "#blog"
-#weight = 4
+#parent = "tools"
+#name = "Cybersecurity Tools"
+#url = "#cybersecurity-tools"
+#weight = 1
+
+#[[main]]
+#parent = "tools"
+#name = "Trading Tools"
+#url = "#trading-tools"
+#weight = 2
+
+[[main]]
+name = "blog"
+url = "#blog"
+weight = 5
 
 [[main]]
 name = "contact"
 url = "#contact"
-weight = 5
+weight = 6

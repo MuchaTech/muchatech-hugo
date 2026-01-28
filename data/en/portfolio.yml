@@ -1,29 +1,36 @@
 #################################### portfolio ###############################
 portfolio:
-  enable : true
-  title : Our Works
-  portfolio_item :
+  enable: true
+  title: Hands on Works
+  portfolio_item:
+    # portfolio item loop
+    - name: Temo Process Technologies - Secure IT Infranstruture
+      image: images/portfolio/Temo Process.jpg
+      image_webp: images/portfolio/Temo Process.webp
+      categories: ["development", "cybersecurity"]
+      content: Minerals processing solutions provider.
+      link: "https://www.temoprocess.co.za"
 
     # portfolio item loop
-    - name : Temo Process Technologies - Secure IT Infranstruture
-      image : images/portfolio/Temo Process.jpg
-      image_webp : images/portfolio/Temo Process.webp
-      categories : ["development", "cybersecurity"]
-      content : Minerals processing solutions provider.
-      link : "https://www.temoprocess.co.za"
-      
-    # portfolio item loop
-    - name : Hydrosizer PLC
-      image : images/portfolio/metq.jpg
-      image_webp : images/portfolio/metq.webp
-      categories : ["cybersecurity", "development"]
-      content : Minerals processing technology provider.
-      link : "https://www.metq.co.za"
+    - name: Hydrosizer PLC
+      image: images/portfolio/metq.jpg
+      image_webp: images/portfolio/metq.webp
+      categories: ["cybersecurity"]
+      content: Minerals processing technology provider.
+      link: "https://www.metq.co.za"
 
     # portfolio item loop
-    - name : Oaklapine
-      image : images/portfolio/oaklapine.jpg
-      image_webp : images/portfolio/oaklapine.webp
-      categories : ["development"]
-      content : Custom build and modern furniture to create mesmerizing spaces.
-      link : "https://www.oaklapine.com"
+    - name: Oaklapine
+      image: images/portfolio/oaklapine.jpg
+      image_webp: images/portfolio/oaklapine.webp
+      categories: ["cybersecurity"]
+      content: Custom build and modern furniture to create mesmerizing spaces.
+      link: "https://www.oaklapine.com"
+
+    # portfolio item loop
+    - name: Khulong Mining Supplies
+      image: images/portfolio/kms.jpg
+      image_webp: images/portfolio/kms.webp
+      categories: ["development", "automation", "cybersecurity"]
+      content: Design, build, secure real time machinery workshop application.
+      link: "https://www.khulongminingsupply.com"

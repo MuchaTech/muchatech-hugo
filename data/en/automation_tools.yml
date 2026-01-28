@@ -7,14 +7,19 @@ automation_tools:
   content: "Automating repeatitive business tasks and workflows for productivity and faster product delivery."
   automation_domains:
     # service item loop
-    - title: ICS Automation 
+    - title: Mision Critical ICS Automation
       icon: ti-shield
       content: Automate physical processes through hardware and software to monitor and control machinery with minimal human intervention.
-     
-    - title: Robotic Process Automation
-      icon: ti-shield 
+
+    - title: Security Orchestration Automation Response (SOAR) & Robotic Process Automation (RPA)
+      icon: ti-shield
       content: Improve efficienncy and accuracy while reducing costs and time consuming tasks.
-      
-    - title: Exploit Development
-      icon: ti-shield 
+
+    - title: Exploits Development
+      icon: ti-shield
       content: Leverage software flaws for a desired result bere they land in the hands of unethical hackers.
+
+    - title: Algorithmic Robots
+      icon: ti-shield
+      content: Automate trading signals identification, capital allocation, position sizing, positions placement, monitoring and management.
+

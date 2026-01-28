@@ -1,64 +1,63 @@
 ##################################### pricing ##############################
 pricing:
-  enable : false
-  title : Our Plans
-  pricing_table :
+  enable: true
+  title: Our Plans
+  pricing_table:
     # pricing table loop
-    - name : Free
-      price : $99
-      unit : month
+    - name: Free
+      price: R0,0
+      unit: month
       services:
-        - 1GB Disk Space
-        - 10 Email Account
-        - Script Installer
-        - 1 GB Storage
-        - 10 GB Bandwidth
-        - 24/7 Tech Support
+        - M365-enabled office machines optimization
+        - Management-business email data breach check
+        - Privacy and anonymity status check
       button:
-        label : "Signup"
-        link : "#"
-      
+        enable: false
+        label: "Signup"
+        link: "#"
+
     # pricing table loop
-    - name : Silver
-      price : $149
-      unit : month
+    - name: Silver
+      price: R10,000
+      unit: month
       services:
-        - 1GB Disk Space
-        - 10 Email Account
-        - Script Installer
-        - 1 GB Storage
-        - 10 GB Bandwidth
-        - 24/7 Tech Support
+        - Basic Monitoring
+        - 4-hour P1 response SLAs
+        - 10 endpoints
+        - Scales with data ingestion (R0.50/GB)
       button:
-        label : "Signup"
-        link : "#"
-        
+        enable: false
+        label: "Signup"
+        link: "#"
+
     # pricing table loop
-    - name : Gold
-      price : $199
-      unit : month
+    - name: Gold
+      price: R25,000
+      unit: month
       services:
-        - 1GB Disk Space
-        - 10 Email Account
-        - Script Installer
-        - 1 GB Storage
-        - 10 GB Bandwidth
-        - 24/7 Tech Support
+        - Advanced Monitoring
+        - 15-mins P1 response SLAs
+        - Maximum of 20 endpoints
+        - Scales with data ingestion (R2/GB)
+        - Analyst Support
       button:
-        label : "Signup"
-        link : "#"
-        
+        enable: false
+        label: "Signup"
+        link: "#"
+
     # pricing table loop
-    - name : Platinum
-      price : $299
-      unit : month
+    - name: Platinum
+      price: R30,000+
+      unit: month
       services:
-        - 1GB Disk Space
-        - 10 Email Account
-        - Script Installer
-        - 1 GB Storage
-        - 10 GB Bandwidth
-        - 24/7 Tech Support
+        - Fully Managed
+        - 24/7 Response
+        - 15-mins P1 SLAs
+        - 99.9% uptime guarantee
+        - Scales with endpoints (R500 per device)
+        - Dark Web Monitoring
+        - One-off SIEM integration and customization setup fee (R20,000-R100,000)
       button:
-        label : "Signup"
-        link : "#"
+        enable: false
+        label: "Signup"
+        link: "#"
