@@ -22,6 +22,6 @@ feature:
       content: Implement security workflow controls and playbooks for efficiency.
 
       # feature item loop
-    - title: SOC-as-a-Service (SOCaaS)
+    - title: SOCaaS
       icon: ti-layers-alt # themify icon pack : https://themify.me/themify-icons
       content: Uninterrupted protection, 24/7 cyber defense and POPIA-compliant monitoring tailored to SA's rising threats.
