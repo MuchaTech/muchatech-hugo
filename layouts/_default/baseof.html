@@ -1,22 +1,33 @@
 <!DOCTYPE html>
 <html lang="{{ with site.LanguageCode }}{{ . }}{{ else }}en-us{{ end }}">
+
 {{ partial "head.html" . }}
 
 <body id="body" data-spy="scroll" data-target=".navbar" data-offset="55">
+  
   <div id="content">
     {{ partial "preloader.html" . }}
-    {{- block "main" . }}{{- end }}
+    {{- block "main" . }}
+    {{- end }}
   </div>
-  {{- partial "footer.html" . -}}
   
-      <!--form handling-->
-    <script>
-      var form = document.getElementById("contact-form");
+  {{- partial "footer.html" . -}}
 
+      <!-- form handling -->
+    <script>
+
+      let form = document.getElementById("contact-form");
+      let formResponse = document.getElementById("form-response");
+
+      // hide the form response div from the layout until we get response 
+
+      //  create content elements for the form response div
+      let strongElement = document.getElementById("warning-smg");
+      let spanIcon = document.getElementById("closing-icon");
+      
       async function handleSubmit(event) {
         event.preventDefault();
-        var status = document.getElementById("my-form-status");
-        var data = new FormData(event.target);
+        let data = new FormData(event.target);
         fetch(event.target.action, {
           method: form.method,
           body: data,
@@ -24,32 +35,26 @@
             Accept: "application/json",
           },
         })
-          .then((response) => {
-            if (response.ok) {
-              status.innerHTML = "Thank you for contacting MuchaTech!";
-              status.att
+        .then((response) => {
+            if (response.ok && response.status == 200) {
+              // spanIcon.innerHTML = "&times;";
+              // strongElement.innerHTML = "Success!";
+              formResponse.classList.add("alert-success");
+              formResponse.innerHTML = "Thank you for contacting MuchaTech";
               form.reset();
-            } else {
-              response.json().then((data) => {
-                if (Object.hasOwn(data, "errors")) {
-                  status.innerHTML = data["errors"]
-                    .map((error) => error["message"])
-                    .join(", ");
-                } else {
-                  status.innerHTML =
-                    "Oops! There was a problem submitting your form";
-                }
-              });
             }
           })
-          .catch((error) => {
-            status.innerHTML = "Oops! There was a problem submitting your form";
-          });
+        .catch((error) => {
+            // spanIcon.innerHTML = "&times;";
+            // strongElement.innerHTML = "Error!";
+            formResponse.classList.add("alert-warning");
+            formResponse.innerHTML = "There was a problem submitting your form";
+        });
       }
       form.addEventListener("submit", handleSubmit);
+
     </script>
-  
-  
+
 </body>
 
 </html>
