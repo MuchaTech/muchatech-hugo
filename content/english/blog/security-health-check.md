@@ -35,6 +35,9 @@ Follow these structured steps for thorough coverage:
 4. **Risk Assessment**: Rank findings by severity, exploit potential, and business impact.
 5. **Remediation**: Apply patches, configurations, and defenses to neutralize threats.
 
+[Security Health Check Process](images/blog/security-health-check-process.webp)
+*Diagram illustrating the five-step security health check process*
+
 ## Common Security Gaps to Watch 👀
 
 Attackers target these frequent weak spots:
@@ -45,7 +48,7 @@ Attackers target these frequent weak spots:
 - Insecure protocols like HTTP or FTP
 - Unpatched flaws in third-party tools
 
-![Security Gaps](images/blog/security-gaps-summary.webp)
+[Security Gaps](images/blog/security-gaps-summary.webp)
 *Visual summary of prevalent security vulnerabilities*
 
 ## Best Practices for Success 💡
@@ -57,7 +60,7 @@ Maximize effectiveness with these strategies:
 - Focus remediation on high-risk items first
 - Enable ongoing monitoring and automated alerts
 
-![Best Practices](images/blog/shc-best-practices-simple.webp)
+[Best Practices](images/blog/shc-best-practices-simple.webp)
 *Key best practices for robust security health checks*
 
 Implementing these health checks empowers muchatech.com to stay ahead of threats, protect assets, and maintain trust. 🌐🔒
