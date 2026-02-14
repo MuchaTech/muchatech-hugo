@@ -92,7 +92,7 @@ link = "plugins/google-map/map.js"
 [params]
 logo = "images/V1.webp"
 # Meta data
-description = "A cybersecurity and automation tools company."
+description = "Unlock Secure Ops: Cybersecurity + Automation Mastery Company."
 author = "Motape Oswald Langa"
 # Google Analytics
 google_analytics_id = "G-VV11Q6E2W3"
