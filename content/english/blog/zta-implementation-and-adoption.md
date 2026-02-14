@@ -71,8 +71,6 @@ NIST SP 800-207 outlines 19 ZTA configurations, from device-agent to enhanced en
 
 Pro tip: Pilot with one workload, like email or SaaS apps, before full rollout. Tools like Zscaler, Palo Alto Prisma, or Okta accelerate adoption.
 
-  
-*Alt: Zero Trust Architecture diagram showing continuous verification, segmentation, and monitoring per NIST SP 800-207.*
 
 ## Benefits of Zero Trust Architecture 🌟
 
@@ -91,6 +89,6 @@ Cyber threats evolve daily—ransomware, supply chain attacks (e.g., SolarWinds)
 
 Ready to shift paradigms? Audit your perimeter today and explore NIST SP 800-207 for tailored guidance.
 
-*What’s your biggest cybersecurity challenge? Share in the comments or [contact our experts](link-to-consultation) for a free ZTA assessment.*
+*What’s your biggest cybersecurity challenge? Contact our experts for a free ZTA assessment.*
 
 ---
