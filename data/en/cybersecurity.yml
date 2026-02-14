@@ -15,7 +15,7 @@ cybersecurity:
       icon: ti-shield
       content: Day-to-day monitoring, threat detection, incidents and threats response.
 
-    - title: Continous Security Assessments
+    - title: Continuous Security Assessments
       icon: ti-shield
       content: Proactively finding weaknesses through audits, pen-testing and scanning of business environments.
 

@@ -11,15 +11,10 @@ automation_tools:
       icon: ti-shield
       content: Automate physical processes through hardware and software to monitor and control machinery with minimal human intervention.
 
-    - title: Security Orchestration Automation Response (SOAR) & Robotic Process Automation (RPA)
+    - title: Security Orchestration Automation Response - (SOAR)
       icon: ti-shield
-      content: Improve efficienncy and accuracy while reducing costs and time consuming tasks.
+      content: integrate security tools to automate incident detection, investigation, and remediation, accelerating threat response for overwhelmed SecOps teams.
 
-    - title: Exploits Development
+    - title: Robotic Process Automation - (RPA)
       icon: ti-shield
-      content: Leverage software flaws for a desired result bere they land in the hands of unethical hackers.
-
-    - title: Algorithmic Robots
-      icon: ti-shield
-      content: Automate trading signals identification, capital allocation, position sizing, positions placement, monitoring and management.
-
+      content: Automates log monitoring, threat detection alerts, and compliance reporting to minimize manual risks.
