@@ -35,9 +35,6 @@ Follow these structured steps for thorough coverage:
 4. **Risk Assessment**: Rank findings by severity, exploit potential, and business impact.
 5. **Remediation**: Apply patches, configurations, and defenses to neutralize threats.
 
-![Security Health Check Process](images/blog/security-health-check-process.webp)
-*Diagram illustrating the five-step security health check process*
-
 ## Common Security Gaps to Watch 👀
 
 Attackers target these frequent weak spots:
