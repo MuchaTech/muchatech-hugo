@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Enterprise on MuchaTech</title>
-    <link>https://www.muchatech.com/tags/enterprise/</link>
+    <link>http://localhost:1313/tags/enterprise/</link>
     <description>Recent content in Enterprise on MuchaTech</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 19 Jan 2026 14:22:14 +0200</lastBuildDate>
-    <atom:link href="https://www.muchatech.com/tags/enterprise/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/enterprise/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Zero Trust Architecture</title>
-      <link>https://www.muchatech.com/blog/comptuter-security/zta-implementation-and-adoption/</link>
+      <link>http://localhost:1313/blog/comptuter-security/zta-implementation-and-adoption/</link>
       <pubDate>Mon, 19 Jan 2026 14:22:14 +0200</pubDate>
-      <guid>https://www.muchatech.com/blog/comptuter-security/zta-implementation-and-adoption/</guid>
+      <guid>http://localhost:1313/blog/comptuter-security/zta-implementation-and-adoption/</guid>
       <description>&lt;h1 id=&#34;zero-trust-architecture-replacing-perimeter-security-in-modern-cybersecurity&#34;&gt;Zero Trust Architecture: Replacing Perimeter Security in Modern Cybersecurity&lt;/h1&gt;&#xA;&lt;p&gt;In today&amp;rsquo;s threat landscape, &lt;strong&gt;Zero Trust Architecture (ZTA)&lt;/strong&gt;—as defined in &lt;a href=&#34;https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf&#34;&gt;NIST SP 800-207&lt;/a&gt;—marks a &lt;strong&gt;paradigm shift in cybersecurity&lt;/strong&gt;. Traditional perimeter-based models fail against insider threats, remote work, and cloud breaches. Zero Trust eliminates implicit trust, verifying every access request no matter the source.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Cybersecurity Health Check</title>
-      <link>https://www.muchatech.com/blog/comptuter-security/security-health-check/</link>
+      <link>http://localhost:1313/blog/comptuter-security/security-health-check/</link>
       <pubDate>Wed, 12 Sep 2018 12:52:36 +0600</pubDate>
-      <guid>https://www.muchatech.com/blog/comptuter-security/security-health-check/</guid>
+      <guid>http://localhost:1313/blog/comptuter-security/security-health-check/</guid>
       <description>&lt;h2 id=&#34;a-proactive-approach-to-protecting-your-domain-&#34;&gt;A Proactive Approach to Protecting Your Domain 🌐&lt;/h2&gt;&#xA;&lt;p&gt;A security health check systematically reviews your domain&amp;rsquo;s security posture, uncovering vulnerabilities that attackers could exploit. This proactive step safeguards our clients from threats.&lt;/p&gt;</description>
     </item>
   </channel>

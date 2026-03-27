@@ -2,37 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.muchatech.com/tags/architecture/</loc>
+    <loc>http://localhost:1313/tags/architecture/</loc>
     <lastmod>2026-01-19T14:22:14+02:00</lastmod>
   </url><url>
-    <loc>https://www.muchatech.com/blog/</loc>
+    <loc>http://localhost:1313/blog/</loc>
     <lastmod>2026-01-19T14:22:14+02:00</lastmod>
   </url><url>
-    <loc>https://www.muchatech.com/tags/computer-security/</loc>
+    <loc>http://localhost:1313/tags/computer-security/</loc>
     <lastmod>2026-01-19T14:22:14+02:00</lastmod>
   </url><url>
-    <loc>https://www.muchatech.com/tags/enterprise/</loc>
+    <loc>http://localhost:1313/tags/enterprise/</loc>
     <lastmod>2026-01-19T14:22:14+02:00</lastmod>
   </url><url>
-    <loc>https://www.muchatech.com/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2026-01-19T14:22:14+02:00</lastmod>
   </url><url>
-    <loc>https://www.muchatech.com/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2026-01-19T14:22:14+02:00</lastmod>
   </url><url>
-    <loc>https://www.muchatech.com/blog/comptuter-security/zta-implementation-and-adoption/</loc>
+    <loc>http://localhost:1313/blog/comptuter-security/zta-implementation-and-adoption/</loc>
     <lastmod>2026-01-19T14:22:14+02:00</lastmod>
   </url><url>
-    <loc>https://www.muchatech.com/tags/zero-trust/</loc>
+    <loc>http://localhost:1313/tags/zero-trust/</loc>
     <lastmod>2026-01-19T14:22:14+02:00</lastmod>
   </url><url>
-    <loc>https://www.muchatech.com/blog/comptuter-security/security-health-check/</loc>
+    <loc>http://localhost:1313/blog/comptuter-security/security-health-check/</loc>
     <lastmod>2018-09-12T12:52:36+06:00</lastmod>
   </url><url>
-    <loc>https://www.muchatech.com/author/</loc>
+    <loc>http://localhost:1313/author/</loc>
   </url><url>
-    <loc>https://www.muchatech.com/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
   </url><url>
-    <loc>https://www.muchatech.com/author/motape-oswald-langa/</loc>
+    <loc>http://localhost:1313/author/motape-oswald-langa/</loc>
   </url>
 </urlset>
