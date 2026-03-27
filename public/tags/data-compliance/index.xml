@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data-Compliance on MuchaTech</title>
+    <link>http://localhost:1313/tags/data-compliance/</link>
+    <description>Recent content in Data-Compliance on MuchaTech</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 27 Mar 2026 16:46:01 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/data-compliance/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Navigating POPIA Compliance for South African SMEs</title>
+      <link>http://localhost:1313/blog/data-compliance/popia_guideline/</link>
+      <pubDate>Fri, 27 Mar 2026 16:46:01 +0200</pubDate>
+      <guid>http://localhost:1313/blog/data-compliance/popia_guideline/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
