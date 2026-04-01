@@ -2,101 +2,73 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on MuchaTech</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://www.muchatech.com/tags/</link>
     <description>Recent content in Tags on MuchaTech</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 27 Mar 2026 16:46:01 +0200</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.muchatech.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Data Protection SMEs</title>
-      <link>http://localhost:1313/tags/data-protection-smes/</link>
+      <link>https://www.muchatech.com/tags/data-protection-smes/</link>
       <pubDate>Fri, 27 Mar 2026 16:46:01 +0200</pubDate>
-      <guid>http://localhost:1313/tags/data-protection-smes/</guid>
+      <guid>https://www.muchatech.com/tags/data-protection-smes/</guid>
       <description></description>
     </item>
     <item>
       <title>POPIA Checklist South Africa</title>
-      <link>http://localhost:1313/tags/popia-checklist-south-africa/</link>
+      <link>https://www.muchatech.com/tags/popia-checklist-south-africa/</link>
       <pubDate>Fri, 27 Mar 2026 16:46:01 +0200</pubDate>
-      <guid>http://localhost:1313/tags/popia-checklist-south-africa/</guid>
+      <guid>https://www.muchatech.com/tags/popia-checklist-south-africa/</guid>
       <description></description>
     </item>
     <item>
       <title>POPIA Compliance</title>
-      <link>http://localhost:1313/tags/popia-compliance/</link>
+      <link>https://www.muchatech.com/tags/popia-compliance/</link>
       <pubDate>Fri, 27 Mar 2026 16:46:01 +0200</pubDate>
-      <guid>http://localhost:1313/tags/popia-compliance/</guid>
+      <guid>https://www.muchatech.com/tags/popia-compliance/</guid>
       <description></description>
     </item>
     <item>
       <title>POPIA for Small Businesses</title>
-      <link>http://localhost:1313/tags/popia-for-small-businesses/</link>
+      <link>https://www.muchatech.com/tags/popia-for-small-businesses/</link>
       <pubDate>Fri, 27 Mar 2026 16:46:01 +0200</pubDate>
-      <guid>http://localhost:1313/tags/popia-for-small-businesses/</guid>
+      <guid>https://www.muchatech.com/tags/popia-for-small-businesses/</guid>
       <description></description>
     </item>
     <item>
       <title>South Africa POPIA</title>
-      <link>http://localhost:1313/tags/south-africa-popia/</link>
+      <link>https://www.muchatech.com/tags/south-africa-popia/</link>
       <pubDate>Fri, 27 Mar 2026 16:46:01 +0200</pubDate>
-      <guid>http://localhost:1313/tags/south-africa-popia/</guid>
+      <guid>https://www.muchatech.com/tags/south-africa-popia/</guid>
       <description></description>
     </item>
     <item>
       <title>Architecture</title>
-      <link>http://localhost:1313/tags/architecture/</link>
+      <link>https://www.muchatech.com/tags/architecture/</link>
       <pubDate>Mon, 19 Jan 2026 14:22:14 +0200</pubDate>
-      <guid>http://localhost:1313/tags/architecture/</guid>
+      <guid>https://www.muchatech.com/tags/architecture/</guid>
       <description></description>
     </item>
     <item>
       <title>Computer-Security</title>
-      <link>http://localhost:1313/tags/computer-security/</link>
+      <link>https://www.muchatech.com/tags/computer-security/</link>
       <pubDate>Mon, 19 Jan 2026 14:22:14 +0200</pubDate>
-      <guid>http://localhost:1313/tags/computer-security/</guid>
+      <guid>https://www.muchatech.com/tags/computer-security/</guid>
       <description></description>
     </item>
     <item>
       <title>Enterprise</title>
-      <link>http://localhost:1313/tags/enterprise/</link>
+      <link>https://www.muchatech.com/tags/enterprise/</link>
       <pubDate>Mon, 19 Jan 2026 14:22:14 +0200</pubDate>
-      <guid>http://localhost:1313/tags/enterprise/</guid>
+      <guid>https://www.muchatech.com/tags/enterprise/</guid>
       <description></description>
     </item>
     <item>
       <title>Zero-Trust</title>
-      <link>http://localhost:1313/tags/zero-trust/</link>
+      <link>https://www.muchatech.com/tags/zero-trust/</link>
       <pubDate>Mon, 19 Jan 2026 14:22:14 +0200</pubDate>
-      <guid>http://localhost:1313/tags/zero-trust/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Data-Compliance</title>
-      <link>http://localhost:1313/tags/data-compliance/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/data-compliance/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Popia</title>
-      <link>http://localhost:1313/tags/popia/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/popia/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>SMEs</title>
-      <link>http://localhost:1313/tags/smes/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/smes/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>South Africa</title>
-      <link>http://localhost:1313/tags/south-africa/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/south-africa/</guid>
+      <guid>https://www.muchatech.com/tags/zero-trust/</guid>
       <description></description>
     </item>
   </channel>
