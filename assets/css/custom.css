@@ -128,6 +128,28 @@ code {
     line-height: 1.8;
 }
 
+.post-single-content a {
+    color: var(--muchatech-color-primary);
+    text-decoration: underline;
+    text-decoration-color: currentColor;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.18em;
+    transition: color 160ms ease, background-color 160ms ease;
+}
+
+.post-single-content a:hover,
+.post-single-content a:focus-visible {
+    border-radius: 2px;
+    background-color: rgba(43, 233, 240, 0.12);
+    color: #fff;
+    text-decoration-thickness: 2px;
+}
+
+.post-single-content a:focus-visible {
+    outline: 2px solid var(--muchatech-color-primary);
+    outline-offset: 3px;
+}
+
 .article-hero {
     display: flex;
     aspect-ratio: 16 / 9;
