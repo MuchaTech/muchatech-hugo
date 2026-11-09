@@ -3,11 +3,21 @@
 	<title>{{ .Title }}</title>
 
 	{{ "<!-- mobile responsive meta -->" | safeHTML }}
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with site.Params.description }}{{ . }}{{ end }}{{ end }}">
 	{{ with site.Params.author }}
 	<meta name="author" content="{{ . }}">{{ end }}
 	{{ partial "social-meta.html" . }}
+	{{ if .IsHome }}
+		{{ $data := index site.Data site.Language.Lang }}
+		{{ with $data.banner.banner }}
+			{{ if and .enable .bg_image_webp }}
+				{{ with resources.Get .bg_image_webp }}
+	<link rel="preload" as="image" href="{{ (.Resize "1920x q75 webp").RelPermalink }}" fetchpriority="high">
+				{{ end }}
+			{{ end }}
+		{{ end }}
+	{{ end }}
 
 	<!-- theme meta -->
 	<meta name="theme-name" content="meghna-hugo" />

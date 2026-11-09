@@ -1,12 +1,16 @@
 ############################### Banner ################################
 banner:
   enable : true
-  bg_image_webp : "images/backgrounds/david-taffet.webp"
-  bg_image : "images/backgrounds/david-taffet.jpg"
+  bg_image_webp : "images/backgrounds/mike-kononov.webp"
+  bg_image : "images/backgrounds/mike-kononov.jpg"
   icon : ""
-  title : "watch`.` safeguard your business `assets`. `the new reality`."
-  content : "`{}` We confidently protect your business."
+  title : "Protect your business. Stay ahead of `threats`."
+  content : "Cybersecurity, automation, and research for resilient businesses in South Africa."
   button:
     enable : true
-    label : "Explore MuchaTech" 
+    label : "Explore our services"
     link : "#services"
+  secondary_button:
+    enable : true
+    label : "Talk to our team"
+    link : "#contact"

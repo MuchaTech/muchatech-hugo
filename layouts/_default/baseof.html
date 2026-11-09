@@ -13,50 +13,44 @@
   
   {{- partial "footer.html" . -}}
 
-      <!-- form handling -->
     <script>
+      const contactForm = document.getElementById("contact-form");
+      const formResponse = document.getElementById("form-response");
 
-      let form = document.getElementById("contact-form");
-      let formResponse = document.getElementById("form-response");
+      if (contactForm && formResponse) {
+        contactForm.addEventListener("submit", async (event) => {
+          event.preventDefault();
+          formResponse.hidden = true;
+          formResponse.classList.remove("alert-success", "alert-warning");
 
-      // hide the form response div from the layout until we get response 
+          try {
+            const response = await fetch(contactForm.action, {
+              method: contactForm.method,
+              body: new FormData(contactForm),
+              headers: { Accept: "application/json" },
+            });
 
-      //  create content elements for the form response div
-      let strongElement = document.getElementById("warning-smg");
-      let spanIcon = document.getElementById("closing-icon");
-      
-      async function handleSubmit(event) {
-        event.preventDefault();
-        let data = new FormData(event.target);
-        fetch(event.target.action, {
-          method: form.method,
-          body: data,
-          headers: {
-            Accept: "application/json",
-          },
-        })
-        .then((response) => {
-            if (response.ok && response.status == 200) {
-              // spanIcon.innerHTML = "&times;";
-              // strongElement.innerHTML = "Success!";
-              formResponse.classList.add("alert-success");
-              formResponse.innerHTML = "Thank you for contacting MuchaTech";
-              form.reset();
+            if (!response.ok) {
+              throw new Error(`Contact form request failed with status ${response.status}`);
             }
-          })
-        .catch((error) => {
-            // spanIcon.innerHTML = "&times;";
-            // strongElement.innerHTML = "Error!";
+
+            formResponse.textContent = "Thank you for contacting MuchaTech.";
+            formResponse.classList.add("alert-success");
+            contactForm.reset();
+          } catch (error) {
+            console.error("Contact form submission failed:", error);
+            formResponse.textContent = "We couldn't send your message. Please try again or contact us by email.";
             formResponse.classList.add("alert-warning");
-            formResponse.innerHTML = "There was a problem submitting your form";
+          }
+
+          formResponse.hidden = false;
         });
       }
-      form.addEventListener("submit", handleSubmit);
-
     </script>
 
     <script>
       const navigationMenu = document.getElementById("navigation");
+      const navigationToggle = document.querySelector(".navbar-toggler");
       if (navigationMenu) {
         navigationMenu.addEventListener("click", (event) => {
           const link = event.target.closest("a.nav-link:not(.dropdown-toggle), a.dropdown-item");
@@ -72,7 +66,45 @@
             }
           }
         }, true);
+
+        navigationMenu.addEventListener("keydown", (event) => {
+          if (event.key === "Escape" && navigationMenu.classList.contains("show")) {
+            window.jQuery(navigationMenu).collapse("hide");
+            navigationToggle?.focus();
+          }
+        });
       }
+    </script>
+
+    <script>
+      window.jQuery(function ($) {
+        const scrollLinks = $("nav a, .page-scroll");
+        scrollLinks.off("click").on("click", function (event) {
+          if (
+            location.pathname.replace(/^\//, "") !== this.pathname.replace(/^\//, "") ||
+            location.hostname !== this.hostname
+          ) {
+            return;
+          }
+
+          const targetId = this.hash.slice(1);
+          if (!targetId) {
+            return;
+          }
+
+          const target = document.getElementById(targetId);
+          if (!target) {
+            return;
+          }
+
+          event.preventDefault();
+          const navigationHeight = document.querySelector(".navigation")?.offsetHeight ?? 50;
+          const duration = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 650;
+          $("html, body").stop().animate({
+            scrollTop: Math.max($(target).offset().top - navigationHeight - 12, 0),
+          }, duration);
+        });
+      });
     </script>
 
     <script>
