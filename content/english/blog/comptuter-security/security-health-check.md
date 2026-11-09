@@ -5,7 +5,11 @@ image_webp: images/blog/security-health-check-test.webp
 image: images/blog/security-health-check-test.jpg
 author: Motape Oswald Langa
 description: "Maturity of your cybersecurity controls"
+topic: "Cybersecurity"
 tags: ["computer-security","zero-trust","architecture","enterprise"]
+cta_title: "Want help prioritizing your security gaps?"
+cta_text: "Talk with MuchaTech about your organization's security review and practical next steps."
+cta_label: "Discuss a security review"
 draft: false
 ---
 

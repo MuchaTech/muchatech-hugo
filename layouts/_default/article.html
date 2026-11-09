@@ -1,0 +1,67 @@
+<article class="col-lg-4 col-md-6 col-12 clearfix wow fadeInUp mb-4">
+  <div class="post-block blog-card">
+    {{ $image := resources.Get .Params.Image_webp }}
+    {{ if not $image }}
+      {{ $image = resources.Get .Params.Image }}
+    {{ end }}
+    {{ if not $image }}
+      {{ with .Resources.GetMatch .Params.Image }}
+        {{ $image = . }}
+      {{ end }}
+    {{ end }}
+    {{ with $image }}
+      {{ $source := . }}
+      {{ $widths := slice }}
+      {{ $srcset := slice }}
+      {{ range (slice 320 480 640) }}
+        {{ if le . $source.Width }}
+          {{ $widths = $widths | append . }}
+        {{ end }}
+      {{ end }}
+      {{ if and (le $source.Width 640) (not (in $widths $source.Width)) }}
+        {{ $widths = $widths | append $source.Width }}
+      {{ end }}
+      {{ range $widths }}
+        {{ $resized := $source.Resize (printf "%dx webp q80" .) }}
+        {{ $srcset = $srcset | append (printf "%s %dw" $resized.RelPermalink .) }}
+      {{ end }}
+      <div class="media-wrapper">
+        <img
+          src="{{ $source.RelPermalink }}"
+          {{ with $srcset }}srcset="{{ delimit . ", " }}" sizes="(max-width: 575px) calc(100vw - 30px), (max-width: 991px) 50vw, 360px"{{ end }}
+          class="img-fluid"
+          alt="{{ $.Params.image_alt | default $.Title }}"
+          width="{{ $source.Width }}"
+          height="{{ $source.Height }}"
+          loading="lazy"
+          decoding="async">
+      </div>
+    {{ else }}
+      {{ with .File }}
+        {{ errorf "Blog card image %q was not found in assets or page resources for %s" $.Params.Image_webp .Path }}
+      {{ end }}
+    {{ end }}
+
+    <div class="content">
+      {{ $topic := .Params.topic }}
+      {{ if not $topic }}
+        {{ with .Params.tags }}
+          {{ $topic = index . 0 }}
+        {{ end }}
+      {{ end }}
+      {{ with $topic }}
+        <p class="blog-card-topic">{{ . }}</p>
+      {{ end }}
+      <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+      {{ $summary := .Description | default .Summary | plainify | htmlUnescape }}
+      {{ with $summary }}
+        <p class="blog-card-summary">{{ . | truncate 170 }}</p>
+      {{ end }}
+      <ul class="blog-card-meta" aria-label="Article details">
+        <li><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time></li>
+        <li>{{ .ReadingTime }} min read</li>
+      </ul>
+      <a class="btn btn-transparent blog-card-link" href="{{ .RelPermalink }}" aria-label="Read {{ .Title }}">Read article</a>
+    </div>
+  </div>
+</article>

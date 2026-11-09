@@ -46,6 +46,13 @@
           formResponse.hidden = false;
         });
       }
+
+      if (contactForm && window.location.hash === "#contact") {
+        const firstContactField = contactForm.querySelector("input:not([type='hidden']), select, textarea, button");
+        window.addEventListener("pageshow", () => {
+          firstContactField?.focus({ preventScroll: true });
+        }, { once: true });
+      }
     </script>
 
     <script>

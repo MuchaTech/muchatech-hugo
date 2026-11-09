@@ -7,50 +7,94 @@
     <div class="row">
       <div class="col-lg-8 offset-lg-2 text-center">
         <h1>{{ .Title }}</h1>
-        <ul class="list-inline mb-50">
-          <li class="list-inline-item"><a href="{{ `author/` | relLangURL }}{{ .Params.Author | urlize }}/">{{ .Params.Author }}</a></li>
-          <li class="list-inline-item">{{ dateFormat "Monday, Jan 2, 2006" .Date }}</li>
+        <ul class="list-inline article-meta mb-50">
+          {{ with .Params.Author }}
+          <li class="list-inline-item"><a href="{{ `author/` | relLangURL }}{{ . | urlize }}/">{{ . }}</a></li>
+          {{ end }}
+          <li class="list-inline-item"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ dateFormat "Monday, Jan 2, 2006" .Date }}</time></li>
+          <li class="list-inline-item">{{ .ReadingTime }} min read</li>
+          {{ with .Params.lastReviewed }}
+          <li class="list-inline-item">Last reviewed <time datetime="{{ (time.AsTime .).Format "2006-01-02" }}">{{ dateFormat "Jan 2, 2006" (time.AsTime .) }}</time></li>
+          {{ end }}
         </ul>
-        {{ $image := resources.Get .Params.Image }}
-        {{ if not $image }}
-          {{ with .Resources.GetMatch .Params.Image }}
-            {{ $image = . }}
-          {{ end }}
-        {{ end }}
-        {{ with $image }}
-          {{ $source := . }}
-          {{ $webpSrcset := slice }}
-          {{ $widths := slice }}
-          {{ range (slice 480 768 1200 1600) }}
-            {{ if le . $source.Width }}
-              {{ $widths = $widths | append . }}
-            {{ end }}
-          {{ end }}
-          {{ if and (le $source.Width 1600) (not (in $widths $source.Width)) }}
-            {{ $widths = $widths | append $source.Width }}
-          {{ end }}
-          {{ range $widths }}
-            {{ $resized := $source.Resize (printf "%dx webp q80" .) }}
-            {{ $webpSrcset = $webpSrcset | append (printf "%s %dw" $resized.RelPermalink .) }}
-          {{ end }}
-          <picture>
-            <source type="image/webp" srcset="{{ delimit $webpSrcset ", " }}" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1199px) 640px, 760px">
-            <img src="{{ $source.RelPermalink }}" class="img-fluid mb-50" alt="{{ $.Title }}" width="{{ $source.Width }}" height="{{ $source.Height }}" loading="eager" fetchpriority="high" decoding="async">
-          </picture>
-        {{ else }}
-          {{ errorf "Blog post image %q was not found in assets or page resources for %s" .Params.Image .File.Path }}
-        {{ end }}
       </div>
-      <div class="col-lg-8 offset-lg-2">
-        <div class="post-single-content">
-          {{ .Content }}
-        </div>
-        {{ if site.Params.post_share }}
-        {{ partial "post-share.html" . }}
-        {{ end }}
-        <!-- comments -->
-        <div class="mt-5">
-          {{ template "_internal/disqus.html" . }}
+      <div class="col-12">
+        <div class="row article-reading-layout">
+          <main class="{{ if and .Params.toc (gt (len .Fragments.Headings) 0) }}col-lg-8{{ else }}col-lg-8 offset-lg-2{{ end }} article-reading-main">
+            {{ $image := resources.Get .Params.Image }}
+            {{ if not $image }}
+              {{ with .Resources.GetMatch .Params.Image }}
+                {{ $image = . }}
+              {{ end }}
+            {{ end }}
+            {{ with $image }}
+              {{ $source := . }}
+              {{ $webpSrcset := slice }}
+              {{ $widths := slice }}
+              {{ range (slice 480 768 1200 1600) }}
+                {{ if le . $source.Width }}
+                  {{ $widths = $widths | append . }}
+                {{ end }}
+              {{ end }}
+              {{ if and (le $source.Width 1600) (not (in $widths $source.Width)) }}
+                {{ $widths = $widths | append $source.Width }}
+              {{ end }}
+              {{ range $widths }}
+                {{ $resized := $source.Resize (printf "%dx webp q80" .) }}
+                {{ $webpSrcset = $webpSrcset | append (printf "%s %dw" $resized.RelPermalink .) }}
+              {{ end }}
+              <figure class="article-hero">
+                <picture>
+                  <source type="image/webp" srcset="{{ delimit $webpSrcset ", " }}" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1199px) 60vw, 760px">
+                  <img src="{{ $source.RelPermalink }}" class="article-hero-image" alt="{{ $.Title }}" width="{{ $source.Width }}" height="{{ $source.Height }}" loading="eager" fetchpriority="high" decoding="async">
+                </picture>
+              </figure>
+            {{ else }}
+              {{ errorf "Blog post image %q was not found in assets or page resources for %s" .Params.Image .File.Path }}
+            {{ end }}
+            <div class="post-single-content">
+              {{ .Content }}
+            </div>
+            <section class="article-cta" aria-labelledby="article-cta-title">
+              <h2 id="article-cta-title">{{ .Params.cta_title | default "Want to discuss your security priorities?" }}</h2>
+              <p>{{ .Params.cta_text | default "Talk with the MuchaTech team about practical next steps for your organization." }}</p>
+              {{ $contactURL := printf "%s#contact" site.Home.RelPermalink }}
+              <a class="btn btn-main article-cta-link" href="{{ .Params.cta_link | default $contactURL }}">{{ .Params.cta_label | default "Talk to our team" }}</a>
+            </section>
+            {{ $previous := .PrevInSection }}
+            {{ $next := .NextInSection }}
+            {{ if or $previous $next }}
+            <nav class="article-navigation" aria-label="Blog post navigation">
+              {{ with $previous }}
+              <a class="article-navigation-link article-navigation-previous" href="{{ .RelPermalink }}">
+                <span>Previous article</span>
+                <strong>{{ .Title }}</strong>
+              </a>
+              {{ end }}
+              {{ with $next }}
+              <a class="article-navigation-link article-navigation-next" href="{{ .RelPermalink }}">
+                <span>Next article</span>
+                <strong>{{ .Title }}</strong>
+              </a>
+              {{ end }}
+            </nav>
+            {{ end }}
+            {{ if site.Params.post_share }}
+            {{ partial "post-share.html" . }}
+            {{ end }}
+            <!-- comments -->
+            <div class="mt-5">
+              {{ template "_internal/disqus.html" . }}
+            </div>
+          </main>
+          {{ if and .Params.toc (gt (len .Fragments.Headings) 0) }}
+          <aside class="col-lg-4 article-reading-sidebar">
+            <nav class="article-toc" aria-labelledby="article-toc-title">
+              <h2 id="article-toc-title">On this page</h2>
+              {{ .TableOfContents | replaceRE `<nav id="TableOfContents">` `<div id="TableOfContents">` | replaceRE `</nav>` `</div>` | safeHTML }}
+            </nav>
+          </aside>
+          {{ end }}
         </div>
       </div>
     </div>
