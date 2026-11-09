@@ -111,7 +111,14 @@
       window.jQuery(function ($) {
         const testimonials = $("#testimonials");
         if (testimonials.hasClass("slick-initialized")) {
-          testimonials.slick("slickSetOption", "autoplaySpeed", 2500, true);
+          testimonials.slick("slickSetOption", {
+            autoplay: !window.matchMedia("(prefers-reduced-motion: reduce)").matches,
+            autoplaySpeed: 6000,
+            dots: true,
+            pauseOnFocus: true,
+            pauseOnHover: true,
+            customPaging: (slider, index) => `<button type="button" aria-label="Show testimonial ${index + 1}">${index + 1}</button>`,
+          }, true);
         }
       });
     </script>

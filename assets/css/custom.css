@@ -351,6 +351,43 @@ fieldset {
     object-fit: cover;
 }
 
+.testimonial .slick-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    margin: 1.5rem 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.testimonial .slick-dots li {
+    margin: 0;
+}
+
+.testimonial .slick-dots button {
+    display: block;
+    width: 14px;
+    height: 14px;
+    padding: 0;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background: transparent;
+    color: transparent;
+    font-size: 0;
+    line-height: 0;
+    cursor: pointer;
+}
+
+.testimonial .slick-dots .slick-active button {
+    border-color: var(--muchatech-color-primary);
+    background: var(--muchatech-color-primary);
+}
+
+.testimonial .slick-dots button:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 3px;
+}
+
 .social-share-buttons {
     display: flex;
     flex-wrap: wrap;
