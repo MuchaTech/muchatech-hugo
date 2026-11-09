@@ -1,0 +1,26 @@
+{{ $data := index site.Data site.Language.Lang }}
+
+{{ if $data.banner.banner.enable }}
+{{ with $data.banner.banner }}
+{{ $image := resources.Get .bg_image_webp }}
+{{ if not $image }}
+  {{ errorf "Hero background image %q was not found in assets" .bg_image_webp }}
+{{ else }}
+  {{ $image = $image.Resize "1920x q75 webp" }}
+  <section class="hero-area" style="background-image: url('{{ $image.RelPermalink }}'); background-size: cover; background-position: center center; background-repeat: no-repeat;">
+    <div class="block">
+      {{ if .icon }}
+      <div class="video-button">
+        <i class="{{ .icon }}"></i>
+      </div>
+      {{ end }}
+      <h1>{{ .title | markdownify }}</h1>
+      <p>{{ .content | markdownify }}</p>
+      {{ if .button.enable }}
+      <a href="{{ .button.link }}" class="btn btn-transparent page-scroll">{{ .button.label }}</a>
+      {{ end }}
+    </div>
+  </section>
+{{ end }}
+{{ end }}
+{{ end }}

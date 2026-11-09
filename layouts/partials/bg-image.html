@@ -1,0 +1,33 @@
+{{- $src := .Src -}}
+{{- $size := .Size | default "1920x q75" -}}
+{{- $position := .Position | default "center center" -}}
+{{- $perspective := .Perspective | default "cover" -}}
+{{- $repeat := .Repeat | default "no-repeat" -}}
+{{- $minHeight := .MinHeight -}}
+{{- $context := .Context | default . -}}
+{{- $image := resources.Get $src -}}
+{{- if not $image -}}
+  {{- with $context.Resources -}}
+    {{- $image = .GetMatch $src -}}
+  {{- end -}}
+{{- end -}}
+{{- if $image -}}
+  {{- if not (in (slice ".svg" ".gif") (path.Ext $image)) -}}
+    {{- $image = $image.Resize (printf "%s webp" $size) -}}
+  {{- end -}}
+  {{- if .Lazy -}}
+    data-background-image="{{ $image.RelPermalink }}"
+    style="background-size: {{ $perspective }}; background-position: {{ $position }}; background-repeat: {{ $repeat }};{{ with $minHeight }} min-height: {{ . }};{{ end }}"
+  {{- else -}}
+    style="background-image: url('{{ $image.RelPermalink }}'); background-size: {{ $perspective }}; background-position: {{ $position }}; background-repeat: {{ $repeat }};{{ with $minHeight }} min-height: {{ . }};{{ end }}"
+  {{- end -}}
+{{- else if or (hasPrefix $src "http") (fileExists (path.Join "static" $src)) -}}
+  {{- if .Lazy -}}
+    data-background-image="{{ $src | absURL }}"
+    style="background-size: {{ $perspective }}; background-position: {{ $position }}; background-repeat: {{ $repeat }};{{ with $minHeight }} min-height: {{ . }};{{ end }}"
+  {{- else -}}
+    style="background-image: url('{{ $src | absURL }}'); background-size: {{ $perspective }}; background-position: {{ $position }}; background-repeat: {{ $repeat }};{{ with $minHeight }} min-height: {{ . }};{{ end }}"
+  {{- end -}}
+{{- else -}}
+  {{- errorf "Background image %q was not found in assets, page resources, or static" $src -}}
+{{- end -}}
