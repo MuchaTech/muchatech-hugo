@@ -1490,9 +1490,37 @@ fieldset {
     height: auto;
 }
 
+.navigation {
+    z-index: 1030;
+    border-bottom: 1px solid rgba(43, 233, 240, 0.22);
+    background: rgba(22, 28, 35, 0.82);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.18);
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+    transition: background-color 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.navigation .navbar {
+    min-height: 68px;
+}
+
+.navigation .navbar-nav {
+    gap: 0.25rem;
+}
+
 .navigation .navbar-toggler {
     min-width: 48px;
     min-height: 44px;
+    border: 1px solid rgba(43, 233, 240, 0.35);
+    border-radius: 10px !important;
+    background: rgba(255, 255, 255, 0.04);
+    transition: border-color 160ms ease, background-color 160ms ease;
+}
+
+.navigation .navbar-toggler:hover,
+.navigation .navbar-toggler:focus-visible {
+    border-color: var(--muchatech-color-primary);
+    background: rgba(43, 233, 240, 0.1);
 }
 
 .navigation .navbar-toggler:focus-visible {
@@ -1504,6 +1532,31 @@ fieldset {
     min-height: 44px;
     display: flex;
     align-items: center;
+    padding: 0.55rem 0.85rem;
+    border-radius: 999px;
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: color 160ms ease, background-color 160ms ease;
+}
+
+.navigation .navbar-nav .nav-link:hover,
+.navigation .navbar-nav .nav-link:focus-visible {
+    background-color: rgba(43, 233, 240, 0.1);
+    color: #fff;
+}
+
+.navigation .navbar-nav .active > .nav-link,
+.navigation .navbar-nav .nav-link.active,
+.navigation .navbar-nav .nav-link.show,
+.navigation .navbar-nav .show > .nav-link {
+    background-color: rgba(43, 233, 240, 0.13);
+    color: var(--muchatech-color-primary);
+}
+
+.navigation .navbar-nav .nav-link:focus-visible {
+    outline: 2px solid var(--muchatech-color-primary);
+    outline-offset: 2px;
 }
 
 #contact {
@@ -1716,8 +1769,20 @@ fieldset {
     .navigation .navbar-collapse {
         margin: 0 -1rem;
         padding: 0.5rem 1rem 1rem;
-        border-top: 1px solid rgb(255 255 255 / 12%);
-        background-color: #1d2024;
+        border-top: 1px solid rgba(43, 233, 240, 0.18);
+        background-color: rgba(22, 28, 35, 0.96);
+        -webkit-backdrop-filter: blur(16px);
+        backdrop-filter: blur(16px);
+    }
+
+    .navigation .navbar-nav {
+        gap: 0.2rem;
+    }
+
+    .navigation .navbar-nav .nav-link {
+        min-height: 48px;
+        padding: 0.7rem 0.9rem;
+        border-radius: 10px;
     }
 
     .hero-area {
@@ -1727,6 +1792,14 @@ fieldset {
 
     .hero-area .block {
         padding: 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .navigation,
+    .navigation .navbar-nav .nav-link,
+    .navigation .navbar-toggler {
+        transition: none;
     }
 }
 
