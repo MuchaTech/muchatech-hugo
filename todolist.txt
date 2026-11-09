@@ -1,0 +1,21 @@
+MuchaTech website improvement priorities
+
+1. Build trust with evidence
+   - Turn portfolio entries into concise case studies covering the client challenge, work delivered, and measurable outcomes.
+   - Add relevant certifications and other verifiable proof points.
+   - Review public claims and ensure each is accurate and supportable.
+
+2. Make the next step obvious
+   - Clarify which businesses each service is for and what each offering includes.
+   - Explain pricing, response times, and service-level commitments in plain language.
+   - Make the contact and onboarding path easy to find and follow.
+
+3. Measure and improve mobile performance
+   - Run Lighthouse or PageSpeed Insights against the deployed site.
+   - Record the baseline and address the largest measured bottlenecks first.
+   - Target Core Web Vitals: LCP under 2.5 seconds, INP under 200 milliseconds, and CLS under 0.1.
+
+4. Audit accessibility and the full homepage
+   - Check keyboard navigation, visible focus, color contrast, and heading structure.
+   - Verify reduced-motion behavior and responsive layouts across the full homepage.
+   - Fix issues found in the audit and retest on mobile and desktop.
