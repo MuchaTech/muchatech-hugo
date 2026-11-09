@@ -400,7 +400,7 @@ fieldset {
         transform: none;
     }
 
-    .hero-actions .btn {
+    .hero-area .hero-actions .btn {
         transition: none;
     }
 }
@@ -452,18 +452,49 @@ fieldset {
     margin-top: 1.75rem;
 }
 
-.hero-actions .btn {
+.hero-area .hero-actions .btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-height: 48px;
+    min-width: 13.75rem;
+    min-height: 3.25rem;
     margin: 0;
     padding: 0.75rem 1.5rem;
     border-radius: 0.25rem;
+    border: 1px solid var(--muchatech-color-primary);
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1.25;
     letter-spacing: 0.02em;
+    transition: background-color 150ms ease, border-color 150ms ease, color 150ms ease;
 }
 
-.hero-actions .btn:focus-visible {
+.hero-area .hero-actions .btn-transparent {
+    background-color: var(--muchatech-color-primary);
+    color: #1d2024;
+}
+
+.hero-area .hero-actions .btn-transparent:hover,
+.hero-area .hero-actions .btn-transparent:focus-visible {
+    border-color: #fff;
+    background-color: #fff;
+    color: #1d2024;
+}
+
+.hero-area .hero-actions .btn-outline-light {
+    border-color: rgb(255 255 255 / 75%);
+    background-color: rgb(29 32 36 / 35%);
+    color: #fff;
+}
+
+.hero-area .hero-actions .btn-outline-light:hover,
+.hero-area .hero-actions .btn-outline-light:focus-visible {
+    border-color: var(--muchatech-color-primary);
+    background-color: var(--muchatech-color-primary);
+    color: #1d2024;
+}
+
+.hero-area .hero-actions .btn:focus-visible {
     outline: 3px solid var(--muchatech-color-primary);
     outline-offset: 3px;
 }
@@ -533,7 +564,7 @@ fieldset {
         margin-left: auto;
     }
 
-    .hero-actions .btn {
+    .hero-area .hero-actions .btn {
         width: 100%;
     }
 }
