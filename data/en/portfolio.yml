@@ -28,9 +28,9 @@ portfolio:
       link: "https://www.oaklapine.com"
 
     # portfolio item loop
-    - name: Khulong Mining Supplies
-      image: images/portfolio/khulong_logo.jpg
-      image_webp: images/portfolio/khulong_logo.webp
-      categories: ["development", "automation", "cybersecurity"]
-      content: Design, build, secure real time machinery workshop application.
-      link: "https://www.khulongmining.com"
+    # - name: Khulong Mining Supplies
+    #   image: images/portfolio/khulong_logo.jpg
+    #   image_webp: images/portfolio/khulong_logo.webp
+    #   categories: ["development", "automation", "cybersecurity"]
+    #   content: Design, build, secure real time machinery workshop application.
+    #   link: "https://www.khulongmining.com"
