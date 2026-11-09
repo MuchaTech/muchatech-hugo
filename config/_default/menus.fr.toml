@@ -16,26 +16,21 @@ url = "#portfolio"
 weight = 3
 
 [[main]]
-name = "équipe"
-url = "#team"
-weight = 4
-
-[[main]]
 name = "tarification"
 url = "#pricing"
-weight = 5
+weight = 4
 
 [[main]]
 name = "blog"
 url = "#blog"
-weight = 6
+weight = 5
 
 [[main]]
 name = "contact"
 url = "#contact"
-weight = 7
+weight = 6
 
 [[main]]
 name = "themefisher"
 url = "https://themefisher.com/"
-weight = 8
+weight = 7
