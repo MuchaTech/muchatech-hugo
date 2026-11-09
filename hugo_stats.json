@@ -253,7 +253,6 @@
       "wow"
     ],
     "ids": [
-      "5-step-implementation-guide",
       "TableOfContents",
       "a-practical-zero-trust-implementation-plan",
       "a-proactive-approach-to-protecting-your-domain-",
@@ -261,7 +260,6 @@
       "article-cta-title",
       "article-toc-title",
       "automation-tools",
-      "benefits-of-zero-trust-architecture-",
       "best-practices-for-success-",
       "blog",
       "body",
@@ -274,29 +272,22 @@
       "contact-submit",
       "content",
       "counter",
-      "critical-limitations",
       "cta",
       "cybersecurity",
       "dpa-consent",
       "dpa-consent-description",
-      "draft-false",
       "email",
-      "essential-zero-trust-elements",
       "feature",
-      "flaws-of-traditional-perimeter-based-security-",
       "footer",
       "form-response",
       "hero-title",
       "how-zero-trust-changes-perimeter-based-security",
-      "implementing-zero-trust-nist-sp-800-207-roadmap-",
       "js-cookie-box",
       "js-cookie-button",
-      "key-characteristics",
       "message",
       "name",
       "navigating-popia-compliance-for-south-african-smes-in-2026",
       "navigation",
-      "nist-core-principles-of-zero-trust",
       "phone-number",
       "popia-compliance-checklist-6-key-steps-for-smes",
       "portfolio",
@@ -314,10 +305,7 @@
       "what-is-popia-a-quick-guide-for-smes",
       "what-zero-trust-means",
       "why-security-health-checks-matter-",
-      "why-south-african-smes-must-prioritize-popia-compliance",
-      "why-zero-trust-is-essential-now",
-      "zero-trust-architecture-explained-",
-      "zero-trust-architecture-replacing-perimeter-security-in-modern-cybersecurity"
+      "why-south-african-smes-must-prioritize-popia-compliance"
     ]
   }
 }
