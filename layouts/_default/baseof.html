@@ -55,6 +55,18 @@
 
     </script>
 
+    <script>
+      const navigationMenu = document.getElementById("navigation");
+      if (navigationMenu) {
+        navigationMenu.addEventListener("click", (event) => {
+          const link = event.target.closest("a.nav-link:not(.dropdown-toggle), a.dropdown-item");
+          if (link && window.matchMedia("(max-width: 991.98px)").matches) {
+            window.jQuery(navigationMenu).collapse("hide");
+          }
+        }, true);
+      }
+    </script>
+
 </body>
 
 </html>
