@@ -332,3 +332,62 @@ fieldset {
     text-align: center;
     white-space: nowrap;
 }
+
+.client-thumb img.testimonial-image {
+    width: 115px;
+    height: 115px;
+    max-width: 115px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.social-share-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.social-share-buttons .resp-sharing-button__link {
+    margin: 0;
+}
+
+.social-share-buttons .resp-sharing-button {
+    align-items: center;
+    border-radius: 50%;
+    display: inline-flex;
+    height: 44px;
+    justify-content: center;
+    padding: 0;
+    transition: box-shadow 150ms ease, transform 150ms ease;
+    width: 44px;
+}
+
+.social-share-buttons .resp-sharing-button__icon,
+.social-share-buttons .resp-sharing-button__icon svg {
+    display: block;
+    height: 20px;
+    margin: 0;
+    width: 20px;
+}
+
+.social-share-buttons .resp-sharing-button__link:hover .resp-sharing-button {
+    box-shadow: 0 3px 8px rgb(0 0 0 / 25%);
+    transform: translateY(-2px);
+}
+
+.social-share-buttons .resp-sharing-button__link:focus-visible {
+    border-radius: 50%;
+    outline: 3px solid var(--muchatech-color-primary);
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .social-share-buttons .resp-sharing-button {
+        transition: none;
+    }
+
+    .social-share-buttons .resp-sharing-button__link:hover .resp-sharing-button {
+        transform: none;
+    }
+}

@@ -13,7 +13,7 @@ automation_tools:
 
     - title: Security Orchestration Automation Response - (SOAR)
       icon: ti-shield
-      content: integrate security tools to automate incident detection, investigation, and remediation, accelerating threat response for overwhelmed SecOps teams.
+      content: Integrate security tools to automate incident detection, investigation, and remediation, accelerating threat response for overwhelmed SecOps teams.
 
     - title: Robotic Process Automation - (RPA)
       icon: ti-shield
