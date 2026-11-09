@@ -4,10 +4,10 @@ automation_tools:
   image: images/services/automation/julien-tromeur.jpg # eli-alvarez.jpg # julien-tromeur.jpg
   image_webp: images/services/automation/julien-tromeur.webp #eli-alvarez.webp # julien-tromeur.webp
   title: Automation & Tools
-  content: "Automating repeatitive business tasks and workflows for productivity and faster product delivery."
+  content: "We automate repetitive business tasks and workflows to boost productivity and speed up service delivery."
   automation_domains:
     # service item loop
-    - title: Mision Critical ICS Automation
+    - title: Mission-Critical ICS Automation
       icon: ti-shield
       content: Automate physical processes through hardware and software to monitor and control machinery with minimal human intervention.
 

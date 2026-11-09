@@ -2,8 +2,8 @@
 skill:
   enable: true
   title: Our Skills
-  subtitle: We excel in a wide range of Cybersecurity`{Domains}` & Automation.
-  content: Effective and reliable teamwork through our inhouse talent and professionals.
+  subtitle: We excel across a wide range of cybersecurity domains and automation.
+  content: Our in-house team and trusted professionals work together to deliver reliable results.
   image: images/about/company-growth.webp
   skill_item:
     # skill item loop

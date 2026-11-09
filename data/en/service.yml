@@ -6,7 +6,7 @@ service:
     # service item loop
     - name: Managed Cybersecurity
       icon: ti-layers-alt # themify icon pack : https://themify.me/themify-icons
-      content: Secure your critically connected systems and business assets in today's data driven world.
+      content: Protect your connected systems and business assets in today's data-driven world.
 
     # service item loop
     - name: Automation & Tools
@@ -16,4 +16,4 @@ service:
     # service item loop
     - name: Cybersecurity R&D
       icon: ti-package
-      content: Tomorrow's treats, solved Today - Pioneering SA's Cyber Future through `{SSDLC}`.
+      content: We help anticipate tomorrow's threats and advance South Africa's cyber future through a secure software development lifecycle (SSDLC).

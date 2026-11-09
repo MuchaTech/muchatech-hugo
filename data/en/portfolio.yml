@@ -1,10 +1,10 @@
 #################################### portfolio ###############################
 portfolio:
   enable: true
-  title: Hands on Works
+  title: Our Work
   portfolio_item:
     # portfolio item loop
-    - name: Temo Process Technologies - Secure IT Infranstruture
+    - name: Temo Process Technologies - Secure IT Infrastructure
       image: images/portfolio/Temo Process.jpg
       image_webp: images/portfolio/Temo Process.webp
       categories: ["development", "cybersecurity"]

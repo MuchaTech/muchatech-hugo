@@ -5,12 +5,12 @@ about:
   about_item:
     - icon: ti-thought # themify icon pack : https://themify.me/themify-icons
       title: We're Progressive.
-      content: Security is a process, we aim to stay current by conducting research and hands-on testing.
+      content: Security is an ongoing process. We stay current through research and hands-on testing.
 
     - icon: ti-thought
       title: We're Agile.
-      content: Embrace dynamic methodologies to thrive in our ever-evolving, interconnected, and data-fueled world.
+      content: We embrace adaptable methods to thrive in an ever-evolving, interconnected, data-driven world.
 
     - icon: ti-thought
       title: We're Local.
-      content: Embrace local expertise for low latency and compliance with certified ethical hackers.
+      content: We combine local expertise with low-latency support and a commitment to compliance.

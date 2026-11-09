@@ -3,22 +3,22 @@ research_development:
   image: images/services/research_development/boitumelo.jpg
   image_webp: images/services/research_development/boitumelo.webp
   title: Cybersecurity R&D
-  content: "Making effort in one of the neglected aspect in the cybersecurity industry."
+  content: "We research emerging technologies and security challenges to help strengthen the cybersecurity industry."
   research_domains:
     # service item loop
-    - title: Al & Machine Learning Security
+    - title: AI & Machine Learning Security
       icon: ti-shield # themify icon pack : https://themify.me/themify-icons
-      content: Utilisation of AI to boost threat detection and protecting AI systems from adversarial AI.
+      content: Use AI to improve threat detection and protect AI systems from adversarial attacks.
 
     - title: Privacy-Enhancing Technologies 
       icon: ti-shield 
-      content: Enabling data analysis and sharing while proteting individual privacy.
+      content: Enable data analysis and sharing while protecting individual privacy.
 
     - title: Quantum Computing & Cryptography 
       icon: ti-shield 
-      content: Preparing for quantum computers that could break today's encryptionn controls.
+      content: Prepare for quantum computers that could break today's encryption.
       
-    - title: Network Security & Mesasurement 
+    - title: Network Security & Measurement
       icon: ti-shield 
       content: Protect sensitive data, prevent financial losses, and maintain customer trust.
       

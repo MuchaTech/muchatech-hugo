@@ -5,11 +5,11 @@ pricing:
   pricing_table:
     # pricing table loop
     - name: Free
-      price: R0,0
+      price: R0
       unit: month
       services:
-        - M365-enabled office machines optimization
-        - Management-business email data breach check
+        - M365-enabled office machine optimization
+        - Business email breach assessment
         - Privacy and anonymity status check
       button:
         enable: false
@@ -36,7 +36,7 @@ pricing:
       unit: month
       services:
         - Advanced Monitoring
-        - 15-mins P1 response SLAs
+        - 15-minute P1 response SLA
         - Maximum of 20 endpoints
         - Scales with data ingestion (R2/GB)
         - Analyst Support
@@ -52,7 +52,7 @@ pricing:
       services:
         - Fully Managed
         - 24/7 Response
-        - 15-mins P1 SLAs
+        - 15-minute P1 response SLAs
         - 99.9% uptime guarantee
         - Scales with endpoints (R500 per device)
         - Dark Web Monitoring
