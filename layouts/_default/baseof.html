@@ -13,15 +13,62 @@
   
   {{- partial "footer.html" . -}}
 
+    <div class="contact-toast-container" aria-live="polite" aria-atomic="true">
+      <div id="contact-toast" class="toast fade contact-toast" role="status" aria-live="polite" aria-atomic="true">
+        <div class="toast-header">
+          <span class="contact-toast-icon" aria-hidden="true"></span>
+          <strong id="contact-toast-title" class="mr-auto"></strong>
+          <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close notification">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div id="contact-toast-message" class="toast-body"></div>
+      </div>
+    </div>
+
     <script>
       const contactForm = document.getElementById("contact-form");
-      const formResponse = document.getElementById("form-response");
+      const contactToast = document.getElementById("contact-toast");
+      const contactToastTitle = document.getElementById("contact-toast-title");
+      const contactToastMessage = document.getElementById("contact-toast-message");
+      const contactToastInstance = contactToast ? window.jQuery(contactToast) : null;
+      let contactToastTimer;
 
-      if (contactForm && formResponse) {
+      if (contactToastInstance) {
+        contactToastInstance.toast({ autohide: false });
+      }
+
+      const showContactToast = (title, message, state, hideAfter) => {
+        if (!contactToast || !contactToastInstance || !contactToastTitle || !contactToastMessage) {
+          return;
+        }
+
+        window.clearTimeout(contactToastTimer);
+        contactToast.classList.remove("contact-toast--info", "contact-toast--success", "contact-toast--error");
+        contactToast.classList.add(`contact-toast--${state}`);
+        contactToast.setAttribute("role", state === "error" ? "alert" : "status");
+        contactToast.setAttribute("aria-live", state === "error" ? "assertive" : "polite");
+        contactToastTitle.textContent = title;
+        contactToastMessage.textContent = message;
+        contactToastInstance.toast("show");
+
+        if (hideAfter) {
+          contactToastTimer = window.setTimeout(() => contactToastInstance.toast("hide"), hideAfter);
+        }
+      };
+
+      if (contactForm && contactToastInstance) {
+        const submitButton = contactForm.querySelector("button[type='submit']");
+        const submitLabel = submitButton?.textContent;
+
         contactForm.addEventListener("submit", async (event) => {
           event.preventDefault();
-          formResponse.hidden = true;
-          formResponse.classList.remove("alert-success", "alert-warning");
+          showContactToast("Sending message", "Please wait while we send your message.", "info");
+          contactForm.setAttribute("aria-busy", "true");
+          if (submitButton) {
+            submitButton.disabled = true;
+            submitButton.textContent = "Sending...";
+          }
 
           try {
             const response = await fetch(contactForm.action, {
@@ -34,16 +81,18 @@
               throw new Error(`Contact form request failed with status ${response.status}`);
             }
 
-            formResponse.textContent = "Thank you for contacting MuchaTech.";
-            formResponse.classList.add("alert-success");
+            showContactToast("Message sent", "Thank you for contacting MuchaTech. We’ll be in touch soon.", "success", 8000);
             contactForm.reset();
           } catch (error) {
             console.error("Contact form submission failed:", error);
-            formResponse.textContent = "We couldn't send your message. Please try again or contact us by email.";
-            formResponse.classList.add("alert-warning");
+            showContactToast("Message not sent", "We couldn't send your message. Please try again or contact us by email.", "error", 10000);
+          } finally {
+            contactForm.removeAttribute("aria-busy");
+            if (submitButton) {
+              submitButton.disabled = false;
+              submitButton.textContent = submitLabel;
+            }
           }
-
-          formResponse.hidden = false;
         });
       }
 

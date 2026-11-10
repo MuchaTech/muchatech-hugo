@@ -4,32 +4,11 @@ skill:
   title: Our Skills
   subtitle: We excel across a wide range of cybersecurity domains and automation.
   content: Our in-house team and trusted professionals work together to deliver reliable results.
-  image: images/about/company-growth.webp
   skill_item:
-    # skill item loop
     - name: Risk Prioritization and Patch Management Roadmaps
-      percent: 95%
-
-    # skill item loop
     - name: Exploits Development
-      percent: 85%
-
-    # skill item loop
     - name: Threat Intelligence
-      percent: 75%
-
-    # skill item loop
     - name: Incident Response
-      percent: 90%
-
-    # skill item loop
     - name: Tiered Analysis
-      percent: 70%
-
-    # skill item loop
     - name: API integration for (EDR/SIEM) orchestration
-      percent: 80%
-
-    # skill item loop
     - name: Compliance Mapping
-      percent: 80%
