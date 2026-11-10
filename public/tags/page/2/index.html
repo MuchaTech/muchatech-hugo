@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=53131&amp;path=livereload" data-no-instant defer></script>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=49503&amp;path=livereload" data-no-instant defer></script>
 	<meta charset="utf-8">
 	<title>Tags</title>
 
@@ -20,28 +20,28 @@
 
 	<!-- plugins -->
 	
-	<link rel="stylesheet" href="http://localhost:53131/plugins/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" href="http://localhost:49503/plugins/bootstrap/bootstrap.min.css">
 	
-	<link rel="stylesheet" href="http://localhost:53131/plugins/themify-icons/themify-icons.css">
+	<link rel="stylesheet" href="http://localhost:49503/plugins/themify-icons/themify-icons.css">
 	
-	<link rel="stylesheet" href="http://localhost:53131/plugins/magnific-popup/magnific-popup.css">
+	<link rel="stylesheet" href="http://localhost:49503/plugins/magnific-popup/magnific-popup.css">
 	
-	<link rel="stylesheet" href="http://localhost:53131/plugins/slick/slick.css">
+	<link rel="stylesheet" href="http://localhost:49503/plugins/slick/slick.css">
 	
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anaheim%7cQuattrocento&#43;Sans:400,700&amp;display=swap">
 	
 
 	<!-- Main Stylesheet -->
 	
-	<link rel="stylesheet" href="http://localhost:53131/css/style.min.css" media="screen">
+	<link rel="stylesheet" href="http://localhost:49503/css/style.min.css" media="screen">
 
 	<!-- Custom stylesheet - for your changes -->
 	
-	<link rel="stylesheet" href="http://localhost:53131/css/custom.min.css" media="screen">
+	<link rel="stylesheet" href="http://localhost:49503/css/custom.min.css" media="screen">
 
 	<!--Favicon-->
-	<link rel="shortcut icon" href="http://localhost:53131/images/favicon.png" type="image/x-icon">
-	<link rel="icon" href="http://localhost:53131/images/favicon.png" type="image/x-icon">
+	<link rel="shortcut icon" href="http://localhost:49503/images/favicon.png" type="image/x-icon">
+	<link rel="icon" href="http://localhost:49503/images/favicon.png" type="image/x-icon">
 
 	
 	<!-- Global Site Tag (gtag.js) - Google Analytics -->
@@ -70,7 +70,7 @@
       <a class="navbar-brand p-0" href="/">
         
         <img
-          src="http://localhost:53131/images/V1.webp"
+          src="http://localhost:49503/images/V1.webp"
           alt="MuchaTech"
           width="129"
           height="52"
@@ -376,9 +376,9 @@
 
 				<!-- copyright -->
 				<div class="copyright text-center">
-					<a href="http://localhost:53131/">
+					<a href="http://localhost:49503/">
 						
-						<img class="lozad" data-src="http://localhost:53131/images/V1.webp" alt="MuchaTech" height="52">
+						<img class="lozad" data-src="http://localhost:49503/images/V1.webp" alt="MuchaTech" height="52">
 					</a>
 					<br>
 					<p>Copyright © 2020-2026 Designed by <a href="https://github.com/muchatech">MuchaTech</a> &amp; Developed by <a href="https://github.com/muchatech">MuchaTech</a></p>
@@ -394,24 +394,24 @@
 
 <!-- JS Plugins -->
 
-<script src="http://localhost:53131/plugins/jquery/jquery.min.js"></script>
+<script src="http://localhost:49503/plugins/jquery/jquery.min.js"></script>
 
-<script src="http://localhost:53131/plugins/bootstrap/bootstrap.min.js"></script>
+<script src="http://localhost:49503/plugins/bootstrap/bootstrap.min.js"></script>
 
-<script src="http://localhost:53131/plugins/slick/slick.min.js"></script>
+<script src="http://localhost:49503/plugins/slick/slick.min.js"></script>
 
-<script src="http://localhost:53131/plugins/shuffle/shuffle.min.js"></script>
+<script src="http://localhost:49503/plugins/shuffle/shuffle.min.js"></script>
 
-<script src="http://localhost:53131/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+<script src="http://localhost:49503/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
 
-<script src="http://localhost:53131/plugins/lazy-load/lozad.min.js"></script>
+<script src="http://localhost:49503/plugins/lazy-load/lozad.min.js"></script>
 
-<script src="http://localhost:53131/plugins/google-map/map.js"></script>
+<script src="http://localhost:49503/plugins/google-map/map.js"></script>
 
 
 <!-- Main Script -->
 
-<script src="http://localhost:53131/js/script.min.af325f2c280c8896bd633e31140c7749c0dedba1b86023e32603d1f96d0ddcb688e95a99c5bbaa124c2fc7f042e688f9.js" integrity="sha384-rzJfLCgMiJa9Yz4xFAx3ScDe26G4YCPjJgPR&#43;W0N3LaI6VqZxbuqEkwvx/BC5oj5"></script>
+<script src="http://localhost:49503/js/script.min.af325f2c280c8896bd633e31140c7749c0dedba1b86023e32603d1f96d0ddcb688e95a99c5bbaa124c2fc7f042e688f9.js" integrity="sha384-rzJfLCgMiJa9Yz4xFAx3ScDe26G4YCPjJgPR&#43;W0N3LaI6VqZxbuqEkwvx/BC5oj5"></script>
 
 
 
@@ -439,10 +439,22 @@
       const formResponse = document.getElementById("form-response");
 
       if (contactForm && formResponse) {
+        const submitButton = contactForm.querySelector("button[type='submit']");
+        const submitLabel = submitButton?.textContent;
+
         contactForm.addEventListener("submit", async (event) => {
           event.preventDefault();
-          formResponse.hidden = true;
-          formResponse.classList.remove("alert-success", "alert-warning");
+          formResponse.classList.remove("alert-success", "alert-warning", "alert-info");
+          formResponse.setAttribute("role", "status");
+          formResponse.setAttribute("aria-live", "polite");
+          formResponse.textContent = "Sending your message...";
+          formResponse.classList.add("alert-info");
+          formResponse.hidden = false;
+          contactForm.setAttribute("aria-busy", "true");
+          if (submitButton) {
+            submitButton.disabled = true;
+            submitButton.textContent = "Sending...";
+          }
 
           try {
             const response = await fetch(contactForm.action, {
@@ -455,16 +467,24 @@
               throw new Error(`Contact form request failed with status ${response.status}`);
             }
 
-            formResponse.textContent = "Thank you for contacting MuchaTech.";
+            formResponse.textContent = "Thank you! Your message has been sent. We’ll be in touch soon.";
+            formResponse.classList.remove("alert-info");
             formResponse.classList.add("alert-success");
             contactForm.reset();
           } catch (error) {
             console.error("Contact form submission failed:", error);
             formResponse.textContent = "We couldn't send your message. Please try again or contact us by email.";
+            formResponse.classList.remove("alert-info");
             formResponse.classList.add("alert-warning");
+            formResponse.setAttribute("role", "alert");
+            formResponse.setAttribute("aria-live", "assertive");
+          } finally {
+            contactForm.removeAttribute("aria-busy");
+            if (submitButton) {
+              submitButton.disabled = false;
+              submitButton.textContent = submitLabel;
+            }
           }
-
-          formResponse.hidden = false;
         });
       }
 
@@ -550,6 +570,8 @@
         }
       });
     </script>
+
+    
 
 </body>
 
