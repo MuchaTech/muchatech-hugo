@@ -1,8 +1,8 @@
 ---
 title: "POPIA Compliance for South African SMEs"
 date: "2026-03-27T16:46:01+02:00"
-image_webp: images/blog/popia_data_compliance.webp
-image: images/blog/popia_data_compliance.jpg
+image_webp: images/blog/data-compliance/popia_data_compliance.webp
+image: images/blog/data-compliance/popia_data_compliance.jpg
 author: Motape Oswald Langa
 description: "Master POPIA compliance for South African SMEs with this 2026 checklist. Learn key steps, avoid fines up to R10 million, and protect customer data—essential guide for small businesses."
 topic: "POPIA & Data Protection"

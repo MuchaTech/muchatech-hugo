@@ -1,8 +1,8 @@
 ---
 title: "Zero Trust Architecture"
 date: 2026-01-19T14:22:14+02:00
-image_webp: images/blog/tp-security-model-test.webp
-image: images/blog/tp-security-model-test.jpg
+image_webp: images/blog/computer-security/tp-security-model-test.webp
+image: images/blog/computer-security/tp-security-model-test.jpg
 author: Motape Oswald Langa
 description: "Moving from stagnant, network-based parameters to focus on users, assets, and resources"
 topic: "Zero Trust"
@@ -22,7 +22,7 @@ Zero Trust Architecture (ZTA) is an approach to designing security controls, not
 
 Traditional controls such as firewalls and VPNs can still be useful, but being connected to an internal network should not by itself grant access to every resource. This distinction matters as organizations use cloud services, support remote work, and manage both organization-owned and personal devices.
 
-![Diagram of a perimeter-based network, with a firewall separating an internal network from external networks.](images/blog/perimeter-security-simple.webp)
+![Diagram of a perimeter-based network, with a firewall separating an internal network from external networks.](images/blog/computer-security/perimeter-security-simple.webp)
 
 ## What Zero Trust Means
 
