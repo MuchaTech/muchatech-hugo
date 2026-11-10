@@ -2454,6 +2454,10 @@ fieldset {
     box-shadow: 0 14px 40px rgba(0, 0, 0, 0.35);
     -webkit-backdrop-filter: blur(16px);
     backdrop-filter: blur(16px);
+    pointer-events: none;
+}
+
+.contact-toast-container .contact-toast.show {
     pointer-events: auto;
 }
 
@@ -2531,6 +2535,24 @@ fieldset {
 }
 
 @media (max-width: 991.98px) {
+    .navigation .navbar-toggler {
+        display: grid;
+        width: 56px;
+        min-width: 56px;
+        height: 52px;
+        min-height: 52px;
+        padding: 0;
+        place-items: center;
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .navigation .navbar-toggler-icon {
+        width: 1.5rem;
+        height: 1.5rem;
+        background-size: 100% 100%;
+    }
+
     .navigation .navbar-collapse {
         margin: 0 -1rem;
         padding: 0.5rem 1rem 1rem;
