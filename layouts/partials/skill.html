@@ -13,23 +13,48 @@
 			</div>
 		</div>
 
-		<div class="row skills-intro">
+		<div class="row skills-content">
 			<div class="col-lg-7">
-				<h3>{{ .subtitle | markdownify }}</h3>
+				<div class="skills-intro">
+					<h3>{{ .subtitle | markdownify }}</h3>
+					<p>{{ .content | markdownify }}</p>
+				</div>
+
+				<ul class="capability-grid">
+					{{ range $index, $element := .skill_item }}
+					<li class="capability-card">
+						<span class="capability-card-number" aria-hidden="true">{{ printf "%02d" (add $index 1) }}</span>
+						<h4>{{ $element.name }}</h4>
+					</li>
+					{{ end }}
+				</ul>
 			</div>
-			<div class="col-lg-5">
-				<p>{{ .content | markdownify }}</p>
+			<div class="col-lg-5 skills-framework-column">
+				<div class="skills-framework">
+					<div class="skills-framework-heading">
+						<span>CAPABILITY MAP</span>
+						<h3>How our skills connect</h3>
+						<p>Expertise across risk, engineering, analysis and response.</p>
+					</div>
+					<ol class="skills-framework-groups">
+						{{ $skills := .skill_item }}
+						{{ range $index, $group := .skill_groups }}
+						<li class="skills-framework-group">
+							<span class="skills-framework-number" aria-hidden="true">{{ printf "%02d" (add $index 1) }}</span>
+							<div>
+								<h4>{{ $group.title }}</h4>
+								<ul>
+									{{ range where $skills "group" $group.id }}
+									<li>{{ .name }}</li>
+									{{ end }}
+								</ul>
+							</div>
+						</li>
+						{{ end }}
+					</ol>
+				</div>
 			</div>
 		</div>
-
-		<ul class="capability-grid">
-			{{ range $index, $element := .skill_item }}
-			<li class="capability-card">
-				<span class="capability-card-number" aria-hidden="true">{{ printf "%02d" (add $index 1) }}</span>
-				<h4>{{ $element.name }}</h4>
-			</li>
-			{{ end }}
-		</ul>
 	</div>
 </section>
 {{ end }}

@@ -4,11 +4,25 @@ skill:
   title: Our Skills
   subtitle: We excel across a wide range of cybersecurity domains and automation.
   content: Our in-house team and trusted professionals work together to deliver reliable results.
+  skill_groups:
+    - id: risk-intelligence
+      title: Risk and intelligence
+    - id: security-engineering
+      title: Security engineering
+    - id: analysis-response
+      title: Analysis and response
   skill_item:
     - name: Risk Prioritization and Patch Management Roadmaps
+      group: risk-intelligence
     - name: Exploits Development
+      group: security-engineering
     - name: Threat Intelligence
+      group: risk-intelligence
     - name: Incident Response
+      group: analysis-response
     - name: Tiered Analysis
+      group: analysis-response
     - name: API integration for (EDR/SIEM) orchestration
+      group: security-engineering
     - name: Compliance Mapping
+      group: risk-intelligence

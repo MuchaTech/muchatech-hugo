@@ -1,0 +1,27 @@
+{{ $data := index site.Data site.Language.Lang }}
+
+{{ if $data.cta.cta.enable }}
+{{ with $data.cta.cta }}
+<section id="cta" class="call-to-action section-sm bg-1 overly" {{ partial "bg-image.html" (dict "Src" .bg_image_webp) | safeHTMLAttr }}>
+	{{ partial "image" (dict "Src" .bg_image "Alt" .title "Class" "d-none") }}
+	<div class="container">
+		<div class="row align-items-center">
+			<div class="col-lg-6">
+				<div class="cta-copy">
+					<h2>{{ .title | markdownify }}</h2>
+					<p>{{ .content | markdownify }}</p>
+					{{ if .button.enable }}
+					{{ with .button }}
+					<a href="{{ .link }}" class="btn btn-main page-scroll">{{ .label }}</a>
+					{{ end }}
+					{{ end }}
+				</div>
+			</div>
+			<div class="col-lg-6 cta-preview-column">
+				{{ partial "endpoint-preview.html" (dict "id" "cta-endpoint") }}
+			</div>
+		</div>
+	</div>
+</section>
+{{ end }}
+{{ end }}

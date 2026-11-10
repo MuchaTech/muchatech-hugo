@@ -1,0 +1,45 @@
+{{- $id := .id -}}
+<div class="endpoint-preview" data-endpoint-preview>
+	<div class="endpoint-preview-header">
+		<div class="endpoint-preview-window" aria-hidden="true"><span></span><span></span><span></span></div>
+		<span class="endpoint-preview-status"><i aria-hidden="true"></i> SIMULATED FEED · NOT LIVE</span>
+	</div>
+
+	<div class="endpoint-preview-tabs" role="tablist" aria-label="Endpoint security preview styles">
+		<button id="{{ $id }}-tab-feed" class="endpoint-preview-tab" type="button" role="tab" aria-selected="true" aria-controls="{{ $id }}-panel-feed" tabindex="0" data-endpoint-tab="feed">Threat feed</button>
+		<button id="{{ $id }}-tab-fleet" class="endpoint-preview-tab" type="button" role="tab" aria-selected="false" aria-controls="{{ $id }}-panel-fleet" tabindex="-1" data-endpoint-tab="fleet">Endpoint fleet</button>
+		<button id="{{ $id }}-tab-response" class="endpoint-preview-tab" type="button" role="tab" aria-selected="false" aria-controls="{{ $id }}-panel-response" tabindex="-1" data-endpoint-tab="response">Response</button>
+	</div>
+
+	<div id="{{ $id }}-panel-feed" class="endpoint-preview-panel" role="tabpanel" aria-labelledby="{{ $id }}-tab-feed" data-endpoint-panel="feed">
+		<div class="endpoint-preview-panel-title"><span>Security operations</span><span class="endpoint-preview-live"><i aria-hidden="true"></i> DEMO</span></div>
+		<div class="endpoint-feed">
+			<div class="endpoint-feed-line"><time>09:41:08</time><span class="endpoint-feed-tag">DETECTED</span><p>Unusual process activity on <b>FINANCE-07</b></p></div>
+			<div class="endpoint-feed-line"><time>09:41:10</time><span class="endpoint-feed-tag endpoint-feed-tag--cyan">ISOLATED</span><p>Endpoint isolated from the network</p></div>
+			<div class="endpoint-feed-line"><time>09:41:13</time><span class="endpoint-feed-tag endpoint-feed-tag--green">SECURED</span><p>Threat contained; investigation started</p></div>
+		</div>
+		<div class="endpoint-preview-footer"><span>Protection status</span><strong>Active</strong></div>
+	</div>
+
+	<div id="{{ $id }}-panel-fleet" class="endpoint-preview-panel" role="tabpanel" aria-labelledby="{{ $id }}-tab-fleet" data-endpoint-panel="fleet" hidden>
+		<div class="endpoint-preview-panel-title"><span>Managed endpoints</span><span>04 DEVICES</span></div>
+		<div class="endpoint-fleet">
+			<div class="endpoint-device endpoint-device--protected"><span class="endpoint-device-icon" aria-hidden="true">⌘</span><span><b>DESIGN-02</b><small>Protected</small></span><i aria-hidden="true"></i></div>
+			<div class="endpoint-device endpoint-device--alert"><span class="endpoint-device-icon" aria-hidden="true">▣</span><span><b>FINANCE-07</b><small>Threat contained</small></span><i aria-hidden="true"></i></div>
+			<div class="endpoint-device endpoint-device--protected"><span class="endpoint-device-icon" aria-hidden="true">⌘</span><span><b>OPS-LAPTOP-1</b><small>Protected</small></span><i aria-hidden="true"></i></div>
+			<div class="endpoint-device endpoint-device--protected"><span class="endpoint-device-icon" aria-hidden="true">▣</span><span><b>SERVER-03</b><small>Protected</small></span><i aria-hidden="true"></i></div>
+		</div>
+		<div class="endpoint-preview-footer"><span>Devices monitored</span><strong>04 / 04</strong></div>
+	</div>
+
+	<div id="{{ $id }}-panel-response" class="endpoint-preview-panel" role="tabpanel" aria-labelledby="{{ $id }}-tab-response" data-endpoint-panel="response" hidden>
+		<div class="endpoint-preview-panel-title"><span>Incident response</span><span>CASE #0248</span></div>
+		<ol class="endpoint-timeline">
+			<li class="is-complete"><span>01</span><div><b>Identify</b><small>Suspicious activity flagged</small></div><i aria-hidden="true"></i></li>
+			<li class="is-complete"><span>02</span><div><b>Contain</b><small>Endpoint safely isolated</small></div><i aria-hidden="true"></i></li>
+			<li class="is-current"><span>03</span><div><b>Remediate</b><small>Threat removed from device</small></div><i aria-hidden="true"></i></li>
+			<li><span>04</span><div><b>Recover</b><small>Restore and verify systems</small></div><i aria-hidden="true"></i></li>
+		</ol>
+		<div class="endpoint-preview-footer"><span>Response workflow</span><strong>In progress</strong></div>
+	</div>
+</div>

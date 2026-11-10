@@ -105,6 +105,40 @@
     </script>
 
     <script>
+      document.querySelectorAll("[data-endpoint-preview]").forEach((preview) => {
+        const tabs = [...preview.querySelectorAll("[data-endpoint-tab]")];
+        const panels = [...preview.querySelectorAll("[data-endpoint-panel]")];
+
+        const activateTab = (tab) => {
+          tabs.forEach((item) => {
+            const selected = item === tab;
+            item.setAttribute("aria-selected", String(selected));
+            item.tabIndex = selected ? 0 : -1;
+          });
+          panels.forEach((panel) => {
+            panel.hidden = panel.dataset.endpointPanel !== tab.dataset.endpointTab;
+          });
+        };
+
+        tabs.forEach((tab, index) => {
+          tab.addEventListener("click", () => activateTab(tab));
+          tab.addEventListener("keydown", (event) => {
+            if (event.key !== "ArrowLeft" && event.key !== "ArrowRight" && event.key !== "Home" && event.key !== "End") {
+              return;
+            }
+
+            event.preventDefault();
+            const nextIndex = event.key === "Home" ? 0
+              : event.key === "End" ? tabs.length - 1
+                : (index + (event.key === "ArrowRight" ? 1 : tabs.length - 1)) % tabs.length;
+            tabs[nextIndex].focus();
+            activateTab(tabs[nextIndex]);
+          });
+        });
+      });
+    </script>
+
+    <script>
       const navigationMenu = document.getElementById("navigation");
       const navigationToggle = document.querySelector(".navbar-toggler");
       if (navigationMenu) {
