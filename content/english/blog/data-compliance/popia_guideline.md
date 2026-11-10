@@ -17,7 +17,7 @@ draft: false
 
 ## Navigating POPIA Compliance for South African SMEs in 2026
 
-South Africa's **Protection of Personal Information Act (POPIA)** protects personal data, forcing SMEs to handle customer, employee, and supplier info responsibly. Non-compliance risks fines up to <span style="color: crimson">**R10 million or 10 years' imprisonment**</span>—but getting it right builds trust and avoids breaches. [SME South Africa](https://smesouthafrica.co.za/what-small-businesses-need-to-do-to-stay-popia-compliant/)
+South Africa's **Protection of Personal Information Act (POPIA)** protects personal data, forcing SMEs to handle customer, employee, and supplier info responsibly. Non-compliance risks fines up to <span class="article-warning">**R10 million or 10 years' imprisonment**</span>—but getting it right builds trust and avoids breaches. [SME South Africa](https://smesouthafrica.co.za/what-small-businesses-need-to-do-to-stay-popia-compliant/)
 
 ## What is POPIA? A Quick Guide for SMEs
 

@@ -2,7 +2,51 @@
     --muchatech-color-primary: #2be9f0;
     --muchatech-color-secondary: #fc21d1;
     --muchatech-color-tertiary: #4d4b4b;
+    --muchatech-color-text-muted: #b7c1c9;
+    --muchatech-color-text-accent: #ff83df;
 }
+
+body {
+    color: var(--muchatech-color-text-muted);
+}
+
+.title p,
+.portfolio .portfolio-filter .btn,
+.post-time,
+.post-meta > span,
+.simple-icon,
+.pagination .page-item .page-link {
+    color: var(--muchatech-color-text-muted);
+}
+
+.error {
+    color: #ff9da7;
+}
+
+.pagination .page-item .page-link:hover,
+.pagination .page-item.active .page-link {
+    color: #171d21;
+}
+
+code {
+    color: var(--muchatech-color-text-accent);
+}
+
+.btn-main {
+    color: #171d21;
+}
+
+.btn-main:hover {
+    border-color: #1f7778;
+    background: #1f7778;
+    color: #fff;
+}
+
+.btn-transparent:hover,
+.btn-transparent:focus {
+    color: #171d21;
+}
+
 .btn-transparent:focus {
     background-color: var(--muchatech-color-primary);
 }
@@ -21,7 +65,6 @@
 code {
     font-family: "Oswald";
     font-size: 88.5%;
-    color: var(--muchatech-color-secondary);
 }
 .member-photo .mask {
     background-color: rgba(16.86, 91.37, 94.12, 0.85);
@@ -31,6 +74,7 @@ code {
 }
 #my-form-button:hover {
     background-color: var(--muchatech-color-secondary);
+    color: #171d21;
 }
 .counters-item span {
     color: var(--muchatech-color-primary);
@@ -158,7 +202,7 @@ code {
     border-color: var(--muchatech-color-secondary);
     background: var(--muchatech-color-secondary);
     box-shadow: 0 12px 28px rgba(252, 33, 209, 0.22);
-    color: #fff;
+    color: #171d21;
 }
 
 #cta.call-to-action .btn-main:focus-visible {
@@ -440,6 +484,10 @@ code {
     color: #e4e8eb;
     font-size: 1.05rem;
     line-height: 1.8;
+}
+
+.post-single-content .article-warning {
+    color: #ff9da7;
 }
 
 .post-single-content a {
@@ -991,7 +1039,7 @@ code {
     width: 100%;
     padding: 25px;
     background-color: coral;
-    color: white;
+    color: #25211f;
     font-size: 25px;
 }
 /** Tools section css
@@ -1090,7 +1138,7 @@ fieldset {
 .fs-button {
     background-color: var(--muchatech-color-primary);
     border-radius: 0.375rem;
-    color: white;
+    color: #171d21;
     cursor: pointer;
     font-size: 0.875rem;
     font-weight: 500;
@@ -1102,9 +1150,11 @@ fieldset {
 }
 .fs-button:hover {
     background-color: var(--muchatech-color-secondary);
+    color: #171d21;
 }
 .fs-button:focus-visible {
     background-color: var(--muchatech-color-secondary);
+    color: #171d21;
     outline: 3px solid var(--muchatech-color-tertiary);
 }
 .fs-input, .fs-select {
@@ -1802,7 +1852,7 @@ fieldset {
     transform: translateY(-2px);
     border-color: var(--muchatech-color-secondary);
     background: var(--muchatech-color-secondary);
-    color: #fff;
+    color: #171d21;
 }
 
 #contact form.form-meghna #contact-submit:focus-visible {
@@ -2067,7 +2117,7 @@ fieldset {
     border: 1px solid transparent;
     border-radius: 7px 7px 0 0;
     background: transparent;
-    color: #97a5ae;
+    color: var(--muchatech-color-text-muted);
     cursor: pointer;
     font-size: 0.72rem;
     font-weight: 600;
@@ -2137,7 +2187,7 @@ fieldset {
 }
 
 .endpoint-feed-line time {
-    color: #788892;
+    color: var(--muchatech-color-text-muted);
     font-family: monospace;
     font-size: 0.66rem;
 }
@@ -2147,7 +2197,7 @@ fieldset {
     padding: 0.16rem 0.4rem;
     border-radius: 4px;
     background: rgba(252, 97, 112, 0.12);
-    color: #ff8994;
+    color: #ff9da7;
     font-size: 0.57rem;
     font-weight: 700;
     letter-spacing: 0.04em;
@@ -2184,7 +2234,7 @@ fieldset {
     margin-top: 0.95rem;
     padding-top: 0.75rem;
     border-top: 1px solid rgba(255, 255, 255, 0.08);
-    color: #91a0a9;
+    color: var(--muchatech-color-text-muted);
     font-size: 0.68rem;
 }
 
@@ -2241,7 +2291,7 @@ fieldset {
 
 .endpoint-device small {
     margin-top: 0.22rem;
-    color: #91a0a9;
+    color: var(--muchatech-color-text-muted);
     font-size: 0.57rem;
 }
 
@@ -2255,7 +2305,7 @@ fieldset {
 
 .endpoint-device--alert .endpoint-device-icon {
     background: rgba(240, 173, 78, 0.12);
-    color: #f0ad4e;
+    color: #ffd08a;
 }
 
 .endpoint-device--alert > i {
@@ -2278,7 +2328,7 @@ fieldset {
     align-items: center;
     gap: 0.65rem;
     min-height: 49px;
-    color: #7f8e97;
+    color: var(--muchatech-color-text-muted);
 }
 
 .endpoint-timeline li:not(:last-child)::after {
@@ -2313,7 +2363,7 @@ fieldset {
 
 .endpoint-timeline li small {
     margin-top: 0.12rem;
-    color: #8998a1;
+    color: var(--muchatech-color-text-muted);
     font-size: 0.61rem;
 }
 

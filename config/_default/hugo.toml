@@ -90,7 +90,7 @@ link = "plugins/google-map/map.js"
 
 ############################# Default Parameters ##########################
 [params]
-logo = "images/V1.webp"
+logo = "images/V1-contrast.webp"
 # Meta data
 description = "Unlock Secure Ops: Cybersecurity + Automation Mastery Company."
 author = "Motape Oswald Langa"
