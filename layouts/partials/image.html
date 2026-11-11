@@ -1,0 +1,36 @@
+{{- $src := .Src -}}
+{{- $class := .Class | default "" -}}
+{{- $source := resources.Get $src -}}
+{{- if $source -}}
+  {{- if in (slice ".svg" ".gif") (path.Ext $src) -}}
+    <img src="{{ $source.RelPermalink }}" alt="{{ .Alt | default "" }}" class="{{ $class }}" loading="lazy" decoding="async">
+  {{- else -}}
+    {{- $widths := slice -}}
+    {{- range (slice 320 480 640 960 1110) -}}
+      {{- if le . $source.Width -}}
+        {{- $widths = $widths | append . -}}
+      {{- end -}}
+    {{- end -}}
+    {{- if and (le $source.Width 1110) (not (in $widths $source.Width)) -}}
+      {{- $widths = $widths | append $source.Width -}}
+    {{- end -}}
+    {{- $srcset := slice -}}
+    {{- range $widths -}}
+      {{- $variant := $source.Resize (printf "%dx webp q80" .) -}}
+      {{- $srcset = $srcset | append (printf "%s %dw" $variant.RelPermalink .) -}}
+    {{- end -}}
+    {{- $fallbackWidth := index $widths (sub (len $widths) 1) -}}
+    {{- $fallback := $source.Resize (printf "%dx webp q80" $fallbackWidth) -}}
+    {{- $sizes := .Sizes | default "(max-width: 575px) calc(100vw - 30px), (max-width: 991px) 50vw, 370px" -}}
+    {{- if or (strings.Contains $class "testimonial-image") (strings.Contains $class "rounded-circle") -}}
+      {{- $sizes = .Sizes | default "128px" -}}
+    {{- end -}}
+    <img src="{{ $fallback.RelPermalink }}" srcset="{{ delimit $srcset ", " }}" sizes="{{ $sizes }}" alt="{{ .Alt | default "" }}" class="{{ $class }}" width="{{ $source.Width }}" height="{{ $source.Height }}" loading="lazy" decoding="async">
+  {{- end -}}
+{{- else if hasPrefix $src "http" -}}
+  <img src="{{ $src | safeURL }}" alt="{{ .Alt | default "" }}" class="{{ $class }}" loading="lazy" decoding="async">
+{{- else if fileExists (path.Join "static" $src) -}}
+  <img src="{{ $src | relURL }}" alt="{{ .Alt | default "" }}" class="{{ $class }}" loading="lazy" decoding="async">
+{{- else -}}
+  {{- errorf "Image %q was not found in assets, page resources, or static" $src -}}
+{{- end -}}

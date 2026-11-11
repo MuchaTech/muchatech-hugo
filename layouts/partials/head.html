@@ -25,7 +25,9 @@
 
 	{{ "<!-- plugins -->" | safeHTML }}
 	{{ range site.Params.plugins.css }}
+	{{ if or (not .homeOnly) $.IsHome }}
 	<link rel="stylesheet" href="{{ .link | absURL }}">
+	{{ end }}
 	{{ end }}
 
 	{{"<!-- Main Stylesheet -->"|safeHTML}}

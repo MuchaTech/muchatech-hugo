@@ -66,8 +66,10 @@ link = "plugins/bootstrap/bootstrap.min.css"
 link = "plugins/themify-icons/themify-icons.css"
 [[params.plugins.css]]
 link = "plugins/magnific-popup/magnific-popup.css"
+homeOnly = true
 [[params.plugins.css]]
 link = "plugins/slick/slick.css"
+homeOnly = true
 [[params.plugins.css]]
 link = "https://fonts.googleapis.com/css?family=Anaheim|Quattrocento+Sans:400,700&display=swap"
 
@@ -78,14 +80,15 @@ link = "plugins/jquery/jquery.min.js"
 link = "plugins/bootstrap/bootstrap.min.js"
 [[params.plugins.js]]
 link = "plugins/slick/slick.min.js"
+homeOnly = true
 [[params.plugins.js]]
 link = "plugins/shuffle/shuffle.min.js"
+homeOnly = true
 [[params.plugins.js]]
 link = "plugins/magnific-popup/jquery.magnific-popup.min.js"
+homeOnly = true
 [[params.plugins.js]]
 link = "plugins/lazy-load/lozad.min.js"
-[[params.plugins.js]]
-link = "plugins/google-map/map.js"
 
 
 ############################# Default Parameters ##########################
@@ -159,4 +162,4 @@ weight = 2
 
 [Languages.fr.params]
 home = "Accueil"
-copyright = "Copyright &copy; 2020-2026 Designed by [MuchaTech](https://github.com/muchatech) & Developed by [MuchaTech](https://github.com/muchatech)"
+copyright = "Copyright &copy; 2020-2026 Designed & Developed by [MuchaTech](https://github.com/muchatech)"
