@@ -174,11 +174,13 @@
 
   const cookieBox = document.getElementById("js-cookie-box");
   const cookieButton = document.getElementById("js-cookie-button");
-  if (cookieBox && cookieButton && window.Cookies && !window.Cookies.get("cookie-box")) {
+  const cookieAccepted = document.cookie.split("; ").some((cookie) => cookie.startsWith("cookie-box="));
+  if (cookieBox && cookieButton && !cookieAccepted) {
     const expireDays = Number(cookieBox.dataset.expireDays);
     cookieBox.classList.remove("cookie-box-hide");
     cookieButton.addEventListener("click", () => {
-      window.Cookies.set("cookie-box", true, { expires: expireDays });
+      const expires = new Date(Date.now() + expireDays * 86400000).toUTCString();
+      document.cookie = `cookie-box=true; expires=${expires}; path=/; SameSite=Lax`;
       cookieBox.classList.add("cookie-box-hide");
     });
   }

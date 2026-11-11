@@ -2,8 +2,15 @@
 {{- $class := .Class | default "" -}}
 {{- $source := resources.Get $src -}}
 {{- if $source -}}
+  {{- $width := $source.Width -}}
+  {{- $height := $source.Height -}}
+  {{- if or (not $width) (not $height) -}}
+    {{- $imageConfig := imageConfig (printf "assets/%s" $src) -}}
+    {{- $width = $imageConfig.Width -}}
+    {{- $height = $imageConfig.Height -}}
+  {{- end -}}
   {{- if in (slice ".svg" ".gif") (path.Ext $src) -}}
-    <img src="{{ $source.RelPermalink }}" alt="{{ .Alt | default "" }}" class="{{ $class }}" loading="lazy" decoding="async">
+    <img src="{{ $source.RelPermalink }}" alt="{{ .Alt | default "" }}" class="{{ $class }}" width="{{ $width }}" height="{{ $height }}" loading="lazy" decoding="async">
   {{- else -}}
     {{- $widths := slice -}}
     {{- range (slice 320 480 640 960 1110) -}}
@@ -28,9 +35,14 @@
     <img src="{{ $fallback.RelPermalink }}" srcset="{{ delimit $srcset ", " }}" sizes="{{ $sizes }}" alt="{{ .Alt | default "" }}" class="{{ $class }}" width="{{ $source.Width }}" height="{{ $source.Height }}" loading="lazy" decoding="async">
   {{- end -}}
 {{- else if hasPrefix $src "http" -}}
-  <img src="{{ $src | safeURL }}" alt="{{ .Alt | default "" }}" class="{{ $class }}" loading="lazy" decoding="async">
+  {{- if and .Width .Height -}}
+    <img src="{{ $src | safeURL }}" alt="{{ .Alt | default "" }}" class="{{ $class }}" width="{{ .Width }}" height="{{ .Height }}" loading="lazy" decoding="async">
+  {{- else -}}
+    {{- errorf "Lazy-loaded remote image %q requires Width and Height" $src -}}
+  {{- end -}}
 {{- else if fileExists (path.Join "static" $src) -}}
-  <img src="{{ $src | relURL }}" alt="{{ .Alt | default "" }}" class="{{ $class }}" loading="lazy" decoding="async">
+  {{- $imageConfig := imageConfig (printf "static/%s" $src) -}}
+  <img src="{{ $src | relURL }}" alt="{{ .Alt | default "" }}" class="{{ $class }}" width="{{ $imageConfig.Width }}" height="{{ $imageConfig.Height }}" loading="lazy" decoding="async">
 {{- else -}}
   {{- errorf "Image %q was not found in assets, page resources, or static" $src -}}
 {{- end -}}

@@ -22,25 +22,24 @@
 </footer>
 
 {{ if site.Params.map.enable }}
-<script src="{{ site.Params.map.gmap_api | safeURL }}"></script>
-<script src="{{ "plugins/google-map/map.js" | absURL }}"></script>
+<script defer src="{{ site.Params.map.gmap_api | safeURL }}"></script>
+<script defer src="{{ "plugins/google-map/map.js" | absURL }}"></script>
 {{ end }}
 
 {{ range site.Params.plugins.js }}
 {{ if or (not .homeOnly) $.IsHome }}
-<script src="{{ .link | absURL }}"></script>
+<script defer src="{{ .link | absURL }}"></script>
 {{ end }}
 {{ end }}
 
 {{ $script := resources.Get "js/script.js" | minify | fingerprint "sha384" }}
-<script src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}"></script>
+<script defer src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}"></script>
 
 {{ if site.Params.cookies.enable }}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
 <div id="js-cookie-box" class="cookie-box cookie-box-hide" data-expire-days="{{ site.Params.cookies.expire_days }}">
   This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-transparent">I Accept</span>
 </div>
 {{ end }}
 
 {{ $siteScript := resources.Get "js/site.js" | minify | fingerprint "sha384" }}
-<script src="{{ $siteScript.Permalink }}" integrity="{{ $siteScript.Data.Integrity }}"></script>
+<script defer src="{{ $siteScript.Permalink }}" integrity="{{ $siteScript.Data.Integrity }}"></script>

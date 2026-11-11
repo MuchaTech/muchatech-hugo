@@ -22,21 +22,24 @@
 	<!-- theme meta -->
 	<meta name="theme-name" content="meghna-hugo" />
 	{{ hugo.Generator }}
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 	{{ "<!-- plugins -->" | safeHTML }}
 	{{ range site.Params.plugins.css }}
 	{{ if or (not .homeOnly) $.IsHome }}
+	{{ if or (hasPrefix .link "http") .defer }}
+	<link rel="stylesheet" href="{{ .link | absURL }}" media="print" onload="this.media='all'">
+	<noscript><link rel="stylesheet" href="{{ .link | absURL }}"></noscript>
+	{{ else }}
 	<link rel="stylesheet" href="{{ .link | absURL }}">
+	{{ end }}
 	{{ end }}
 	{{ end }}
 
 	{{"<!-- Main Stylesheet -->"|safeHTML}}
-	{{ $styles := resources.Get "css/style.css" | minify }}
-	<link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
-
-	{{"<!-- Custom stylesheet - for your changes -->" |safeHTML}}
-	{{ $custom := resources.Get "css/custom.css" | minify }}
-	<link rel="stylesheet" href="{{ $custom.Permalink }}" media="screen">
+	{{ $styles := slice (resources.Get "css/style.css") (resources.Get "css/custom.css") | resources.Concat "css/site.css" | minify | fingerprint }}
+	<link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
 
 	{{ "<!--Favicon-->" | safeHTML }}
 	<link rel="shortcut icon" href="{{ `images/favicon.png` | absURL }}" type="image/x-icon">
@@ -44,13 +47,19 @@
 
 	{{ with site.Params.google_analytics_id }}
 	{{ "<!-- Global Site Tag (gtag.js) - Google Analytics -->" | safeHTML }}
-	<script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
 	<script>
 	  window.dataLayer = window.dataLayer || [];
 	  function gtag(){dataLayer.push(arguments);}
 	  gtag('js', new Date());
-
 	  gtag('config', '{{ . }}');
+	  var analyticsScript = document.createElement('script');
+	  analyticsScript.async = true;
+	  analyticsScript.src = 'https://www.googletagmanager.com/gtag/js?id={{ . }}';
+	  if ('requestIdleCallback' in window) {
+	    window.requestIdleCallback(function () { document.head.appendChild(analyticsScript); }, { timeout: 2000 });
+	  } else {
+	    window.addEventListener('load', function () { window.setTimeout(function () { document.head.appendChild(analyticsScript); }, 1000); }, { once: true });
+	  }
 	</script>
 	{{ end }}
 

@@ -67,9 +67,11 @@ link = "plugins/themify-icons/themify-icons.css"
 [[params.plugins.css]]
 link = "plugins/magnific-popup/magnific-popup.css"
 homeOnly = true
+defer = true
 [[params.plugins.css]]
 link = "plugins/slick/slick.css"
 homeOnly = true
+defer = true
 [[params.plugins.css]]
 link = "https://fonts.googleapis.com/css?family=Anaheim|Quattrocento+Sans:400,700&display=swap"
 
@@ -151,7 +153,7 @@ contentDir = "content/english"
 [Languages.en.params]
 weight = 1
 home = "Home"
-copyright = "Copyright &copy; 2020-2026 Designed by [MuchaTech](https://github.com/muchatech) & Developed by [MuchaTech](https://github.com/muchatech)"
+copyright = "Copyright &copy; 2020-2026 Designed & Developed by [MuchaTech](https://github.com/muchatech)"
 
 ################################ France Language ########################
 [Languages.fr]
