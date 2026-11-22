@@ -9,25 +9,25 @@ cybersecurity:
   security_domains:
     # service item loop
     - title: Security Architecture & Engineering
-      icon: ti-shield # themify icon pack : https://themify.me/themify-icons
+      icon: ti-layout # themify icon pack : https://themify.me/themify-icons
       content: Redesign and implementation of zero trust security measures to protect organization's assets.
 
     - title: MDR - 24/7 Security Operation Center `{SOC}`
-      icon: ti-shield
+      icon: ti-eye
       content: Day-to-day monitoring, threat detection, incidents and threats response.
 
     - title: Continuous Security Assessments
-      icon: ti-shield
+      icon: ti-clipboard
       content: Proactively finding weaknesses through audits, pen-testing and scanning of business environments.
 
     - title: Security Penetration Testing
-      icon: ti-shield
+      icon: ti-target
       content: Strengthen defenses proactively by simulating Black Box cyberattacks to uncover vulnerabilities in systems, networks, or applications.
 
     - title: Privacy and Anonymity
-      icon: ti-shield
+      icon: ti-lock
       content: Ensuring individuals' personal information and online activities remain secure and protected.
 
     - title: Dark Web Monitoring
-      icon: ti-shield
+      icon: ti-world
       content: Monitor, detect, and respond to security-related events and incidents.

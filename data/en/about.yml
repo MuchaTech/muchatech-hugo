@@ -3,14 +3,14 @@ about:
   enable: true
   title: About Us
   about_item:
-    - icon: ti-thought # themify icon pack : https://themify.me/themify-icons
+    - icon: ti-arrow-up # themify icon pack : https://themify.me/themify-icons
       title: We're Progressive.
       content: Security is an ongoing process. We stay current through research and hands-on testing.
 
-    - icon: ti-thought
+    - icon: ti-bolt
       title: We're Agile.
       content: We embrace adaptable methods to thrive in an ever-evolving, interconnected, data-driven world.
 
-    - icon: ti-thought
+    - icon: ti-location-pin
       title: We're Local.
       content: We combine local expertise with low-latency support and a commitment to compliance.

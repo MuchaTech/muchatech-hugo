@@ -9,13 +9,13 @@ automation_tools:
   automation_domains:
     # service item loop
     - title: Mission-Critical ICS Automation
-      icon: ti-shield
+      icon: ti-harddrives # themify icon pack : https://themify.me/themify-icons
       content: Automate physical processes through hardware and software to monitor and control machinery with minimal human intervention.
 
     - title: Security Orchestration Automation Response - (SOAR)
-      icon: ti-shield
+      icon: ti-loop
       content: Integrate security tools to automate incident detection, investigation, and remediation, accelerating threat response for overwhelmed SecOps teams.
 
     - title: Robotic Process Automation - (RPA)
-      icon: ti-shield
+      icon: ti-reload
       content: Automates log monitoring, threat detection alerts, and compliance reporting to minimize manual risks.

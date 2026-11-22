@@ -8,25 +8,25 @@ research_development:
   research_domains:
     # service item loop
     - title: AI & Machine Learning Security
-      icon: ti-shield # themify icon pack : https://themify.me/themify-icons
+      icon: ti-thought # themify icon pack : https://themify.me/themify-icons
       content: Use AI to improve threat detection and protect AI systems from adversarial attacks.
 
-    - title: Privacy-Enhancing Technologies 
-      icon: ti-shield 
+    - title: Privacy-Enhancing Technologies
+      icon: ti-id-badge
       content: Enable data analysis and sharing while protecting individual privacy.
 
-    - title: Quantum Computing & Cryptography 
-      icon: ti-shield 
+    - title: Quantum Computing & Cryptography
+      icon: ti-infinite
       content: Prepare for quantum computers that could break today's encryption.
-      
+
     - title: Network Security & Measurement
-      icon: ti-shield 
+      icon: ti-signal
       content: Protect sensitive data, prevent financial losses, and maintain customer trust.
-      
-    - title: IoT & Cyber-Physical Systems Security 
-      icon: ti-shield 
+
+    - title: IoT & Cyber-Physical Systems Security
+      icon: ti-tablet
       content: Securing connected devices from smart homes to industrial control systems.
-      
-    - title: Human-Centered Security 
-      icon: ti-shield 
+
+    - title: Human-Centered Security
+      icon: ti-user
       content: Understanding and mitigating the human element - often the weakest link.
