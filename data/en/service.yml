@@ -5,7 +5,7 @@ service:
   service_item:
     # service item loop
     - name: Managed Cybersecurity
-      icon: ti-layers-alt # themify icon pack : https://themify.me/themify-icons
+      icon: ti-shield # themify icon pack : https://themify.me/themify-icons
       content: Protect your connected systems and business assets in today's data-driven world.
       link: "/services/managed-cybersecurity/"
       starting_price: "R10 000 / month"
@@ -13,7 +13,7 @@ service:
 
     # service item loop
     - name: Automation & Tools
-      icon: ti-palette
+      icon: ti-settings
       content: Enhance productivity and streamline operational workflows to improve client service and speed up delivery.
       link: "/services/automation-and-tools/"
       starting_price: "R15 000 / project"
@@ -21,8 +21,16 @@ service:
 
     # service item loop
     - name: Cybersecurity R&D
-      icon: ti-package
+      icon: ti-light-bulb
       content: We help anticipate tomorrow's threats and advance South Africa's cyber future through a secure software development lifecycle (SSDLC).
       link: "/services/research-and-development/"
       starting_price: "R25 000 / engagement"
       audience: "Product teams · Industrial · Research"
+
+    # service item loop
+    - name: Security Training
+      icon: ti-blackboard
+      content: Practical sessions that turn security policy into practised behaviour for staff, technical teams and leadership.
+      link: "/services/security-training/"
+      starting_price: "R7 500 / session"
+      audience: "All staff · Technical teams · Leadership"

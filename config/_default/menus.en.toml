@@ -30,6 +30,12 @@ url = "/services/research-and-development/"
 weight = 3
 
 [[main]]
+parent = "services"
+name = "Security Training"
+url = "/services/security-training/"
+weight = 4
+
+[[main]]
 name = "portfolio"
 url = "#portfolio"
 weight = 3

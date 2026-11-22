@@ -1,0 +1,124 @@
+MuchaTech store plan - selling security tools and software
+Saved: 2026-11-22
+Status: planned, not started. Full design notes are in the session; this file is the executable checklist.
+
+GOAL
+Turn the free tools catalog into free + paid products:
+- Free section stays ungated (lead generation).
+- Paid products are sold with PayFast for recurring subscriptions and Paystack for once-off payments.
+- Payments only matter if delivery works: every paid product needs an entitlement (licence key and/or gated access).
+
+PRODUCT SHAPES (decide per product before building)
+- Hosted tool/SaaS  -> account + entitlement check on every request.
+- Downloadable software -> licence key + signed, expiring download link.
+- Self-hosted / on-prem -> licence file, per-seat or per-site, renewals.
+
+INFORMATION ARCHITECTURE
+- /tools/            hub with "Free" and "Paid" sections (free stays as-is).
+- /tools/<slug>/     paid product page: what it does, licence, price, FAQ, buy CTA.
+- /checkout/success/ static thank-you page (no sensitive data in the URL).
+- /checkout/cancel/  static "nothing was charged" page.
+- /account/          phase 4: magic-link portal (downloads, invoices, cancel).
+
+ARCHITECTURE
+Browser -> static Hugo catalog and product pages
+  one-off  -> POST /api/checkout/paystack -> Paystack initialize -> redirect to Paystack
+  recurring-> POST /api/checkout/payfast  -> signed form POST -> redirect to PayFast
+Paystack -> webhook (/api/webhooks/paystack, HMAC-SHA512 on raw body)
+PayFast  -> ITN     (/api/webhooks/payfast, signature + validate postback)
+both -> Postgres (orders, subscriptions, entitlements) -> email (licence + signed download link)
+
+STACK
+- Vercel Functions (Node/TypeScript) in the api/ directory alongside the static public/ output.
+- Postgres (Neon via Vercel Marketplace) for orders, subscriptions, entitlements.
+- Resend (or similar) for transactional email.
+- Private blob storage for installers. Never put paid files in static/ or public/.
+- Secrets live in Vercel environment variables only.
+
+PHASE 0 - Decisions and accounts
+[ ] Choose the first paid product and its shape (hosted / downloadable / self-hosted).
+[ ] Set price and billing interval (monthly, annual, or both).
+[ ] Choose licence model: per user, per site, or per company.
+[ ] Confirm VAT registration status (changes price display and invoices).
+[ ] Write refund and cancellation policy; pick support email address.
+[ ] Open/verify PayFast merchant account (recurring enabled) and Paystack account.
+[ ] Draft EULA / licence terms and POPIA privacy notice for customer data.
+
+PHASE 1 - Paid catalog UI only (no payments, no keys needed)
+[ ] Add data/en/products.yml (slug, name, type, price_cents, currency, interval, active).
+[ ] Extend /tools/ with a Paid section, keeping the free tools untouched.
+[ ] Build /tools/<slug>/ product pages from the existing service-page components.
+[ ] Add licence/pricing/FAQ blocks and a "Buy" CTA that is disabled until phase 2.
+[ ] Add product pages to the sitemap and navigation.
+
+PHASE 2 - Paystack once-off (prove the pipeline with the simpler gateway)
+[ ] api/checkout/paystack.ts: look up price server-side, initialize transaction (ZAR, cents, unique reference, callback_url, metadata).
+[ ] api/webhooks/paystack.ts: verify x-paystack-signature over the raw body, re-verify via API, check amount/currency/reference.
+[ ] Postgres schema + idempotent order fulfilment keyed on provider reference.
+[ ] Issue entitlement + licence key on success.
+[ ] Email receipt, licence key and signed download link.
+[ ] api/download.ts: entitlement check, then time-limited signed URL.
+[ ] Sandbox tests: valid/invalid signature, amount tampering, duplicate webhook, expired link.
+
+PHASE 3 - PayFast recurring subscriptions
+[ ] api/checkout/payfast.ts: build checkout form with merchant_id, merchant_key, m_payment_id, amount, item_name, email, return/cancel/notify URLs.
+[ ] Add recurring fields: subscription_type=1, billing_date, recurring_amount, frequency (3 monthly / 6 annual), cycles (0 = indefinite).
+[ ] Sign fields in order with the merchant passphrase (required for subscriptions).
+[ ] api/webhooks/payfast.ts: verify signature, validate ITN by posting back to PayFast, check payment_status, merchant id and amount.
+[ ] On ITN: create/extend subscription, grant entitlement, set current_period_end.
+[ ] Handle failed/cancelled recurring ITNs (revoke access, notify customer).
+[ ] Manual cancellation path for v1 (support email), portal later.
+[ ] Sandbox ITN tests including replayed and invalid payloads.
+
+PHASE 4 - Customer portal (optional for launch)
+[ ] Email magic-link login (no passwords).
+[ ] List purchases, re-download files, view invoices, cancel subscription.
+[ ] Accessible from the purchase emails and /account/.
+
+PHASE 5 - Hardening and launch
+[ ] Sandbox end-to-end run for both gateways, then a small live test purchase.
+[ ] Monitoring/alerting on failed webhooks and pending orders; reconciliation query/report.
+[ ] Refund runbook and ledger entry process.
+[ ] Terms, privacy, refund policy and EULA pages linked from checkout.
+[ ] VAT-compliant invoices if registered.
+
+SECURITY RULES (do not skip)
+- Never trust a price or amount sent by the browser; always look up server-side.
+- Verify webhook signatures before any database write.
+- Idempotency on provider reference; store payload hashes to detect replays.
+- Hosted checkout pages only (PCI SAQ-A). No card data touches the site.
+- Licence keys: 128-bit random, revocable. Downloads: signed URLs with short expiry.
+- Log without card or personal data; secrets only in the hosting environment.
+
+DATA MODEL
+products      (id, slug, name, type, price_cents, currency, interval, active)
+customers     (id, email, name, created_at)
+orders        (id, provider, provider_ref, product_id, customer_id, amount, currency, status, created_at)
+subscriptions (id, provider_token, customer_id, product_id, status, current_period_end, cycles, cancelled_at)
+entitlements  (id, customer_id, product_id, license_key, kind, expires_at, revoked_at)
+webhook_events(provider, event_id, payload_sha256, received_at)  unique(provider, event_id)
+
+FILE MAP
+data/en/products.yml
+content/english/store/_index.md
+content/english/store/<slug>.md
+layouts/store/{list,single}.html
+layouts/partials/store/buy.html
+api/checkout/paystack.ts
+api/checkout/payfast.ts
+api/webhooks/paystack.ts
+api/webhooks/payfast.ts
+api/download.ts
+lib/{db,payfast,paystack,email,licensing}.ts
+
+OPEN QUESTIONS
+- Which product launches first, and is it hosted or downloadable?
+- Subscription prices and intervals.
+- Licence model (user / site / company).
+- VAT registered or not.
+- Refund policy and support address.
+- Are both merchant accounts live, or sandbox only?
+
+REFERENCES
+- PayFast recurring billing guide: https://payfast.io/blog/how-to-automate-subscriptions-a-complete-guide-to-recurring-payments-in-sa/
+- Paystack: initialize transaction + webhook signature verification (HMAC-SHA512) in their API docs.

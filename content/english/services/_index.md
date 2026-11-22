@@ -1,4 +1,4 @@
 ---
 title: "Services"
-description: "Managed cybersecurity, security automation and cybersecurity research for South African SMEs, enterprises and industrial teams."
+description: "Managed cybersecurity, security automation, cybersecurity research and security training for South African SMEs, enterprises and industrial teams."
 ---

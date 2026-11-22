@@ -12,37 +12,61 @@
 					<div class="border-meghna"></div>
 				</div>
 			</div>
+		</div>
 
-			<div class="contact-info col-12 wow fadeInUp" data-wow-duration="500ms">
-				<div class="contact-intro">
-					<h3>{{ .subtitle | markdownify }}</h3>
-					<p>{{ .content | markdownify }}</p>
+		<div class="row contact-layout">
+			<div class="contact-details-column col-12 col-lg-5 wow fadeInUp" data-wow-duration="500ms">
+				<div class="contact-info">
+					<div class="contact-intro">
+						<h3>{{ .subtitle | markdownify }}</h3>
+						<p>{{ .content | markdownify }}</p>
+					</div>
+
+					<div class="contact-details">
+						{{ range .contact_list }}
+						<div class="con-info clearfix">
+							<i class="{{ .icon }}"></i>
+							<span>{{ .info }}</span>
+						</div>
+						{{ end }}
+					</div>
 				</div>
 
-				<div class="contact-details">
-					{{ range .contact_list }}
-					<div class="con-info clearfix">
-						<i class="{{ .icon }}"></i>
-						<span>{{ .info }}</span>
+				<div class="contact-console d-none d-lg-block" role="group" aria-labelledby="contact-console-title">
+					<div class="contact-console-header">
+						<span class="contact-console-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+						<span class="contact-console-title" id="contact-console-title">Penetration test · simulated</span>
+						<span class="contact-console-status">DEMO</span>
 					</div>
-					{{ end }}
+					<div class="contact-console-body">
+						<p class="console-line"><span class="console-prompt">$</span><span class="console-text">pentest --scope demo.muchatech.app --mode safe</span></p>
+						<p class="console-line"><span class="console-key">[recon]</span><span class="console-text">14 endpoints · 3 auth flows mapped</span></p>
+						<p class="console-line"><span class="console-key">[auth]</span><span class="console-text">session cookie missing HttpOnly</span><span class="console-tag console-tag--p2">P2</span></p>
+						<p class="console-line"><span class="console-key">[tls]</span><span class="console-text">TLS 1.0 still accepted</span><span class="console-tag console-tag--p1">P1</span></p>
+						<p class="console-line"><span class="console-key">[report]</span><span class="console-text">2 findings · remediation plan generated</span><span class="console-cursor" aria-hidden="true"></span></p>
+					</div>
+					<div class="contact-console-footer">
+						<span>Simulated output · no client data</span>
+						<a href="{{ `services/managed-cybersecurity/` | relLangURL }}#included">How we test <span aria-hidden="true">&rarr;</span></a>
+					</div>
 				</div>
 			</div>
 
 			{{ if .contact_form.enable }}
 			{{ with .contact_form }}
-			<div class="contact-form-column col-12 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">
+			<div class="contact-form-column col-12 col-lg-7 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">
 				<form id="contact-form" class="form-meghna" method="post" action="{{ .form_action }}">
 					<div class="row contact-form-grid">
-					<div class="form-group col-12 col-lg-6">
+					<div class="form-group col-12 col-md-6">
 						<label class="fs-label" for="business-area">Business Area</label>
 						<select class="fs-select" id="business-area" name="business-area" required>
 							<option value="Cybersecurity" {{ if eq $contactArea "Cybersecurity" }}selected{{ end }}>Cybersecurity</option>
 							<option value="Automation Tools" {{ if eq $contactArea "Automation Tools" }}selected{{ end }}>Automation Tools</option>
 							<option value="Cybersecurity R&amp;D" {{ if eq $contactArea "Cybersecurity R&D" }}selected{{ end }}>Research &amp; Development</option>
+							<option value="Security Training" {{ if eq $contactArea "Security Training" }}selected{{ end }}>Security Training</option>
 						</select>
 					</div>
-					<div class="form-group col-12 col-lg-6">
+					<div class="form-group col-12 col-md-6">
 						<label class="fs-label" for="request-type">Type of Request</label>
 						<select class="fs-select" id="request-type" name="request-type" required>
 							<option value="Product-inquiry">Plans Inquiry</option>
@@ -50,21 +74,21 @@
 							<option value="General-inquiry">General Inquiry</option>
 						</select>
 					</div>
-					<div class="form-group col-12 col-lg-4">
+					<div class="form-group col-12">
 						<label class="fs-label" for="name">{{ .name }}</label>
 						<input type="text" class="form-control" name="name" id="name" autocomplete="name" required>
 					</div>
-					<div class="form-group col-12 col-lg-4">
+					<div class="form-group col-12 col-md-6">
 						<label class="fs-label" for="email">{{ .email }}</label>
 						<input type="email" class="form-control" name="email" id="email" autocomplete="email" required>
 					</div>
-					<div class="form-group col-12 col-lg-4">
+					<div class="form-group col-12 col-md-6">
 						<label class="fs-label" for="phone-number">{{ .phone }}</label>
 						<input type="tel" class="form-control" name="phone-number" id="phone-number" autocomplete="tel" required>
 					</div>
 					<div class="form-group col-12">
 						<label class="fs-label" for="message">{{ .message }}</label>
-						<textarea rows="6" class="form-control" name="message" id="message"></textarea>
+						<textarea rows="4" class="form-control" name="message" id="message"></textarea>
 					</div>
 					<div class="form-group col-12">
 						<div class="fs-checkbox-field col-span-full">
@@ -85,8 +109,8 @@
 								<p class="fs-description" id="dpa-consent-description">
 									You agree that your data from the form will be collected and processed
 									to answer your request. You can revoke your consent at any time for the
-									future by e-mail to {{ . }}. Detailed information on the handling of
-									user data can be found in our data protection declaration.
+									future by e-mail to {{ . }}. Detailed information on how we handle your
+									data is in our <a href="{{ `privacy/` | relLangURL }}">privacy policy</a>.
 								</p>
 								{{ end }}
 							</div>

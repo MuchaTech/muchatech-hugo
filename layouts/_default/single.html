@@ -21,10 +21,11 @@
       <div class="col-12">
         <div class="row article-reading-layout">
           <main class="{{ if and .Params.toc (gt (len .Fragments.Headings) 0) }}col-lg-8{{ else }}col-lg-8 offset-lg-2{{ end }} article-reading-main">
-            {{ $image := resources.Get .Params.Image }}
-            {{ if not $image }}
-              {{ with .Resources.GetMatch .Params.Image }}
-                {{ $image = . }}
+            {{ $image := "" }}
+            {{ with .Params.Image }}
+              {{ $image = resources.Get . }}
+              {{ if not $image }}
+                {{ with $.Resources.GetMatch . }}{{ $image = . }}{{ end }}
               {{ end }}
             {{ end }}
             {{ with $image }}
@@ -50,7 +51,9 @@
                 </picture>
               </figure>
             {{ else }}
-              {{ errorf "Blog post image %q was not found in assets or page resources for %s" .Params.Image .File.Path }}
+              {{ if eq .Section "blog" }}
+                {{ errorf "Blog post image %q was not found in assets or page resources for %s" .Params.Image .File.Path }}
+              {{ end }}
             {{ end }}
             <div class="post-single-content">
               {{ .Content }}

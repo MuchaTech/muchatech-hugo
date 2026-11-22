@@ -1,0 +1,47 @@
+{{ define "main" }}
+
+{{ partial "navigation.html" . }}
+
+<section class="service-hero service-hero--hub legal-hero" aria-labelledby="legal-title">
+  <div class="container">
+    <nav class="service-breadcrumb" aria-label="Breadcrumb">
+      <a href="{{ site.Home.RelPermalink }}">Home</a>
+      <span aria-hidden="true">/</span>
+      <span>{{ .Title }}</span>
+    </nav>
+    <p class="service-eyebrow">Legal</p>
+    <h1 id="legal-title">{{ .Title }}</h1>
+    {{ with .Description }}
+    <p class="service-hero-sub">{{ . }}</p>
+    {{ end }}
+    {{ with .Params.lastUpdated }}
+    <p class="legal-meta">Last updated <time datetime="{{ (time.AsTime .).Format "2006-01-02" }}">{{ (time.AsTime .).Format "2 January 2006" }}</time></p>
+    {{ end }}
+  </div>
+</section>
+
+<section class="section service-section legal-section">
+  <div class="container">
+    <div class="row article-reading-layout">
+      <main class="{{ if gt (len .Fragments.Headings) 0 }}col-lg-8{{ else }}col-lg-8 offset-lg-2{{ end }} article-reading-main legal-main">
+        <div class="post-single-content legal-content">
+          {{ .Content }}
+        </div>
+        <p class="legal-contact">
+          Questions about this page? <a href="{{ site.Home.RelPermalink }}#contact">Contact us</a>
+          or email <a href="mailto:support@muchatech.com">support@muchatech.com</a>.
+        </p>
+      </main>
+      {{ if gt (len .Fragments.Headings) 0 }}
+      <aside class="col-lg-4 article-reading-sidebar">
+        <div class="article-toc legal-toc">
+          <h2>On this page</h2>
+          {{ .TableOfContents }}
+        </div>
+      </aside>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+{{ end }}
