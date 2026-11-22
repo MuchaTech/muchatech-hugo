@@ -1,0 +1,32 @@
+{{ with .Params.included }}
+<section class="section section-bg service-section" id="included" aria-labelledby="included-title">
+  <div class="container">
+    <div class="title text-center">
+      <h2 id="included-title">What is <span class="color">included</span></h2>
+      <div class="border-meghna"></div>
+    </div>
+    <div class="included-grid">
+      {{ range . }}
+      <article class="included-card">
+        <h3>{{ .title }}</h3>
+        <p>{{ .summary }}</p>
+        <dl class="included-meta">
+          {{ with .deliverable }}
+          <div>
+            <dt>Deliverable</dt>
+            <dd>{{ . }}</dd>
+          </div>
+          {{ end }}
+          {{ with .cadence }}
+          <div>
+            <dt>Cadence</dt>
+            <dd>{{ . }}</dd>
+          </div>
+          {{ end }}
+        </dl>
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

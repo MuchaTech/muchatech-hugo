@@ -1,4 +1,4 @@
-{{ if and .IsPage (eq .Section "blog") }}
+{{ if and .IsPage (in (slice "blog" "services") .Section) }}
   {{ $imagePath := .Params.image | default .Params.image_webp }}
   {{ $image := resources.Get $imagePath }}
   {{ if not $image }}
@@ -20,7 +20,7 @@
   {{ else }}
     {{ errorf "Social preview image %q was not found in assets or page resources for %s" $imagePath .File.Path }}
   {{ end }}
-  <meta property="og:type" content="article">
+  <meta property="og:type" content="{{ if eq .Section "blog" }}article{{ else }}website{{ end }}">
   <meta property="og:title" content="{{ .Title }}">
   <meta property="og:description" content="{{ .Description | default .Summary | plainify | htmlEscape }}">
   <meta property="og:url" content="{{ .Permalink }}">

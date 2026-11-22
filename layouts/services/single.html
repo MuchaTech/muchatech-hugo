@@ -1,0 +1,42 @@
+{{ define "main" }}
+
+{{ partial "navigation.html" . }}
+
+{{ partial "service-hero.html" . }}
+
+{{ with .Content }}
+{{"<!-- service introduction -->" | safeHTML}}
+<section class="section service-section service-intro">
+  <div class="container">
+    <div class="service-body post-single-content">
+      {{ . }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{ partial "service-audiences.html" . }}
+
+{{ partial "service-included.html" . }}
+
+{{ partial "service-tracks.html" . }}
+
+{{ partial "service-process.html" . }}
+
+{{ partial "service-deliverables.html" . }}
+
+{{ partial "service-scope.html" . }}
+
+{{ partial "service-plans.html" . }}
+
+{{ partial "service-proof.html" . }}
+
+{{ partial "service-faq.html" . }}
+
+{{ partial "service-related.html" . }}
+
+{{ partial "contact.html" . }}
+
+{{ partial "service-schema.html" . }}
+
+{{ end }}

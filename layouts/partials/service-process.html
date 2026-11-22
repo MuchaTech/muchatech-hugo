@@ -1,0 +1,24 @@
+{{ with .Params.process }}
+<section class="section service-section" id="how-it-works" aria-labelledby="process-title">
+  <div class="container">
+    <div class="title text-center">
+      <h2 id="process-title">How an engagement <span class="color">runs</span></h2>
+      <div class="border-meghna"></div>
+    </div>
+    <ol class="process-list">
+      {{ range $index, $step := . }}
+      <li class="process-item">
+        <span class="process-number" aria-hidden="true">{{ printf "%02d" (add $index 1) }}</span>
+        <div class="process-body">
+          <h3>
+            {{ $step.title }}
+            {{ with $step.timing }}<span class="process-timing">{{ . }}</span>{{ end }}
+          </h3>
+          <p>{{ $step.summary }}</p>
+        </div>
+      </li>
+      {{ end }}
+    </ol>
+  </div>
+</section>
+{{ end }}

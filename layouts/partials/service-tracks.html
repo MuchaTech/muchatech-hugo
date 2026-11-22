@@ -1,0 +1,47 @@
+{{ $tracks := .Params.tracks }}
+{{ if $tracks }}
+{{ $heading := .Params.tracks_heading }}
+{{ $columns := .Params.tracks_columns | default 3 }}
+<section class="section section-bg service-section" id="tracks" aria-labelledby="tracks-title">
+  <div class="container">
+    <div class="title text-center">
+      <h2 id="tracks-title">
+        {{ with $heading }}{{ .lead }}{{ else }}How this works{{ end }}
+        <span class="color">{{ with $heading }}{{ .accent }}{{ else }}in practice{{ end }}</span>
+      </h2>
+      <div class="border-meghna"></div>
+    </div>
+    {{ with .Params.tracks_intro }}
+    <p class="service-tracks-intro">{{ . }}</p>
+    {{ end }}
+    <div class="track-grid{{ if eq $columns 2 }} track-grid--two{{ end }}">
+      {{ range $tracks }}
+      <article class="track-card">
+        {{ with .tagline }}<p class="track-tagline">{{ . }}</p>{{ end }}
+        <h3>{{ .name }}</h3>
+        {{ with .summary }}<p>{{ . }}</p>{{ end }}
+        {{ with .items }}
+        <ul class="check-list">
+          {{ range . }}<li>{{ . }}</li>{{ end }}
+        </ul>
+        {{ end }}
+        <dl class="track-meta">
+          {{ with .timing }}
+          <div>
+            <dt>Typical build</dt>
+            <dd>{{ . }}</dd>
+          </div>
+          {{ end }}
+          {{ with .outcome }}
+          <div>
+            <dt>You end up with</dt>
+            <dd>{{ . }}</dd>
+          </div>
+          {{ end }}
+        </dl>
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

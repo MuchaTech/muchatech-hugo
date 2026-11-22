@@ -1,0 +1,37 @@
+{{ $scope := .Params.scope }}
+{{ if $scope }}
+<section class="section service-section" id="scope" aria-labelledby="scope-title">
+  <div class="container">
+    <div class="title text-center">
+      <h2 id="scope-title">Scope and <span class="color">boundaries</span></h2>
+      <div class="border-meghna"></div>
+    </div>
+    <div class="scope-grid">
+      {{ with $scope.included }}
+      <div class="scope-col scope-col--included">
+        <h3>Included</h3>
+        <ul>
+          {{ range . }}<li>{{ . }}</li>{{ end }}
+        </ul>
+      </div>
+      {{ end }}
+      {{ with $scope.excluded }}
+      <div class="scope-col scope-col--excluded">
+        <h3>Not included</h3>
+        <ul>
+          {{ range . }}<li>{{ . }}</li>{{ end }}
+        </ul>
+      </div>
+      {{ end }}
+      {{ with $scope.client }}
+      <div class="scope-col scope-col--client">
+        <h3>We need from you</h3>
+        <ul>
+          {{ range . }}<li>{{ . }}</li>{{ end }}
+        </ul>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

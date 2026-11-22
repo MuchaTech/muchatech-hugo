@@ -1,0 +1,87 @@
+{{ define "main" }}
+
+{{ partial "navigation.html" . }}
+
+{{ $data := index site.Data site.Language.Lang }}
+{{ $tools := $data.developed_tools.developed_tools }}
+
+<section class="service-hero service-hero--hub" aria-labelledby="tools-title">
+  <div class="container">
+    <p class="service-eyebrow">Free tools</p>
+    <h1 id="tools-title">{{ .Title }}</h1>
+    <p class="service-hero-sub">{{ .Description }}</p>
+  </div>
+</section>
+
+<section class="section service-section">
+  <div class="container">
+    {{ with $tools.intro }}
+    <p class="service-tracks-intro">{{ . }}</p>
+    {{ end }}
+
+    {{ if $tools.enable }}
+    {{ range $tools.groups }}
+    <div class="tool-group">
+      <div class="tool-group-header">
+        <h2>{{ .name }}</h2>
+        {{ with .description }}<p>{{ . }}</p>{{ end }}
+      </div>
+      <div class="tool-grid">
+        {{ range .tools }}
+        <article class="tool-card">
+          {{ with .icon }}
+          <div class="tool-card-icon" aria-hidden="true"><i class="{{ . }}"></i></div>
+          {{ end }}
+          <h3>{{ .name }}</h3>
+          <p>{{ .description }}</p>
+          <div class="tool-card-footer">
+            {{ if eq .status "live" }}
+            <a class="tool-link" href="{{ .url | safeURL }}" target="_blank" rel="noopener">{{ .action | default "Open tool" }} <span aria-hidden="true">&rarr;</span></a>
+            <span class="tool-badge tool-badge--live">Live</span>
+            {{ else }}
+            <span class="tool-link tool-link--disabled">{{ .action | default "Coming soon" }}</span>
+            <span class="tool-badge tool-badge--soon">In build</span>
+            {{ end }}
+          </div>
+        </article>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+    {{ end }}
+  </div>
+</section>
+
+{{ with $tools.principles }}
+<section class="section section-bg service-section" aria-labelledby="tools-principles-title">
+  <div class="container">
+    <div class="title text-center">
+      <h2 id="tools-principles-title">How we build <span class="color">tools</span></h2>
+      <div class="border-meghna"></div>
+    </div>
+    <div class="audience-grid">
+      {{ range . }}
+      <article class="audience-card">
+        <h3>{{ .title }}</h3>
+        <p>{{ .description }}</p>
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+<section class="section service-section">
+  <div class="container">
+    <div class="tools-cta">
+      <h2>Need a tool that does not exist yet?</h2>
+      <p>We build small, well-scoped tools for security and operations teams — and hand over the source code.</p>
+      <div class="tools-cta-actions">
+        <a class="btn btn-main" href="{{ `services/automation-and-tools/` | relLangURL }}">See Automation &amp; Tools</a>
+        <a class="btn btn-transparent page-scroll" href="{{ site.Home.RelPermalink }}#contact">Talk to our team</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ end }}

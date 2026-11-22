@@ -29,6 +29,9 @@
 						</div>
 						{{ end }}
 					</div>
+					{{ with .link }}
+					<a class="btn btn-main page-scroll service-section-link" href="{{ if findRE `^#` . }}{{ . }}{{ else }}{{ . | relLangURL }}{{ end }}">See what is included</a>
+					{{ end }}
 				</div>
 			</div>
 		</div>

@@ -5,6 +5,7 @@ automation_tools:
   image_webp: images/services/automation/julien-tromeur.webp #eli-alvarez.webp # julien-tromeur.webp
   title: Automation & Tools
   content: "We automate repetitive business tasks and workflows to boost productivity and speed up service delivery."
+  link: "/services/automation-and-tools/"
   automation_domains:
     # service item loop
     - title: Mission-Critical ICS Automation

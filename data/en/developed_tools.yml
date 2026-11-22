@@ -1,20 +1,27 @@
-  developed_tools:
-    enable: true
-    # tools item loop
-    cybersecurity:
-      - name: Cybersecurity ROI Calculator
-        embbed_code_url: "https://claude.site/public/artifacts/a0da6cb8-b011-4df2-9dfc-279a74d2b274/embed/"
-        image: ""
-        tag: cybersecurity
-
-      - name: Email Pawned Status
-        embbed_code_url: ""
-        image: ""
-        breaches: 2
-        tag: cybersecurity
-
-    trading-robots:
-      - name: Position Size Calculator
-        embbed_code_url: "/#"
-        image: ""
-        tag: trading-robots
+################################# Developed tools ###########################
+developed_tools:
+  enable: true
+  intro: "Free tools we built while solving client problems. No sign-up, no sales call, no lead capture."
+  groups:
+    - id: cybersecurity
+      name: "Cybersecurity tools"
+      description: "Quick checks and calculators for teams deciding where to spend security effort first."
+      tools:
+        - name: "Cybersecurity ROI Calculator"
+          description: "Compare the cost of an incident against the cost of the controls that reduce it, and see the payback period."
+          icon: "ti-stats-up"
+          status: "live"
+          url: "https://claude.site/public/artifacts/a0da6cb8-b011-4df2-9dfc-279a74d2b274/embed/"
+          action: "Open calculator"
+        - name: "Email Pawned Status"
+          description: "Check whether a business email address appears in known breach data, and what to do first if it does."
+          icon: "ti-email"
+          status: "coming-soon"
+          action: "Coming soon"
+  principles:
+    - title: "Useful before clever"
+      description: "A tool earns its place only if it answers a question you were already asking."
+    - title: "Your data stays yours"
+      description: "Checks run without storing business data, and nothing is resold or shared."
+    - title: "We use them ourselves"
+      description: "Every tool here came out of client work and is still used in our own assessments."

@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=60677&amp;path=livereload" data-no-instant defer></script>
+	<meta charset="utf-8">
+	<title>5 Microsoft 365 Misconfigurations Exposing South African SMEs to Business Email Compromise</title>
+
+	<!-- mobile responsive meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Business Email Compromise (BEC) remains one of the costliest cyber threats facing South African businesses. Here are five common Microsoft 365 configuration gaps—and how to close them.">
+	
+	<meta name="author" content="Motape Oswald Langa">
+	
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <meta property="og:image" content="http://localhost:60677/images/blog/computer-security/m365-bec_hu_aa3b7a599c6dec9e.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="675">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="http://localhost:60677/images/blog/computer-security/m365-bec_hu_aa3b7a599c6dec9e.jpg">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="5 Microsoft 365 Misconfigurations Exposing South African SMEs to Business Email Compromise">
+  <meta property="og:description" content="Business Email Compromise (BEC) remains one of the costliest cyber threats facing South African businesses. Here are five common Microsoft 365 configuration gaps—and how to close them.">
+  <meta property="og:url" content="http://localhost:60677/blog/comptuter-security/m365-misconfigurations-south-african-smes/">
+  <meta name="twitter:title" content="5 Microsoft 365 Misconfigurations Exposing South African SMEs to Business Email Compromise">
+  <meta name="twitter:description" content="Business Email Compromise (BEC) remains one of the costliest cyber threats facing South African businesses. Here are five common Microsoft 365 configuration gaps—and how to close them.">
+
+
+	
+
+	
+	<meta name="theme-name" content="meghna-hugo" />
+	<meta name="generator" content="Hugo 0.154.4">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+	<!-- plugins -->
+	
+	
+	
+	<link rel="stylesheet" href="http://localhost:60677/plugins/bootstrap/bootstrap.min.css">
+	
+	
+	
+	
+	
+	<link rel="stylesheet" href="http://localhost:60677/plugins/themify-icons/themify-icons.css">
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anaheim%7cQuattrocento&#43;Sans:400,700&amp;display=swap" media="print" onload="this.media='all'">
+	<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anaheim%7cQuattrocento&#43;Sans:400,700&amp;display=swap"></noscript>
+	
+	
+	
+
+	<!-- Main Stylesheet -->
+	
+	<link rel="stylesheet" href="http://localhost:60677/css/site.min.5ede8df2f30f9e834e6774e725720ac298e805bc3003b2d1a09825ce3e190e7f.css" integrity="sha256-Xt6N8vMPnoNOZ3TnJXIKwpjoBbwwA7LRoJglzj4ZDn8=" media="screen">
+
+	<!--Favicon-->
+	<link rel="shortcut icon" href="http://localhost:60677/images/favicon.png" type="image/x-icon">
+	<link rel="icon" href="http://localhost:60677/images/favicon.png" type="image/x-icon">
+
+	
+	<!-- Global Site Tag (gtag.js) - Google Analytics -->
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	  gtag('config', 'G-VV11Q6E2W3');
+	  var analyticsScript = document.createElement('script');
+	  analyticsScript.async = true;
+	  analyticsScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-VV11Q6E2W3';
+	  if ('requestIdleCallback' in window) {
+	    window.requestIdleCallback(function () { document.head.appendChild(analyticsScript); }, { timeout: 2000 });
+	  } else {
+	    window.addEventListener('load', function () { window.setTimeout(function () { document.head.appendChild(analyticsScript); }, 1000); }, { once: true });
+	  }
+	</script>
+	
+
+</head>
+
+
+<body id="body" data-spy="scroll" data-target=".navbar" data-offset="55">
+  
+  <div id="content">
+    
+
+
+<section class="sticky-top navigation">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark" aria-label="Primary navigation">
+      <a class="navbar-brand p-0" href="/">
+        
+        <img
+          src="http://localhost:60677/images/V1-contrast.webp"
+          alt="MuchaTech"
+          width="129"
+          height="52"
+          loading="eager"
+          fetchpriority="high"
+          decoding="async"
+        >
+        
+      </a>
+      <button
+        class="navbar-toggler rounded-0"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navigation"
+        aria-controls="navigation"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navigation">
+        <ul class="navbar-nav ml-auto">
+          
+          
+            
+            
+            
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                
+                href="/#about"
+              >about</a>
+            </li>
+            
+          
+            
+            
+            
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >services</a>
+              <div class="dropdown-menu">
+                
+                <a
+                  class="dropdown-item"
+                  
+                  href="/services/managed-cybersecurity/"
+                >Cybersecurity</a>
+                
+                <a
+                  class="dropdown-item"
+                  
+                  href="/services/automation-and-tools/"
+                >Automation &amp; Tools</a>
+                
+                <a
+                  class="dropdown-item"
+                  
+                  href="/services/research-and-development/"
+                >Research &amp; Development</a>
+                
+              </div>
+            </li>
+            
+          
+            
+            
+            
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                
+                href="/#portfolio"
+              >portfolio</a>
+            </li>
+            
+          
+            
+            
+            
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                
+                href="/#pricing"
+              >pricing</a>
+            </li>
+            
+          
+            
+            
+            
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                
+                href="/tools/"
+              >tools</a>
+            </li>
+            
+          
+            
+            
+            
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                
+                href="/#testimonial"
+              >testimonial</a>
+            </li>
+            
+          
+            
+            
+            
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                
+                href="/#blog"
+              >blog</a>
+            </li>
+            
+          
+            
+            
+            
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                
+                href="/#contact"
+              >contact</a>
+            </li>
+            
+          
+        </ul>
+        
+      </div>
+    </nav>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2 text-center">
+        <h1>5 Microsoft 365 Misconfigurations Exposing South African SMEs to Business Email Compromise</h1>
+        <ul class="list-inline article-meta mb-50">
+          
+          <li class="list-inline-item"><a href="/author/motape-oswald-langa/">Motape Oswald Langa</a></li>
+          
+          <li class="list-inline-item"><time datetime="2026-11-20">Friday, Nov 20, 2026</time></li>
+          <li class="list-inline-item">3 min read</li>
+          
+        </ul>
+      </div>
+      <div class="col-12">
+        <div class="row article-reading-layout">
+          <main class="col-lg-8 article-reading-main">
+            
+            
+            
+              
+              
+              
+              
+                
+                  
+                
+              
+                
+                  
+                
+              
+                
+                  
+                
+              
+                
+                  
+                
+              
+              
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+              <figure class="article-hero">
+                <picture>
+                  <source type="image/webp" srcset="/images/blog/computer-security/m365-bec_hu_ee076a117a6a4869.webp 480w, /images/blog/computer-security/m365-bec_hu_d05f7706002ccf70.webp 768w, /images/blog/computer-security/m365-bec_hu_77576f728c861ecf.webp 1200w, /images/blog/computer-security/m365-bec_hu_8697d48a4fcfc083.webp 1600w" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1199px) 60vw, 760px">
+                  <img src="/images/blog/computer-security/m365-bec.jpg" class="article-hero-image" alt="5 Microsoft 365 Misconfigurations Exposing South African SMEs to Business Email Compromise" width="1600" height="900" loading="eager" fetchpriority="high" decoding="async">
+                </picture>
+              </figure>
+            
+            <div class="post-single-content">
+              <p>Business Email Compromise (BEC) rarely requires sophisticated zero-day exploits. In most incidents we investigate across South African SMEs, attackers gain access through stolen credentials and quietly abuse native Microsoft 365 features to monitor invoices, intercept payments, and exfiltrate sensitive client data—triggering mandatory breach notifications under <strong>POPIA Section 22</strong>.</p>
+<p>Below are the five most common Microsoft 365 misconfigurations we uncover during baseline security assessments—and how to remediate them.</p>
+<h2 id="1-legacy-authentication-protocols-remain-enabled">1. Legacy Authentication Protocols Remain Enabled</h2>
+<p>Even when Multi-Factor Authentication (MFA) is enforced on modern sign-ins, legacy protocols like POP3, IMAP, SMTP AUTH, and ActiveSync bypass MFA prompts entirely. Attackers routinely use password-spraying tools against these legacy endpoints.</p>
+<ul>
+<li><strong>The Fix:</strong> Disable legacy authentication across your tenant using Conditional Access policies (or Security Defaults for smaller tenants) and block basic authentication in Exchange Online.</li>
+</ul>
+<h2 id="2-permissive-user-consent-for-third-party-oauth-apps">2. Permissive User Consent for Third-Party OAuth Apps</h2>
+<p>By default, many M365 tenants allow standard users to grant third-party cloud applications read/write access to their mailboxes, OneDrive files, and contacts. Attackers exploit this via <strong>illicit consent grants</strong>—tricking an employee into clicking &ldquo;Accept&rdquo; on a rogue OAuth app rather than stealing their password.</p>
+<ul>
+<li><strong>The Fix:</strong> Restrict user consent to verified publishers and low-impact permissions only, and require an <strong>Admin Consent Workflow</strong> for any app requesting <code>Mail.Read</code> or <code>Files.Read.All</code>.</li>
+</ul>
+<h2 id="3-unmonitored-external-auto-forwarding-rules">3. Unmonitored External Auto-Forwarding Rules</h2>
+<p>Once an attacker compromises an executive or finance mailbox, their first move is often creating an inbox rule that silently forwards incoming invoices or statements containing keywords like <em>&ldquo;EFT&rdquo;</em>, <em>&ldquo;banking details&rdquo;</em>, or <em>&ldquo;invoice&rdquo;</em> to an external Gmail or ProtonMail address.</p>
+<ul>
+<li><strong>The Fix:</strong> Block automatic external email forwarding globally in the Microsoft 365 Defender Anti-Spam outbound policy, and configure SIEM alerts whenever a new inbox forwarding rule is created.</li>
+</ul>
+<h2 id="4-missing-or-misconfigured-dmarc-enforcement">4. Missing or Misconfigured DMARC Enforcement</h2>
+<p>Having an SPF record alone does not stop an attacker from spoofing your executive team&rsquo;s display name or exact domain in phishing emails sent to your clients and suppliers.</p>
+<ul>
+<li><strong>The Fix:</strong> Publish a valid <strong>DKIM</strong> signature for your custom domain and move your <strong>DMARC</strong> policy from <code>p=none</code> to <code>p=quarantine</code> or <code>p=reject</code> once legitimate mail senders are verified.</li>
+</ul>
+<h2 id="5-over-privileged-global-administrator-accounts">5. Over-Privileged Global Administrator Accounts</h2>
+<p>Assigning permanent <code>Global Administrator</code> roles to daily-use accounts—or to third-party IT support vendors—means a single compromised workstation can result in full tenant takeover.</p>
+<ul>
+<li><strong>The Fix:</strong> Limit Global Admins to fewer than five dedicated, cloud-only break-glass/admin accounts, use role-specific permissions (e.g., <em>Exchange Administrator</em>, <em>Security Reader</em>), and enforce Privileged Identity Management (PIM) where licensed.</li>
+</ul>
+<hr>
+<h3 id="check-your-tenant-posture-at-zero-cost">Check Your Tenant Posture at Zero Cost</h3>
+<p>Not sure whether your organization has exposed legacy protocols, missing DMARC enforcement, or leaked credentials on the dark web?</p>
+<p>At <strong>MuchaTech</strong>, our <strong>Free R0/month baseline plan</strong> includes an <strong>M365-enabled office machine optimization</strong>, a <strong>business email breach assessment</strong>, and a <strong>privacy and anonymity status check</strong> tailored for South African SMEs.</p>
+<p class="article-button"><a class="btn btn-main" href="https://muchatech.com/#contact" target="_blank" rel="noopener noreferrer">Request Your Free M365 &amp; Email Breach Assessment</a></p>
+
+
+            </div>
+            <section class="article-cta" aria-labelledby="article-cta-title">
+              <h2 id="article-cta-title">Want to discuss your security priorities?</h2>
+              <p>Talk with the MuchaTech team about practical next steps for your organization.</p>
+              
+              <a class="btn btn-main article-cta-link" href="/#contact">Talk to our team</a>
+            </section>
+            
+            
+            
+            <nav class="article-navigation" aria-label="Blog post navigation">
+              
+              <a class="article-navigation-link article-navigation-previous" href="/blog/data-compliance/popia_guideline/">
+                <span>Previous article</span>
+                <strong>POPIA Compliance for South African SMEs</strong>
+              </a>
+              
+              
+            </nav>
+            
+            
+            
+
+
+<div class="social-share pt-4">
+  <h4>Share:</h4>
+  <div class="social-share-buttons">
+  
+  <a class="resp-sharing-button__link" href="https://facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A60677%2Fblog%2Fcomptuter-security%2Fm365-misconfigurations-south-african-smes%2F" target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook" title="Share on Facebook">
+    <span class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--small">
+      <span class="resp-sharing-button__icon resp-sharing-button__icon--solid" aria-hidden="true">
+        <svg viewBox="0 0 24 24" focusable="false"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/></svg>
+      </span>
+      <span class="sr-only">Share on Facebook</span>
+    </span>
+  </a>
+  
+  <a class="resp-sharing-button__link" href="https://twitter.com/intent/tweet/?text=5&#43;Microsoft&#43;365&#43;Misconfigurations&#43;Exposing&#43;South&#43;African&#43;SMEs&#43;to&#43;Business&#43;Email&#43;Compromise&amp;url=http%3A%2F%2Flocalhost%3A60677%2Fblog%2Fcomptuter-security%2Fm365-misconfigurations-south-african-smes%2F" target="_blank" rel="noopener noreferrer" aria-label="Share on X" title="Share on X">
+    <span class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--small">
+      <span class="resp-sharing-button__icon resp-sharing-button__icon--solid" aria-hidden="true">
+        <svg viewBox="0 0 24 24" focusable="false"><path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3L12 14.6 5.6 22H2.4l7.3-8.4L1.8 2h6.5l4.4 6.9L18.9 2zm-1.1 18h1.7L7.3 3.9H5.5L17.8 20z"/></svg>
+      </span>
+      <span class="sr-only">Share on X</span>
+    </span>
+  </a>
+  
+  <a class="resp-sharing-button__link" href="https://www.linkedin.com/sharing/share-offsite/?url=http%3A%2F%2Flocalhost%3A60677%2Fblog%2Fcomptuter-security%2Fm365-misconfigurations-south-african-smes%2F" target="_blank" rel="noopener noreferrer" aria-label="Share on LinkedIn" title="Share on LinkedIn">
+    <span class="resp-sharing-button resp-sharing-button--linkedin resp-sharing-button--small">
+      <span class="resp-sharing-button__icon resp-sharing-button__icon--solid" aria-hidden="true">
+        <svg viewBox="0 0 24 24" focusable="false"><path d="M5.2 3.6a2.1 2.1 0 1 1-4.2 0 2.1 2.1 0 0 1 4.2 0zM1.3 8h3.8v12H1.3zM7.4 8H11v1.6h.1c.5-.9 1.7-1.9 3.5-1.9 3.8 0 4.5 2.5 4.5 5.7V20h-3.8v-5.8c0-1.4 0-3.2-2-3.2s-2.3 1.5-2.3 3.1V20H7.4z"/></svg>
+      </span>
+      <span class="sr-only">Share on LinkedIn</span>
+    </span>
+  </a>
+  
+  <a class="resp-sharing-button__link" href="mailto:?subject=5&#43;Microsoft&#43;365&#43;Misconfigurations&#43;Exposing&#43;South&#43;African&#43;SMEs&#43;to&#43;Business&#43;Email&#43;Compromise&amp;body=http%3A%2F%2Flocalhost%3A60677%2Fblog%2Fcomptuter-security%2Fm365-misconfigurations-south-african-smes%2F" target="_self"  aria-label="Share on Email" title="Share on Email">
+    <span class="resp-sharing-button resp-sharing-button--email resp-sharing-button--small">
+      <span class="resp-sharing-button__icon resp-sharing-button__icon--solid" aria-hidden="true">
+        <svg viewBox="0 0 24 24" focusable="false"><path d="M22 4H2C.9 4 0 4.9 0 6v12c0 1.1.9 2 2 2h20c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-1 3-9 6-9-6V6l9 6 9-6z"/></svg>
+      </span>
+      <span class="sr-only">Share on Email</span>
+    </span>
+  </a>
+  
+  <a class="resp-sharing-button__link" href="https://reddit.com/submit/?url=http%3A%2F%2Flocalhost%3A60677%2Fblog%2Fcomptuter-security%2Fm365-misconfigurations-south-african-smes%2F&amp;title=5&#43;Microsoft&#43;365&#43;Misconfigurations&#43;Exposing&#43;South&#43;African&#43;SMEs&#43;to&#43;Business&#43;Email&#43;Compromise" target="_blank" rel="noopener noreferrer" aria-label="Share on Reddit" title="Share on Reddit">
+    <span class="resp-sharing-button resp-sharing-button--reddit resp-sharing-button--small">
+      <span class="resp-sharing-button__icon resp-sharing-button__icon--solid" aria-hidden="true">
+        <svg viewBox="0 0 24 24" focusable="false"><path d="M24 11.5c0-1.65-1.35-3-3-3-.96 0-1.86.48-2.42 1.24-1.64-1-3.75-1.64-6.07-1.72.08-1.1.4-3.05 1.52-3.7.72-.4 1.73-.24 3 .5C17.2 6.3 18.46 7.5 20 7.5c1.65 0 3-1.35 3-3s-1.35-3-3-3c-1.38 0-2.54.94-2.88 2.22-1.43-.72-2.64-.8-3.6-.25-1.64.94-1.95 3.47-2 4.55-2.33.08-4.45.7-6.1 1.72C4.86 8.98 3.96 8.5 3 8.5c-1.65 0-3 1.35-3 3 0 1.32.84 2.44 2.05 2.84-.03.22-.05.44-.05.66 0 3.86 4.5 7 10 7s10-3.14 10-7c0-.22-.02-.44-.05-.66 1.2-.4 2.05-1.54 2.05-2.84z"/></svg>
+      </span>
+      <span class="sr-only">Share on Reddit</span>
+    </span>
+  </a>
+  
+  <a class="resp-sharing-button__link" href="https://api.whatsapp.com/send?text=5&#43;Microsoft&#43;365&#43;Misconfigurations&#43;Exposing&#43;South&#43;African&#43;SMEs&#43;to&#43;Business&#43;Email&#43;Compromise%20http%3A%2F%2Flocalhost%3A60677%2Fblog%2Fcomptuter-security%2Fm365-misconfigurations-south-african-smes%2F" target="_blank" rel="noopener noreferrer" aria-label="Share on WhatsApp" title="Share on WhatsApp">
+    <span class="resp-sharing-button resp-sharing-button--whatsapp resp-sharing-button--small">
+      <span class="resp-sharing-button__icon resp-sharing-button__icon--solid" aria-hidden="true">
+        <svg viewBox="0 0 24 24" focusable="false"><path d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.5 5.6L.6 23.4l6-1.6c1.6.9 3.5 1.3 5.4 1.3 6.3 0 11.4-5.1 11.4-11.4-.1-2.8-1.2-5.7-3.3-7.8zM12 21.4c-1.7 0-3.3-.5-4.8-1.3l-.4-.2-3.5 1 1-3.4L4 17c-1-1.5-1.4-3.2-1.4-5.1 0-5.2 4.2-9.4 9.4-9.4 2.5 0 4.9 1 6.7 2.8 1.8 1.8 2.8 4.2 2.8 6.7-.1 5.2-4.3 9.4-9.5 9.4z"/></svg>
+      </span>
+      <span class="sr-only">Share on WhatsApp</span>
+    </span>
+  </a>
+  
+  <a class="resp-sharing-button__link" href="https://t.me/share/url?url=http%3A%2F%2Flocalhost%3A60677%2Fblog%2Fcomptuter-security%2Fm365-misconfigurations-south-african-smes%2F&amp;text=5&#43;Microsoft&#43;365&#43;Misconfigurations&#43;Exposing&#43;South&#43;African&#43;SMEs&#43;to&#43;Business&#43;Email&#43;Compromise" target="_blank" rel="noopener noreferrer" aria-label="Share on Telegram" title="Share on Telegram">
+    <span class="resp-sharing-button resp-sharing-button--telegram resp-sharing-button--small">
+      <span class="resp-sharing-button__icon resp-sharing-button__icon--solid" aria-hidden="true">
+        <svg viewBox="0 0 24 24" focusable="false"><path d="M.707 8.475C.275 8.64 0 9.508 0 9.508s.284.867.718 1.03l5.09 1.897 1.986 6.38a1.102 1.102 0 0 0 1.75.527l2.96-2.41a.405.405 0 0 1 .494-.013l5.34 3.87a1.1 1.1 0 0 0 1.046.135 1.1 1.1 0 0 0 .682-.803l3.91-18.795A1.102 1.102 0 0 0 22.5.075L.706 8.475z"/></svg>
+      </span>
+      <span class="sr-only">Share on Telegram</span>
+    </span>
+  </a>
+  
+  </div>
+</div>
+
+            
+            
+            <div class="mt-5">
+              
+            </div>
+          </main>
+          
+          <aside class="col-lg-4 article-reading-sidebar">
+            <nav class="article-toc" aria-labelledby="article-toc-title">
+              <h2 id="article-toc-title">On this page</h2>
+              <div id="TableOfContents">
+  <ul>
+    <li><a href="#1-legacy-authentication-protocols-remain-enabled">1. Legacy Authentication Protocols Remain Enabled</a></li>
+    <li><a href="#2-permissive-user-consent-for-third-party-oauth-apps">2. Permissive User Consent for Third-Party OAuth Apps</a></li>
+    <li><a href="#3-unmonitored-external-auto-forwarding-rules">3. Unmonitored External Auto-Forwarding Rules</a></li>
+    <li><a href="#4-missing-or-misconfigured-dmarc-enforcement">4. Missing or Misconfigured DMARC Enforcement</a></li>
+    <li><a href="#5-over-privileged-global-administrator-accounts">5. Over-Privileged Global Administrator Accounts</a>
+      <ul>
+        <li><a href="#check-your-tenant-posture-at-zero-cost">Check Your Tenant Posture at Zero Cost</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+            </nav>
+          </aside>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  </div><footer id="footer" class="section-bg">
+  <div class="container">
+    <div class="row wow fadeInUp" data-wow-duration="500ms">
+      <div class="col-xl-12">
+        <div class="social-icon">
+          <ul class="list-inline">
+            
+            <li class="list-inline-item"><a href="https://facebook.com/MuchaTechnology"><i class="ti-facebook"></i></a></li>
+            
+            <li class="list-inline-item"><a href="https://twitter.com/MuchaTech"><i class="ti-twitter-alt"></i></a></li>
+            
+            <li class="list-inline-item"><a href="https://www.youtube.com/@muchatech"><i class="ti-youtube"></i></a></li>
+            
+            <li class="list-inline-item"><a href="https://www.instagram.com/muchatech"><i class="ti-instagram"></i></a></li>
+            
+            <li class="list-inline-item"><a href="https://linkedin.com/company/muchatechnology"><i class="ti-linkedin"></i></a></li>
+            
+          </ul>
+        </div>
+        <div class="copyright text-center">
+          <a href="http://localhost:60677/">
+            <img src="http://localhost:60677/images/V1-contrast.webp" alt="MuchaTech" width="129" height="52" loading="lazy" decoding="async">
+          </a>
+          <br>
+          <p>Copyright © 2020-2026 All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+<script defer src="http://localhost:60677/plugins/jquery/jquery.min.js"></script>
+
+
+
+<script defer src="http://localhost:60677/plugins/bootstrap/bootstrap.min.js"></script>
+
+
+
+
+
+
+
+
+
+<script defer src="http://localhost:60677/plugins/lazy-load/lozad.min.js"></script>
+
+
+
+
+<script defer src="http://localhost:60677/js/script.min.d4c59cd5a23fcc8dfb5074dfcfb995240887424f707616b82afd41c9813b066e3a4bb41c35fc50c2b70eea82d3912461.js" integrity="sha384-1MWc1aI/zI37UHTfz7mVJAiHQk9wdha4Kv1ByYE7Bm46S7QcNfxQwrcO6oLTkSRh"></script>
+
+
+<div id="js-cookie-box" class="cookie-box cookie-box-hide" data-expire-days="2">
+  This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-transparent">I Accept</span>
+</div>
+
+
+
+<script defer src="http://localhost:60677/js/site.min.853da9471bd88554afbc40a2c81b773489a4f9267a9c71d0b1bb8cd94aa90bb49eaf6c528cce51980db2ddf8d9da7a7f.js" integrity="sha384-hT2pRxvYhVSvvECiyBt3NImk&#43;SZ6nHHQsbuM2UqpC7Ser2xSjM5RmA2y3fjZ2np/"></script>
+
+
+    
+
+</body>
+
+</html>

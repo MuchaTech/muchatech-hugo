@@ -1,0 +1,35 @@
+{{ $plans := .Params.plans }}
+{{ if $plans }}
+<section class="section section-bg service-section" id="plans" aria-labelledby="plans-title">
+  <div class="container">
+    <div class="title text-center">
+      <h2 id="plans-title">Plans that <span class="color">cover this</span></h2>
+      <div class="border-meghna"></div>
+    </div>
+    <div class="plan-grid">
+      {{ range $plans }}
+      <article class="plan-card">
+        <h3>{{ .name }}</h3>
+        <p class="plan-price">{{ .price }}<span>/{{ .unit }}</span></p>
+        <dl class="plan-meta">
+          <div>
+            <dt>P1 response</dt>
+            <dd>{{ .response }}</dd>
+          </div>
+          <div>
+            <dt>Includes</dt>
+            <dd>{{ .scope }}</dd>
+          </div>
+        </dl>
+      </article>
+      {{ end }}
+    </div>
+    {{ with .Params.plans_note }}
+    <p class="service-note">{{ . }}</p>
+    <p class="service-note service-note--link">
+      <a href="{{ site.Home.RelPermalink }}#pricing">Compare the full plans <span aria-hidden="true">&rarr;</span></a>
+    </p>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

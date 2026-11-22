@@ -1,0 +1,18 @@
+{{- /*
+  Call-to-action button for article content.
+
+  Usage:
+    {{< button href="https://example.com/#contact" target="_blank" >}}
+    Request your assessment
+    {{< /button >}}
+
+  Optional params: href (default "#"), label (overrides inner text),
+  target (adds rel="noopener noreferrer" for _blank), class, rel.
+*/ -}}
+{{- $href := .Get "href" | default (.Get "link") | default "#" -}}
+{{- $target := .Get "target" -}}
+{{- $label := .Get "label" -}}
+{{- $class := .Get "class" | default "btn btn-main" -}}
+{{- $text := $label | default (.Inner | markdownify | plainify | htmlUnescape) | strings.TrimSpace -}}
+{{- $rel := .Get "rel" | default "noopener noreferrer" -}}
+<p class="article-button"><a class="{{ $class }}" href="{{ $href | safeURL }}"{{ with $target }} target="{{ . }}" rel="{{ $rel }}"{{ end }}>{{ $text }}</a></p>

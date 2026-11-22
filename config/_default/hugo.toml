@@ -142,26 +142,3 @@ link = "https://www.instagram.com/muchatech"
 [[params.social]]
 icon = "ti-linkedin" # themify icon pack : https://themify.me/themify-icons
 link = "https://linkedin.com/company/muchatechnology"
-
-
-################################ English Language ########################
-[Languages.en]
-languageName = "En"
-languageCode = "en-us"
-contentDir = "content/english"
-
-[Languages.en.params]
-weight = 1
-home = "Home"
-copyright = "Copyright &copy; 2020-2026 Designed & Developed by [MuchaTech](https://github.com/muchatech)"
-
-################################ France Language ########################
-[Languages.fr]
-languageName = "Fr"
-languageCode = "fr-fr"
-contentDir = "content/french"
-weight = 2
-
-[Languages.fr.params]
-home = "Accueil"
-copyright = "Copyright &copy; 2020-2026 Designed & Developed by [MuchaTech](https://github.com/muchatech)"

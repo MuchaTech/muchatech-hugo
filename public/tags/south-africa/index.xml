@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>South Africa on MuchaTech</title>
+    <link>http://localhost:60677/tags/south-africa/</link>
+    <description>Recent content in South Africa on MuchaTech</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 20 Nov 2026 00:00:00 +0200</lastBuildDate>
+    <atom:link href="http://localhost:60677/tags/south-africa/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>5 Microsoft 365 Misconfigurations Exposing South African SMEs to Business Email Compromise</title>
+      <link>http://localhost:60677/blog/comptuter-security/m365-misconfigurations-south-african-smes/</link>
+      <pubDate>Fri, 20 Nov 2026 00:00:00 +0200</pubDate>
+      <guid>http://localhost:60677/blog/comptuter-security/m365-misconfigurations-south-african-smes/</guid>
+      <description>&lt;p&gt;Business Email Compromise (BEC) rarely requires sophisticated zero-day exploits. In most incidents we investigate across South African SMEs, attackers gain access through stolen credentials and quietly abuse native Microsoft 365 features to monitor invoices, intercept payments, and exfiltrate sensitive client data—triggering mandatory breach notifications under &lt;strong&gt;POPIA Section 22&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

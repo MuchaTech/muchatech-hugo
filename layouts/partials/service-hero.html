@@ -1,0 +1,45 @@
+{{ $page := . }}
+{{ $hero := .Params.hero }}
+{{ if $hero }}
+{{ $services := site.GetPage "section" "services" }}
+<section class="service-hero" aria-labelledby="service-title">
+  <div class="container">
+    {{ with $services }}
+    <nav class="service-breadcrumb" aria-label="Breadcrumb">
+      <a href="{{ .RelPermalink }}">Services</a>
+      <span aria-hidden="true">/</span>
+      <span>{{ $page.Title }}</span>
+    </nav>
+    {{ end }}
+    <div class="service-hero-grid">
+      <div class="service-hero-copy">
+        {{ with $hero.eyebrow }}<p class="service-eyebrow">{{ . }}</p>{{ end }}
+        <h1 id="service-title">{{ $hero.headline | default $page.Title }}</h1>
+        {{ with $hero.subhead }}<p class="service-hero-sub">{{ . }}</p>{{ end }}
+        {{ with $hero.audience }}
+        <ul class="service-chips" aria-label="Who this service is for">
+          {{ range . }}<li class="service-chip">{{ . }}</li>{{ end }}
+        </ul>
+        {{ end }}
+        <div class="service-hero-actions">
+          {{ with $hero.primary }}<a class="btn btn-main page-scroll" href="{{ .link }}">{{ .label }}</a>{{ end }}
+          {{ with $hero.secondary }}<a class="btn btn-transparent page-scroll" href="{{ .link }}">{{ .label }}</a>{{ end }}
+        </div>
+        {{ with $page.Params.facts }}
+        <dl class="service-facts">
+          {{ range . }}
+          <div class="service-fact">
+            <dt>{{ .label }}</dt>
+            <dd>{{ .value }}</dd>
+          </div>
+          {{ end }}
+        </dl>
+        {{ end }}
+      </div>
+      <div class="service-hero-media">
+        {{ partial "image.html" (dict "Src" $hero.image_webp "Alt" $page.Title "Class" "service-hero-image" "Sizes" "(max-width: 991px) calc(100vw - 30px), 46vw") }}
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

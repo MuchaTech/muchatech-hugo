@@ -14,19 +14,19 @@ hasChildren = true
 [[main]]
 parent = "services"
 name = "Cybersecurity"
-url = "#cybersecurity"
+url = "/services/managed-cybersecurity/"
 weight = 1
 
 [[main]]
 parent = "services"
 name = "Automation & Tools"
-url = "#automation-tools"
+url = "/services/automation-and-tools/"
 weight = 2
 
 [[main]]
 parent = "services"
 name = "Research & Development"
-url = "#research-development"
+url = "/services/research-and-development/"
 weight = 3
 
 [[main]]
@@ -63,16 +63,21 @@ weight = 4
 #weight = 2
 
 [[main]]
+name = "tools"
+url = "/tools/"
+weight = 5
+
+[[main]]
 name = "testimonial"
 url = "#testimonial"
-weight = 5
+weight = 6
 
 [[main]]
 name = "blog"
 url = "#blog"
-weight = 6
+weight = 7
 
 [[main]]
 name = "contact"
 url = "#contact"
-weight = 7
+weight = 8

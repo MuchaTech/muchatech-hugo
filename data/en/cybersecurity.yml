@@ -5,6 +5,7 @@ cybersecurity:
   image_webp: images/services/cybersecurity/derenda.webp #cyber-security.webp #locks.webp
   title: Cybersecurity Operations
   content: "We secure your business assets across your environment, proactively and reliably."
+  link: "/services/managed-cybersecurity/"
   security_domains:
     # service item loop
     - title: Security Architecture & Engineering

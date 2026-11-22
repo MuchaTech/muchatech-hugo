@@ -1,0 +1,27 @@
+{{ $tags := .Params.related_tags }}
+{{ $related := slice }}
+{{ range where site.RegularPages "Section" "blog" }}
+  {{ if and .Params.tags $tags }}
+    {{ if intersect .Params.tags $tags }}
+      {{ $related = $related | append . }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+{{ if $related }}
+<section class="section section-bg service-section" id="insight" aria-labelledby="insight-title">
+  <div class="container">
+    <div class="title text-center">
+      <h2 id="insight-title">Related <span class="color">reading</span></h2>
+      <div class="border-meghna"></div>
+    </div>
+    <div class="row justify-content-center">
+      {{ range first 3 $related }}
+      {{ .Render "article" }}
+      {{ end }}
+    </div>
+    <div class="all-post text-center">
+      <a class="btn btn-transparent" href="{{ `blog/` | relLangURL }}">View all posts</a>
+    </div>
+  </div>
+</section>
+{{ end }}

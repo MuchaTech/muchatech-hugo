@@ -1,0 +1,23 @@
+{{ with .Params.audiences }}
+<section class="section service-section" id="who-its-for" aria-labelledby="audiences-title">
+  <div class="container">
+    <div class="title text-center">
+      <h2 id="audiences-title">Who this is <span class="color">for</span></h2>
+      <div class="border-meghna"></div>
+    </div>
+    <div class="audience-grid">
+      {{ range . }}
+      <article class="audience-card">
+        <h3>{{ .name }}</h3>
+        <p>{{ .summary }}</p>
+        {{ with .points }}
+        <ul class="check-list">
+          {{ range . }}<li>{{ . }}</li>{{ end }}
+        </ul>
+        {{ end }}
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

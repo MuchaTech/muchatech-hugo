@@ -4,6 +4,7 @@ research_development:
   image_webp: images/services/research_development/boitumelo.webp
   title: Cybersecurity R&D
   content: "We research emerging technologies and security challenges to help strengthen the cybersecurity industry."
+  link: "/services/research-and-development/"
   research_domains:
     # service item loop
     - title: AI & Machine Learning Security

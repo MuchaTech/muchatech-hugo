@@ -1,0 +1,23 @@
+{{ $proof := .Params.proof }}
+{{ if $proof }}
+<section class="section service-section" id="proof" aria-labelledby="proof-title">
+  <div class="container">
+    <div class="title text-center">
+      <h2 id="proof-title">Evidence, not <span class="color">claims</span></h2>
+      <div class="border-meghna"></div>
+    </div>
+    <div class="proof-grid">
+      {{ range $proof }}
+      <article class="proof-card">
+        <p class="proof-value">{{ .value }}</p>
+        <p class="proof-label">{{ .label }}</p>
+        {{ with .detail }}<p class="proof-detail">{{ . }}</p>{{ end }}
+      </article>
+      {{ end }}
+    </div>
+    {{ with .Params.proof_note }}
+    <p class="service-note">{{ . }}</p>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

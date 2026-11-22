@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=60677&amp;path=livereload" data-no-instant defer></script>
 	<meta charset="utf-8">
 	<title>MuchaTech</title>
 
@@ -26,41 +26,68 @@
 	
 	<meta name="theme-name" content="meghna-hugo" />
 	<meta name="generator" content="Hugo 0.154.4">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 	<!-- plugins -->
 	
-	<link rel="stylesheet" href="http://localhost:1313/plugins/bootstrap/bootstrap.min.css">
 	
-	<link rel="stylesheet" href="http://localhost:1313/plugins/themify-icons/themify-icons.css">
 	
-	<link rel="stylesheet" href="http://localhost:1313/plugins/magnific-popup/magnific-popup.css">
+	<link rel="stylesheet" href="http://localhost:60677/plugins/bootstrap/bootstrap.min.css">
 	
-	<link rel="stylesheet" href="http://localhost:1313/plugins/slick/slick.css">
 	
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anaheim%7cQuattrocento&#43;Sans:400,700&amp;display=swap">
+	
+	
+	
+	<link rel="stylesheet" href="http://localhost:60677/plugins/themify-icons/themify-icons.css">
+	
+	
+	
+	
+	
+	<link rel="stylesheet" href="http://localhost:60677/plugins/magnific-popup/magnific-popup.css" media="print" onload="this.media='all'">
+	<noscript><link rel="stylesheet" href="http://localhost:60677/plugins/magnific-popup/magnific-popup.css"></noscript>
+	
+	
+	
+	
+	
+	<link rel="stylesheet" href="http://localhost:60677/plugins/slick/slick.css" media="print" onload="this.media='all'">
+	<noscript><link rel="stylesheet" href="http://localhost:60677/plugins/slick/slick.css"></noscript>
+	
+	
+	
+	
+	
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anaheim%7cQuattrocento&#43;Sans:400,700&amp;display=swap" media="print" onload="this.media='all'">
+	<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anaheim%7cQuattrocento&#43;Sans:400,700&amp;display=swap"></noscript>
+	
+	
 	
 
 	<!-- Main Stylesheet -->
 	
-	<link rel="stylesheet" href="http://localhost:1313/css/style.min.css" media="screen">
-
-	<!-- Custom stylesheet - for your changes -->
-	
-	<link rel="stylesheet" href="http://localhost:1313/css/custom.min.css" media="screen">
+	<link rel="stylesheet" href="http://localhost:60677/css/site.min.5ede8df2f30f9e834e6774e725720ac298e805bc3003b2d1a09825ce3e190e7f.css" integrity="sha256-Xt6N8vMPnoNOZ3TnJXIKwpjoBbwwA7LRoJglzj4ZDn8=" media="screen">
 
 	<!--Favicon-->
-	<link rel="shortcut icon" href="http://localhost:1313/images/favicon.png" type="image/x-icon">
-	<link rel="icon" href="http://localhost:1313/images/favicon.png" type="image/x-icon">
+	<link rel="shortcut icon" href="http://localhost:60677/images/favicon.png" type="image/x-icon">
+	<link rel="icon" href="http://localhost:60677/images/favicon.png" type="image/x-icon">
 
 	
 	<!-- Global Site Tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-VV11Q6E2W3"></script>
 	<script>
 	  window.dataLayer = window.dataLayer || [];
 	  function gtag(){dataLayer.push(arguments);}
 	  gtag('js', new Date());
-
 	  gtag('config', 'G-VV11Q6E2W3');
+	  var analyticsScript = document.createElement('script');
+	  analyticsScript.async = true;
+	  analyticsScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-VV11Q6E2W3';
+	  if ('requestIdleCallback' in window) {
+	    window.requestIdleCallback(function () { document.head.appendChild(analyticsScript); }, { timeout: 2000 });
+	  } else {
+	    window.addEventListener('load', function () { window.setTimeout(function () { document.head.appendChild(analyticsScript); }, 1000); }, { once: true });
+	  }
 	</script>
 	
 
@@ -108,11 +135,12 @@
       <a class="navbar-brand p-0" href="/">
         
         <img
-          src="http://localhost:1313/images/V1.webp"
+          src="http://localhost:60677/images/V1-contrast.webp"
           alt="MuchaTech"
           width="129"
           height="52"
-          loading="lazy"
+          loading="eager"
+          fetchpriority="high"
           decoding="async"
         >
         
@@ -162,19 +190,19 @@
                 <a
                   class="dropdown-item"
                   
-                  href="#cybersecurity"
+                  href="/services/managed-cybersecurity/"
                 >Cybersecurity</a>
                 
                 <a
                   class="dropdown-item"
                   
-                  href="#automation-tools"
+                  href="/services/automation-and-tools/"
                 >Automation &amp; Tools</a>
                 
                 <a
                   class="dropdown-item"
                   
-                  href="#research-development"
+                  href="/services/research-and-development/"
                 >Research &amp; Development</a>
                 
               </div>
@@ -202,6 +230,18 @@
                 
                 href="#pricing"
               >pricing</a>
+            </li>
+            
+          
+            
+            
+            
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                
+                href="/tools/"
+              >tools</a>
             </li>
             
           
@@ -320,121 +360,7 @@
 		<div class="row">
 			<div class="col-lg-6 padding-0" style="background-image: url('/images/about/cytonn-photography_hu_afe37575035a65b9.webp'); background-size: cover; background-position: center center; background-repeat: no-repeat;">
 				
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-  
-  
-    
-      
-    
-
-
-    
-    
-
-
-    
-    
-      
-      
-    
-    
-    
-
-
-    
-    
-      
-      
-        
-
-        
-        
-        
-        
-        
-        
-        
-
-
-        
-        
-
-
-        <picture>
-          <source
-            
-              srcset="/images/about/cytonn-photography_hu_4de44c05bf1d015a.webp"
-            
-            media="(max-width: 575px)" />
-          <source
-            
-              srcset="/images/about/cytonn-photography_hu_51c493d231d60650.webp"
-            
-            media="(max-width: 767px)" />
-          <source
-            
-              srcset="/images/about/cytonn-photography_hu_259e49ea3ade6bad.webp"
-            
-            media="(max-width: 991px)" />
-          <source
-            
-              srcset="/images/about/cytonn-photography_hu_5a9402b80d4bc41c.webp"
-             />
-          <img
-            
-              loading="lazy" decoding="async"
-              src="/images/about/cytonn-photography_hu_d5778d44df5d32ba.jpg"
-            class=" d-none img"
-            alt=""
-            width="6016"
-            height="4016" />
-        </picture>
-      
-      
-    
-    
-  
-
-
-  
-
-
+  <img src="/images/about/cytonn-photography_hu_a853f8c4a0f04a02.webp" srcset="/images/about/cytonn-photography_hu_4f6dfdd8786e306f.webp 320w, /images/about/cytonn-photography_hu_8f515ecdc3bc5cdc.webp 480w, /images/about/cytonn-photography_hu_85526d4e169c0315.webp 640w, /images/about/cytonn-photography_hu_d77ab99f1519ffc9.webp 960w, /images/about/cytonn-photography_hu_a853f8c4a0f04a02.webp 1110w" sizes="(max-width: 575px) calc(100vw - 30px), (max-width: 991px) 50vw, 370px" alt="" class="d-none" width="6016" height="4016" loading="lazy" decoding="async">
 			</div>
 			<div class="col-lg-6">
 				<div class="content-block">
@@ -514,121 +440,7 @@
 
 
 <section id="cta" class="call-to-action section-sm bg-1 overly" style="background-image: url('/images/backgrounds/zanyar-ibrahim_hu_ec1a3a079631467e.webp'); background-size: cover; background-position: center center; background-repeat: no-repeat;">
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-  
-  
-    
-      
-    
-
-
-    
-    
-
-
-    
-    
-      
-      
-    
-    
-    
-
-
-    
-    
-      
-      
-        
-
-        
-        
-        
-        
-        
-        
-        
-
-
-        
-        
-
-
-        <picture>
-          <source
-            
-              srcset="/images/backgrounds/zanyar-ibrahim_hu_3d437c1be0c9e2e1.webp"
-            
-            media="(max-width: 575px)" />
-          <source
-            
-              srcset="/images/backgrounds/zanyar-ibrahim_hu_425359a3d9a943f5.webp"
-            
-            media="(max-width: 767px)" />
-          <source
-            
-              srcset="/images/backgrounds/zanyar-ibrahim_hu_f2e1f6152da9f776.webp"
-            
-            media="(max-width: 991px)" />
-          <source
-            
-              srcset="/images/backgrounds/zanyar-ibrahim_hu_539960eee76f523e.webp"
-             />
-          <img
-            
-              loading="lazy" decoding="async"
-              src="/images/backgrounds/zanyar-ibrahim_hu_a1f465b98a00625d.jpg"
-            class=" d-none img"
-            alt="Proactive Services &amp; Incredible Features"
-            width="6000"
-            height="4000" />
-        </picture>
-      
-      
-    
-    
-  
-
-
-  
-
-
+	<img src="/images/backgrounds/zanyar-ibrahim_hu_7ebae22c99015ee9.webp" srcset="/images/backgrounds/zanyar-ibrahim_hu_7b46981a92f56962.webp 320w, /images/backgrounds/zanyar-ibrahim_hu_2f80f7ecc27f78f7.webp 480w, /images/backgrounds/zanyar-ibrahim_hu_771290fdd0badd0d.webp 640w, /images/backgrounds/zanyar-ibrahim_hu_e679ab6df4c4f08.webp 960w, /images/backgrounds/zanyar-ibrahim_hu_7ebae22c99015ee9.webp 1110w" sizes="(max-width: 575px) calc(100vw - 30px), (max-width: 991px) 50vw, 370px" alt="Proactive Services &amp; Incredible Features" class="d-none" width="6000" height="4000" loading="lazy" decoding="async">
 	<div class="container">
 		<div class="row align-items-center">
 			<div class="col-lg-6">
@@ -715,6 +527,8 @@
 			<!-- /section title -->
 
 			
+			
+			
 			<!-- Single Service Item -->
 			<article class="col-lg-4 col-md-6 col-12 wow fadeInUp" data-wow-duration="500ms">
 				<div class="service-block text-center">
@@ -723,9 +537,14 @@
 					</div>
 					<h3>Managed Cybersecurity</h3>
 					<p>Protect your connected systems and business assets in today&rsquo;s data-driven world.</p>
+					
+					<a class="service-card-link" href="/services/managed-cybersecurity/">Explore Managed Cybersecurity <span aria-hidden="true">&rarr;</span></a>
+					
 				</div>
 			</article>
 			<!-- End Single Service Item -->
+			
+			
 			
 			<!-- Single Service Item -->
 			<article class="col-lg-4 col-md-6 col-12 wow fadeInUp" data-wow-duration="500ms">
@@ -735,9 +554,14 @@
 					</div>
 					<h3>Automation &amp; Tools</h3>
 					<p>Enhance productivity and streamline operational workflows to improve client service and speed up delivery.</p>
+					
+					<a class="service-card-link" href="/services/automation-and-tools/">Explore Automation &amp; Tools <span aria-hidden="true">&rarr;</span></a>
+					
 				</div>
 			</article>
 			<!-- End Single Service Item -->
+			
+			
 			
 			<!-- Single Service Item -->
 			<article class="col-lg-4 col-md-6 col-12 wow fadeInUp" data-wow-duration="500ms">
@@ -747,10 +571,17 @@
 					</div>
 					<h3>Cybersecurity R&amp;D</h3>
 					<p>We help anticipate tomorrow&rsquo;s threats and advance South Africa&rsquo;s cyber future through a secure software development lifecycle (SSDLC).</p>
+					
+					<a class="service-card-link" href="/services/research-and-development/">Explore Cybersecurity R&amp;D <span aria-hidden="true">&rarr;</span></a>
+					
 				</div>
 			</article>
 			<!-- End Single Service Item -->
 			
+
+			<div class="all-post text-center col-lg-12">
+				<a class="btn btn-main" href="/services/">Compare all services</a>
+			</div>
 		</div>
 	</div>
 </section>
@@ -861,6 +692,9 @@
 						</div>
 						
 					</div>
+					
+					<a class="btn btn-main page-scroll service-section-link" href="/services/managed-cybersecurity/">See what is included</a>
+					
 				</div>
 			</div>
 		</div>
@@ -878,7 +712,7 @@
 <section class="section section-bg about-2 padding-0 mb-4" id="automation-tools">
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-lg-6 padding-0 lozad" data-background-image="http://localhost:1313/images/services/automation/julien-tromeur.webp"
+			<div class="col-lg-6 padding-0 lozad" data-background-image="http://localhost:60677/images/services/automation/julien-tromeur.webp"
     style="background-size: cover; background-position: top center; background-repeat: no-repeat; min-height: 400px;">
 			</div>
 			<div class="col-lg-6">
@@ -930,6 +764,9 @@
 						</div>
 						
 					</div>
+					
+					<a class="btn btn-main page-scroll service-section-link" href="/services/automation-and-tools/">See what is included</a>
+					
 				</div>
 			</div>
 		</div>
@@ -1041,14 +878,15 @@
 						</div>
 						
 					</div>
+					
+					<a class="btn btn-main page-scroll service-section-link" href="/services/research-and-development/">See what is included</a>
+					
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
 <!-- /detailed service -->
-
-
 
 
 
@@ -1237,121 +1075,7 @@
 			<div class="col-lg-4 col-md-6 shuffle-item"
 				data-groups="[&quot;development&quot;,&quot;cybersecurity&quot;]">
 				<div class="portfolio-block mb-4">
-					
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-  
-  
-    
-      
-    
-
-
-    
-    
-
-
-    
-    
-      
-      
-    
-    
-    
-
-
-    
-    
-      
-      
-        
-
-        
-        
-        
-        
-        
-        
-        
-
-
-        
-        
-
-
-        <picture>
-          <source
-            
-              srcset="/images/portfolio/Temo%20Process_hu_9ad0e7f3033227b5.webp"
-            
-            media="(max-width: 575px)" />
-          <source
-            
-              srcset="/images/portfolio/Temo%20Process_hu_9df75ddc1d89c5f3.webp"
-            
-            media="(max-width: 767px)" />
-          <source
-            
-              srcset="/images/portfolio/Temo%20Process_hu_c19c6efb497fae24.webp"
-            
-            media="(max-width: 991px)" />
-          <source
-            
-              srcset="/images/portfolio/Temo%20Process_hu_1824e87f9c4dc97a.webp"
-             />
-          <img
-            
-              loading="lazy" decoding="async"
-              src="/images/portfolio/Temo%20Process_hu_6e7c35e076b9eb9c.webp"
-            class=" img-fluid img"
-            alt="Temo Process Technologies - Secure IT Infrastructure"
-            width="1696"
-            height="1203" />
-        </picture>
-      
-      
-    
-    
-  
-
-
-  
-
-
+					<img src="/images/portfolio/Temo%20Process_hu_7fff7f787364a48.webp" srcset="/images/portfolio/Temo%20Process_hu_6e1692724163a411.webp 320w, /images/portfolio/Temo%20Process_hu_c20fd00a08e6e5bb.webp 480w, /images/portfolio/Temo%20Process_hu_42cd52d3641a0737.webp 640w, /images/portfolio/Temo%20Process_hu_4da446c742b952af.webp 960w, /images/portfolio/Temo%20Process_hu_7fff7f787364a48.webp 1110w" sizes="(max-width: 575px) calc(100vw - 30px), (max-width: 991px) 50vw, 370px" alt="Temo Process Technologies - Secure IT Infrastructure" class="img-fluid" width="1696" height="1203" loading="lazy" decoding="async">
 					<div class="caption">
 						
   
@@ -1375,121 +1099,7 @@
 			<div class="col-lg-4 col-md-6 shuffle-item"
 				data-groups="[&quot;cybersecurity&quot;]">
 				<div class="portfolio-block mb-4">
-					
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-  
-  
-    
-      
-    
-
-
-    
-    
-
-
-    
-    
-      
-      
-    
-    
-    
-
-
-    
-    
-      
-      
-        
-
-        
-        
-        
-        
-        
-        
-        
-
-
-        
-        
-
-
-        <picture>
-          <source
-            
-              srcset="/images/portfolio/metq_hu_e9af5654f874c35c.webp"
-            
-            media="(max-width: 575px)" />
-          <source
-            
-              srcset="/images/portfolio/metq_hu_262e7900f9ed86c0.webp"
-            
-            media="(max-width: 767px)" />
-          <source
-            
-              srcset="/images/portfolio/metq_hu_9bcc8e429c956c04.webp"
-            
-            media="(max-width: 991px)" />
-          <source
-            
-              srcset="/images/portfolio/metq_hu_d71e1dfc6db7635b.webp"
-             />
-          <img
-            
-              loading="lazy" decoding="async"
-              src="/images/portfolio/metq_hu_f151ad22b5cc363f.webp"
-            class=" img-fluid img"
-            alt="Hydrosizer PLC"
-            width="1278"
-            height="899" />
-        </picture>
-      
-      
-    
-    
-  
-
-
-  
-
-
+					<img src="/images/portfolio/metq_hu_9098c10d0195fa73.webp" srcset="/images/portfolio/metq_hu_8d39de177965f5b5.webp 320w, /images/portfolio/metq_hu_72c5659c97aecf5d.webp 480w, /images/portfolio/metq_hu_4b99689624c574b8.webp 640w, /images/portfolio/metq_hu_f9556bd27a8e82b3.webp 960w, /images/portfolio/metq_hu_9098c10d0195fa73.webp 1110w" sizes="(max-width: 575px) calc(100vw - 30px), (max-width: 991px) 50vw, 370px" alt="Hydrosizer PLC" class="img-fluid" width="1278" height="899" loading="lazy" decoding="async">
 					<div class="caption">
 						
   
@@ -1513,121 +1123,7 @@
 			<div class="col-lg-4 col-md-6 shuffle-item"
 				data-groups="[&quot;cybersecurity&quot;]">
 				<div class="portfolio-block mb-4">
-					
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-  
-  
-    
-      
-    
-
-
-    
-    
-
-
-    
-    
-      
-      
-    
-    
-    
-
-
-    
-    
-      
-      
-        
-
-        
-        
-        
-        
-        
-        
-        
-
-
-        
-        
-
-
-        <picture>
-          <source
-            
-              srcset="/images/portfolio/oaklapine_hu_ca9408b76a96c363.webp"
-            
-            media="(max-width: 575px)" />
-          <source
-            
-              srcset="/images/portfolio/oaklapine_hu_2ac439f66e0c604f.webp"
-            
-            media="(max-width: 767px)" />
-          <source
-            
-              srcset="/images/portfolio/oaklapine_hu_9494687f52f901c4.webp"
-            
-            media="(max-width: 991px)" />
-          <source
-            
-              srcset="/images/portfolio/oaklapine_hu_e050a137d1a76f6a.webp"
-             />
-          <img
-            
-              loading="lazy" decoding="async"
-              src="/images/portfolio/oaklapine_hu_2fa369734d057d01.webp"
-            class=" img-fluid img"
-            alt="Oaklapine"
-            width="596"
-            height="450" />
-        </picture>
-      
-      
-    
-    
-  
-
-
-  
-
-
+					<img src="/images/portfolio/oaklapine_hu_fd040e8e5cbe9efd.webp" srcset="/images/portfolio/oaklapine_hu_34daa29f7d60264.webp 320w, /images/portfolio/oaklapine_hu_f6d830fd68cc3ed6.webp 480w, /images/portfolio/oaklapine_hu_fd040e8e5cbe9efd.webp 596w" sizes="(max-width: 575px) calc(100vw - 30px), (max-width: 991px) 50vw, 370px" alt="Oaklapine" class="img-fluid" width="596" height="450" loading="lazy" decoding="async">
 					<div class="caption">
 						
   
@@ -1663,121 +1159,7 @@
 <!-- Start Counter Section -->
 <section id="counter" class="parallax-section bg-1 section overly" style="background-image: url('/images/backgrounds/bg-testimonial_hu_f50484706a66e53d.webp'); background-size: cover; background-position: center center; background-repeat: no-repeat;">
 	
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-  
-  
-    
-      
-    
-
-
-    
-    
-
-
-    
-    
-      
-      
-    
-    
-    
-
-
-    
-    
-      
-      
-        
-
-        
-        
-        
-        
-        
-        
-        
-
-
-        
-        
-
-
-        <picture>
-          <source
-            
-              srcset="/images/backgrounds/bg-testimonial_hu_3306d5b7bc72e2b.webp"
-            
-            media="(max-width: 575px)" />
-          <source
-            
-              srcset="/images/backgrounds/bg-testimonial_hu_c0b995d4615f34a.webp"
-            
-            media="(max-width: 767px)" />
-          <source
-            
-              srcset="/images/backgrounds/bg-testimonial_hu_d219745f6029ee13.webp"
-            
-            media="(max-width: 991px)" />
-          <source
-            
-              srcset="/images/backgrounds/bg-testimonial_hu_8484de01a6c089d3.webp"
-             />
-          <img
-            
-              loading="lazy" decoding="async"
-              src="/images/backgrounds/bg-testimonial_hu_3e57b8d2bca18e46.jpg"
-            class=" d-none img"
-            alt=""
-            width="1741"
-            height="1161" />
-        </picture>
-      
-      
-    
-    
-  
-
-
-  
-
-
+  <img src="/images/backgrounds/bg-testimonial_hu_489f16c3626c5e50.webp" srcset="/images/backgrounds/bg-testimonial_hu_d8e4194c4a43a40e.webp 320w, /images/backgrounds/bg-testimonial_hu_5dcbf23e50e25991.webp 480w, /images/backgrounds/bg-testimonial_hu_dacec17d56aa6003.webp 640w, /images/backgrounds/bg-testimonial_hu_8bd0ad528d22f447.webp 960w, /images/backgrounds/bg-testimonial_hu_489f16c3626c5e50.webp 1110w" sizes="(max-width: 575px) calc(100vw - 30px), (max-width: 991px) 50vw, 370px" alt="" class="d-none" width="1741" height="1161" loading="lazy" decoding="async">
 	<div class="container">
 		<div class="row justify-content-center">
 			
@@ -1972,121 +1354,7 @@
 <section id="testimonial" class="testimonial overly section bg-2"
 style="background-image: url('/images/backgrounds/zanyar-ibrahim_hu_ec1a3a079631467e.webp'); background-size: cover; background-position: center center; background-repeat: no-repeat;">
 	
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-  
-  
-    
-      
-    
-
-
-    
-    
-
-
-    
-    
-      
-      
-    
-    
-    
-
-
-    
-    
-      
-      
-        
-
-        
-        
-        
-        
-        
-        
-        
-
-
-        
-        
-
-
-        <picture>
-          <source
-            
-              srcset="/images/backgrounds/zanyar-ibrahim_hu_694c8c40bc9f05da.webp"
-            
-            media="(max-width: 575px)" />
-          <source
-            
-              srcset="/images/backgrounds/zanyar-ibrahim_hu_aaf2a6287d9a3a8.webp"
-            
-            media="(max-width: 767px)" />
-          <source
-            
-              srcset="/images/backgrounds/zanyar-ibrahim_hu_e6adb564953792bb.webp"
-            
-            media="(max-width: 991px)" />
-          <source
-            
-              srcset="/images/backgrounds/zanyar-ibrahim_hu_d8e68f1a20663b82.webp"
-             />
-          <img
-            
-              loading="lazy" decoding="async"
-              src="/images/backgrounds/zanyar-ibrahim_hu_8df7172fc226bf4e.webp"
-            class=" d-none img"
-            alt=""
-            width="6000"
-            height="4000" />
-        </picture>
-      
-      
-    
-    
-  
-
-
-  
-
-
+  <img src="/images/backgrounds/zanyar-ibrahim_hu_496b9d0d0a50a81e.webp" srcset="/images/backgrounds/zanyar-ibrahim_hu_e2d2ad3dc78a681b.webp 320w, /images/backgrounds/zanyar-ibrahim_hu_5dd7fc0f9cd61df9.webp 480w, /images/backgrounds/zanyar-ibrahim_hu_fc30180c1efbdcf9.webp 640w, /images/backgrounds/zanyar-ibrahim_hu_cf6b9ad22bb24a05.webp 960w, /images/backgrounds/zanyar-ibrahim_hu_496b9d0d0a50a81e.webp 1110w" sizes="(max-width: 575px) calc(100vw - 30px), (max-width: 991px) 50vw, 370px" alt="" class="d-none" width="6000" height="4000" loading="lazy" decoding="async">
 	<div class="container">
 		<div class="row">
 			<div class="col-xl-12">
@@ -2098,99 +1366,7 @@ style="background-image: url('/images/backgrounds/zanyar-ibrahim_hu_ec1a3a079631
 
 						<!-- client photo -->
 						<div class="client-thumb">
-							
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-  
-  
-    
-      
-    
-
-
-    
-    
-
-
-    
-    
-      
-      
-    
-    
-    
-
-
-    
-    
-      
-      
-        
-        
-        
-        
-        
-        
-
-
-        
-        
-
-
-        <img
-          
-            src="/images/client/client-1_hu_56fe6a09a44bd8de.webp" loading="lazy"
-            decoding="async" alt="Lemos Kail"
-          
-
-          class=" img-fluid lozad testimonial-image img"
-          width="280"
-          height="280"
-          onerror="this.onerror='null';this.src='\/images\/client\/client-1.webp';" />
-      
-      
-    
-    
-  
-
-
-  
-
-
+							<img src="/images/client/client-1_hu_f1d7b38d93134408.webp" srcset="/images/client/client-1_hu_f1d7b38d93134408.webp 280w" sizes="128px" alt="Lemos Kail" class="img-fluid lozad testimonial-image" width="280" height="280" loading="lazy" decoding="async">
 						</div>
 
 						<!-- client info -->
@@ -2211,121 +1387,7 @@ style="background-image: url('/images/backgrounds/zanyar-ibrahim_hu_ec1a3a079631
 
 						<!-- client photo -->
 						<div class="client-thumb">
-							
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-  
-  
-    
-      
-    
-
-
-    
-    
-
-
-    
-    
-      
-      
-    
-    
-    
-
-
-    
-    
-      
-      
-        
-
-        
-        
-        
-        
-        
-        
-        
-
-
-        
-        
-
-
-        <picture>
-          <source
-            
-              srcset="/images/client/client-oaklapine_hu_19c334cb61357b4.webp"
-            
-            media="(max-width: 575px)" />
-          <source
-            
-              srcset="/images/client/client-oaklapine_hu_a830ab254d2914bb.webp"
-            
-            media="(max-width: 767px)" />
-          <source
-            
-              srcset="/images/client/client-oaklapine_hu_4864613be6867669.webp"
-            
-            media="(max-width: 991px)" />
-          <source
-            
-              srcset="/images/client/client-oaklapine_hu_67b32f8e384243d4.webp"
-             />
-          <img
-            
-              loading="lazy" decoding="async"
-              src="/images/client/client-oaklapine_hu_dbf8c2fb028ff9a9.webp"
-            class=" img-fluid lozad testimonial-image img"
-            alt="Lefa Morabe"
-            width="720"
-            height="960" />
-        </picture>
-      
-      
-    
-    
-  
-
-
-  
-
-
+							<img src="/images/client/client-oaklapine_hu_189e13320b8b39f2.webp" srcset="/images/client/client-oaklapine_hu_a0cd628df741f877.webp 320w, /images/client/client-oaklapine_hu_f14abe52e30cb47a.webp 480w, /images/client/client-oaklapine_hu_841eca872773172e.webp 640w, /images/client/client-oaklapine_hu_189e13320b8b39f2.webp 720w" sizes="128px" alt="Lefa Morabe" class="img-fluid lozad testimonial-image" width="720" height="960" loading="lazy" decoding="async">
 						</div>
 
 						<!-- client info -->
@@ -2365,6 +1427,73 @@ style="background-image: url('/images/backgrounds/zanyar-ibrahim_hu_ec1a3a079631
 				</div>
 			</div>
 			<!-- /section title -->
+
+			
+			<article class="col-lg-4 col-md-6 col-12 clearfix wow fadeInUp mb-4">
+  <div class="post-block blog-card">
+    
+    
+    
+    
+      
+      
+      
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+      
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+      <div class="media-wrapper">
+        <img
+          src="/images/blog/computer-security/m365-bec.webp"
+          srcset="/images/blog/computer-security/m365-bec_hu_b2cf20c610fff7a5.webp 320w, /images/blog/computer-security/m365-bec_hu_9d05c5ec8383845e.webp 480w, /images/blog/computer-security/m365-bec_hu_ea78a5a5a361a231.webp 640w" sizes="(max-width: 575px) calc(100vw - 30px), (max-width: 991px) 50vw, 360px"
+          class="img-fluid"
+          alt="5 Microsoft 365 Misconfigurations Exposing South African SMEs to Business Email Compromise"
+          width="1600"
+          height="900"
+          loading="lazy"
+          decoding="async">
+      </div>
+    
+
+    <div class="content">
+      
+      
+      
+        <p class="blog-card-topic">Microsoft 365 Security</p>
+      
+      <h3><a href="/blog/comptuter-security/m365-misconfigurations-south-african-smes/">5 Microsoft 365 Misconfigurations Exposing South African SMEs to Business Email Compromise</a></h3>
+      
+      
+        <p class="blog-card-summary">Business Email Compromise (BEC) remains one of the costliest cyber threats facing South African businesses. Here are five common Microsoft 365 configuration gaps—and how …</p>
+      
+      <ul class="blog-card-meta" aria-label="Article details">
+        <li><time datetime="2026-11-20">Nov 20, 2026</time></li>
+        <li>3 min read</li>
+      </ul>
+      <a class="btn btn-transparent blog-card-link" href="/blog/comptuter-security/m365-misconfigurations-south-african-smes/" aria-label="Read 5 Microsoft 365 Misconfigurations Exposing South African SMEs to Business Email Compromise">Read article</a>
+    </div>
+  </div>
+</article>
 
 			
 			<article class="col-lg-4 col-md-6 col-12 clearfix wow fadeInUp mb-4">
@@ -2496,76 +1625,15 @@ style="background-image: url('/images/backgrounds/zanyar-ibrahim_hu_ec1a3a079631
 </article>
 
 			
-			<article class="col-lg-4 col-md-6 col-12 clearfix wow fadeInUp mb-4">
-  <div class="post-block blog-card">
-    
-    
-    
-    
-      
-      
-      
-      
-        
-          
-        
-      
-        
-      
-        
-      
-      
-        
-      
-      
-        
-        
-      
-        
-        
-      
-      <div class="media-wrapper">
-        <img
-          src="/images/blog/computer-security/security-health-check-test.webp"
-          srcset="/images/blog/computer-security/security-health-check-test_hu_39c3fbe4fe6c40b2.webp 320w, /images/blog/computer-security/security-health-check-test_hu_ae8d829ab19c90f2.webp 410w" sizes="(max-width: 575px) calc(100vw - 30px), (max-width: 991px) 50vw, 360px"
-          class="img-fluid"
-          alt="Cybersecurity Health Check"
-          width="410"
-          height="265"
-          loading="lazy"
-          decoding="async">
-      </div>
-    
-
-    <div class="content">
-      
-      
-      
-        <p class="blog-card-topic">Cybersecurity</p>
-      
-      <h3><a href="/blog/comptuter-security/security-health-check/">Cybersecurity Health Check</a></h3>
-      
-      
-        <p class="blog-card-summary">Maturity of your cybersecurity controls</p>
-      
-      <ul class="blog-card-meta" aria-label="Article details">
-        <li><time datetime="2018-09-12">Sep 12, 2018</time></li>
-        <li>2 min read</li>
-      </ul>
-      <a class="btn btn-transparent blog-card-link" href="/blog/comptuter-security/security-health-check/" aria-label="Read Cybersecurity Health Check">Read article</a>
-    </div>
-  </div>
-</article>
-
-			
 
 			<div class="all-post text-center col-lg-12">
-				<a class="btn btn-main" href="http://localhost:1313/blog/">View All Posts</a>
+				<a class="btn btn-main" href="http://localhost:60677/blog/">View All Posts</a>
 			</div>
 		</div>
 	</div>
 </section>
 <!-- /blog -->
+
 
 
 
@@ -2617,9 +1685,9 @@ style="background-image: url('/images/backgrounds/zanyar-ibrahim_hu_ec1a3a079631
 					<div class="form-group col-12 col-lg-6">
 						<label class="fs-label" for="business-area">Business Area</label>
 						<select class="fs-select" id="business-area" name="business-area" required>
-							<option value="Cybersecurity">Cybersecurity</option>
-							<option value="Automation Tools">Automation Tools</option>
-							<option value="Cybersecurity R&amp;D">Research &amp; Development</option>
+							<option value="Cybersecurity" >Cybersecurity</option>
+							<option value="Automation Tools" >Automation Tools</option>
+							<option value="Cybersecurity R&amp;D" >Research &amp; Development</option>
 						</select>
 					</div>
 					<div class="form-group col-12 col-lg-6">
@@ -2691,288 +1759,90 @@ style="background-image: url('/images/backgrounds/zanyar-ibrahim_hu_ec1a3a079631
 
 
 
-  </div><!-- end Contact Area -->
-<footer id="footer" class="section-bg">
-	<div class="container">
-		<div class="row wow fadeInUp" data-wow-duration="500ms">
-			<div class="col-xl-12">
-
-				<!-- Footer Social Links -->
-				<div class="social-icon">
-					<ul class="list-inline">
-						
-						<li class="list-inline-item"><a href="https://facebook.com/MuchaTechnology"><i class="ti-facebook"></i></a></li>
-						
-						<li class="list-inline-item"><a href="https://twitter.com/MuchaTech"><i class="ti-twitter-alt"></i></a></li>
-						
-						<li class="list-inline-item"><a href="https://www.youtube.com/@muchatech"><i class="ti-youtube"></i></a></li>
-						
-						<li class="list-inline-item"><a href="https://www.instagram.com/muchatech"><i class="ti-instagram"></i></a></li>
-						
-						<li class="list-inline-item"><a href="https://linkedin.com/company/muchatechnology"><i class="ti-linkedin"></i></a></li>
-						
-					</ul>
-				</div>
-
-				<!-- copyright -->
-				<div class="copyright text-center">
-					<a href="http://localhost:1313/">
-						
-						<img class="lozad" data-src="http://localhost:1313/images/V1.webp" alt="MuchaTech" height="52">
-					</a>
-					<br>
-					<p>Copyright © 2020-2026 Designed by <a href="https://github.com/muchatech">MuchaTech</a> &amp; Developed by <a href="https://github.com/muchatech">MuchaTech</a></p>
-				</div>
-			</div>
-		</div>
-	</div>
-</footer>
-<!-- /footer -->
-
-<!-- Google Map API -->
-
-
-<!-- JS Plugins -->
-
-<script src="http://localhost:1313/plugins/jquery/jquery.min.js"></script>
-
-<script src="http://localhost:1313/plugins/bootstrap/bootstrap.min.js"></script>
-
-<script src="http://localhost:1313/plugins/slick/slick.min.js"></script>
-
-<script src="http://localhost:1313/plugins/shuffle/shuffle.min.js"></script>
-
-<script src="http://localhost:1313/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
-
-<script src="http://localhost:1313/plugins/lazy-load/lozad.min.js"></script>
-
-<script src="http://localhost:1313/plugins/google-map/map.js"></script>
-
-
-<!-- Main Script -->
-
-<script src="http://localhost:1313/js/script.min.af325f2c280c8896bd633e31140c7749c0dedba1b86023e32603d1f96d0ddcb688e95a99c5bbaa124c2fc7f042e688f9.js" integrity="sha384-rzJfLCgMiJa9Yz4xFAx3ScDe26G4YCPjJgPR&#43;W0N3LaI6VqZxbuqEkwvx/BC5oj5"></script>
-
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
-<div id="js-cookie-box" class="cookie-box cookie-box-hide">
-	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-transparent">I Accept</span>
-</div>
-<script>
-	(function ($) {
-		const cookieBox = document.getElementById('js-cookie-box');
-		const cookieButton = document.getElementById('js-cookie-button');
-		if (!Cookies.get('cookie-box')) {
-			cookieBox.classList.remove('cookie-box-hide');
-			cookieButton.onclick = function () {
-				Cookies.set('cookie-box', true, {
-					expires:  2 
-				});
-				cookieBox.classList.add('cookie-box-hide');
-			};
-		}
-	})(jQuery);
-</script>
-<div class="contact-toast-container" aria-live="polite" aria-atomic="true">
-      <div id="contact-toast" class="toast fade contact-toast" role="status" aria-live="polite" aria-atomic="true">
-        <div class="toast-header">
-          <span class="contact-toast-icon" aria-hidden="true"></span>
-          <strong id="contact-toast-title" class="mr-auto"></strong>
-          <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close notification">
-            <span aria-hidden="true">&times;</span>
-          </button>
+  </div><footer id="footer" class="section-bg">
+  <div class="container">
+    <div class="row wow fadeInUp" data-wow-duration="500ms">
+      <div class="col-xl-12">
+        <div class="social-icon">
+          <ul class="list-inline">
+            
+            <li class="list-inline-item"><a href="https://facebook.com/MuchaTechnology"><i class="ti-facebook"></i></a></li>
+            
+            <li class="list-inline-item"><a href="https://twitter.com/MuchaTech"><i class="ti-twitter-alt"></i></a></li>
+            
+            <li class="list-inline-item"><a href="https://www.youtube.com/@muchatech"><i class="ti-youtube"></i></a></li>
+            
+            <li class="list-inline-item"><a href="https://www.instagram.com/muchatech"><i class="ti-instagram"></i></a></li>
+            
+            <li class="list-inline-item"><a href="https://linkedin.com/company/muchatechnology"><i class="ti-linkedin"></i></a></li>
+            
+          </ul>
         </div>
-        <div id="contact-toast-message" class="toast-body"></div>
+        <div class="copyright text-center">
+          <a href="http://localhost:60677/">
+            <img src="http://localhost:60677/images/V1-contrast.webp" alt="MuchaTech" width="129" height="52" loading="lazy" decoding="async">
+          </a>
+          <br>
+          <p>Copyright © 2020-2026 All rights reserved.</p>
+        </div>
       </div>
     </div>
+  </div>
+</footer>
 
-    <script>
-      const contactForm = document.getElementById("contact-form");
-      const contactToast = document.getElementById("contact-toast");
-      const contactToastTitle = document.getElementById("contact-toast-title");
-      const contactToastMessage = document.getElementById("contact-toast-message");
-      const contactToastInstance = contactToast ? window.jQuery(contactToast) : null;
-      let contactToastTimer;
 
-      if (contactToastInstance) {
-        contactToastInstance.toast({ autohide: false });
-      }
 
-      const showContactToast = (title, message, state, hideAfter) => {
-        if (!contactToast || !contactToastInstance || !contactToastTitle || !contactToastMessage) {
-          return;
-        }
 
-        window.clearTimeout(contactToastTimer);
-        contactToast.classList.remove("contact-toast--info", "contact-toast--success", "contact-toast--error");
-        contactToast.classList.add(`contact-toast--${state}`);
-        contactToast.setAttribute("role", state === "error" ? "alert" : "status");
-        contactToast.setAttribute("aria-live", state === "error" ? "assertive" : "polite");
-        contactToastTitle.textContent = title;
-        contactToastMessage.textContent = message;
-        contactToastInstance.toast("show");
 
-        if (hideAfter) {
-          contactToastTimer = window.setTimeout(() => contactToastInstance.toast("hide"), hideAfter);
-        }
-      };
+<script defer src="http://localhost:60677/plugins/jquery/jquery.min.js"></script>
 
-      if (contactForm && contactToastInstance) {
-        const submitButton = contactForm.querySelector("button[type='submit']");
-        const submitLabel = submitButton?.textContent;
 
-        contactForm.addEventListener("submit", async (event) => {
-          event.preventDefault();
-          showContactToast("Sending message", "Please wait while we send your message.", "info");
-          contactForm.setAttribute("aria-busy", "true");
-          if (submitButton) {
-            submitButton.disabled = true;
-            submitButton.textContent = "Sending...";
-          }
 
-          try {
-            const response = await fetch(contactForm.action, {
-              method: contactForm.method,
-              body: new FormData(contactForm),
-              headers: { Accept: "application/json" },
-            });
+<script defer src="http://localhost:60677/plugins/bootstrap/bootstrap.min.js"></script>
 
-            if (!response.ok) {
-              throw new Error(`Contact form request failed with status ${response.status}`);
-            }
 
-            showContactToast("Message sent", "Thank you for contacting MuchaTech. We’ll be in touch soon.", "success", 8000);
-            contactForm.reset();
-          } catch (error) {
-            console.error("Contact form submission failed:", error);
-            showContactToast("Message not sent", "We couldn't send your message. Please try again or contact us by email.", "error", 10000);
-          } finally {
-            contactForm.removeAttribute("aria-busy");
-            if (submitButton) {
-              submitButton.disabled = false;
-              submitButton.textContent = submitLabel;
-            }
-          }
-        });
-      }
 
-      if (contactForm && window.location.hash === "#contact") {
-        const firstContactField = contactForm.querySelector("input:not([type='hidden']), select, textarea, button");
-        window.addEventListener("pageshow", () => {
-          firstContactField?.focus({ preventScroll: true });
-        }, { once: true });
-      }
-    </script>
+<script defer src="http://localhost:60677/plugins/slick/slick.min.js"></script>
 
-    <script>
-      document.querySelectorAll("[data-endpoint-preview]").forEach((preview) => {
-        const tabs = [...preview.querySelectorAll("[data-endpoint-tab]")];
-        const panels = [...preview.querySelectorAll("[data-endpoint-panel]")];
 
-        const activateTab = (tab) => {
-          tabs.forEach((item) => {
-            const selected = item === tab;
-            item.setAttribute("aria-selected", String(selected));
-            item.tabIndex = selected ? 0 : -1;
-          });
-          panels.forEach((panel) => {
-            panel.hidden = panel.dataset.endpointPanel !== tab.dataset.endpointTab;
-          });
-        };
 
-        tabs.forEach((tab, index) => {
-          tab.addEventListener("click", () => activateTab(tab));
-          tab.addEventListener("keydown", (event) => {
-            if (event.key !== "ArrowLeft" && event.key !== "ArrowRight" && event.key !== "Home" && event.key !== "End") {
-              return;
-            }
+<script defer src="http://localhost:60677/plugins/shuffle/shuffle.min.js"></script>
 
-            event.preventDefault();
-            const nextIndex = event.key === "Home" ? 0
-              : event.key === "End" ? tabs.length - 1
-                : (index + (event.key === "ArrowRight" ? 1 : tabs.length - 1)) % tabs.length;
-            tabs[nextIndex].focus();
-            activateTab(tabs[nextIndex]);
-          });
-        });
-      });
-    </script>
 
-    <script>
-      const navigationMenu = document.getElementById("navigation");
-      const navigationToggle = document.querySelector(".navbar-toggler");
-      if (navigationMenu) {
-        navigationMenu.addEventListener("click", (event) => {
-          const link = event.target.closest("a.nav-link:not(.dropdown-toggle), a.dropdown-item");
-          if (link) {
-            if (event.detail > 0) {
-              link.blur();
-            }
-            if (window.matchMedia("(max-width: 991.98px)").matches) {
-              window.jQuery(navigationMenu).collapse("hide");
-            } else if (link.matches("a.dropdown-item")) {
-              const dropdownToggle = link.closest(".dropdown").querySelector(".dropdown-toggle");
-              window.jQuery(dropdownToggle).dropdown("hide");
-            }
-          }
-        }, true);
 
-        navigationMenu.addEventListener("keydown", (event) => {
-          if (event.key === "Escape" && navigationMenu.classList.contains("show")) {
-            window.jQuery(navigationMenu).collapse("hide");
-            navigationToggle?.focus();
-          }
-        });
-      }
-    </script>
+<script defer src="http://localhost:60677/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
 
-    <script>
-      window.jQuery(function ($) {
-        const scrollLinks = $("nav a, .page-scroll");
-        scrollLinks.off("click").on("click", function (event) {
-          if (
-            location.pathname.replace(/^\//, "") !== this.pathname.replace(/^\//, "") ||
-            location.hostname !== this.hostname
-          ) {
-            return;
-          }
 
-          const targetId = this.hash.slice(1);
-          if (!targetId) {
-            return;
-          }
 
-          const target = document.getElementById(targetId);
-          if (!target) {
-            return;
-          }
+<script defer src="http://localhost:60677/plugins/lazy-load/lozad.min.js"></script>
 
-          event.preventDefault();
-          const navigationHeight = document.querySelector(".navigation")?.offsetHeight ?? 50;
-          const duration = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 650;
-          $("html, body").stop().animate({
-            scrollTop: Math.max($(target).offset().top - navigationHeight - 12, 0),
-          }, duration);
-        });
-      });
-    </script>
 
-    <script>
-      window.jQuery(function ($) {
-        const testimonials = $("#testimonials");
-        if (testimonials.hasClass("slick-initialized")) {
-          testimonials.slick("slickSetOption", {
-            autoplay: !window.matchMedia("(prefers-reduced-motion: reduce)").matches,
-            autoplaySpeed: 6000,
-            dots: true,
-            pauseOnFocus: true,
-            pauseOnHover: true,
-            customPaging: (slider, index) => `<button type="button" aria-label="Show testimonial ${index + 1}">${index + 1}</button>`,
-          }, true);
-        }
-      });
-    </script>
+
+
+<script defer src="http://localhost:60677/js/script.min.d4c59cd5a23fcc8dfb5074dfcfb995240887424f707616b82afd41c9813b066e3a4bb41c35fc50c2b70eea82d3912461.js" integrity="sha384-1MWc1aI/zI37UHTfz7mVJAiHQk9wdha4Kv1ByYE7Bm46S7QcNfxQwrcO6oLTkSRh"></script>
+
+
+<div id="js-cookie-box" class="cookie-box cookie-box-hide" data-expire-days="2">
+  This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-transparent">I Accept</span>
+</div>
+
+
+
+<script defer src="http://localhost:60677/js/site.min.853da9471bd88554afbc40a2c81b773489a4f9267a9c71d0b1bb8cd94aa90bb49eaf6c528cce51980db2ddf8d9da7a7f.js" integrity="sha384-hT2pRxvYhVSvvECiyBt3NImk&#43;SZ6nHHQsbuM2UqpC7Ser2xSjM5RmA2y3fjZ2np/"></script>
+
+      <div class="contact-toast-container" aria-live="polite" aria-atomic="true">
+        <div id="contact-toast" class="toast fade contact-toast" role="status" aria-live="polite" aria-atomic="true">
+          <div class="toast-header">
+            <span class="contact-toast-icon" aria-hidden="true"></span>
+            <strong id="contact-toast-title" class="mr-auto"></strong>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close notification">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div id="contact-toast-message" class="toast-body"></div>
+        </div>
+      </div>
+    
 
     
 

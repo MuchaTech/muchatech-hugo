@@ -1,0 +1,18 @@
+{{ with .Params.faq }}
+<section class="section service-section" id="faq" aria-labelledby="faq-title">
+  <div class="container">
+    <div class="title text-center">
+      <h2 id="faq-title">Questions clients <span class="color">ask</span></h2>
+      <div class="border-meghna"></div>
+    </div>
+    <div class="faq-list">
+      {{ range . }}
+      <details class="faq-item">
+        <summary>{{ .q }}</summary>
+        <p>{{ .a }}</p>
+      </details>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

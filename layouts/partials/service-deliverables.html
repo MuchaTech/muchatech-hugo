@@ -1,0 +1,29 @@
+{{ $deliverables := .Params.deliverables }}
+{{ if $deliverables }}
+<section class="section section-bg service-section" id="deliverables" aria-labelledby="deliverables-title">
+  <div class="container">
+    <div class="title text-center">
+      <h2 id="deliverables-title">What you <span class="color">receive</span></h2>
+      <div class="border-meghna"></div>
+    </div>
+    <div class="deliverables-grid">
+      {{ with $deliverables.recurring }}
+      <div class="deliverables-col">
+        <h3>Recurring</h3>
+        <ul class="check-list">
+          {{ range . }}<li>{{ . }}</li>{{ end }}
+        </ul>
+      </div>
+      {{ end }}
+      {{ with $deliverables.on_demand }}
+      <div class="deliverables-col">
+        <h3>On demand</h3>
+        <ul class="check-list">
+          {{ range . }}<li>{{ . }}</li>{{ end }}
+        </ul>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

@@ -1,3 +1,8 @@
+################################### Languages #####################################
+# Single source of truth for language configuration. Do not repeat these
+# [Languages.*] blocks in hugo.toml — duplicate keys there are silently
+# overridden by this file, which is how the footer copyright drifted before.
+
 ################################### English language #####################################
 [en]
 languageName = "En"
@@ -6,9 +11,7 @@ contentDir = "content/english"
 weight = 1
 [en.params]
 home = "Home"
-copyright =  "Copyright &copy; 2020-2026 Designed by [MuchaTech](https://github.com/muchatech) & Developed by [MuchaTech](https://github.com/muchatech)"
-
-
+copyright = "Copyright &copy; 2020-2026 All rights reserved."
 
 ################################### French language #####################################
 [fr]
@@ -18,9 +21,4 @@ contentDir = "content/french"
 weight = 2
 [fr.params]
 home = "Accueil"
-copyright =  "Copyright &copy; 2020-2026 Designed by [MuchaTech](https://github.com/muchatech) & Developed by [MuchaTech](https://github.com/muchatech)"
-
-
-
-
-
+copyright = "Copyright &copy; 2020-2026 All rights reserved."
