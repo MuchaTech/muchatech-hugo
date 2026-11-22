@@ -1,0 +1,28 @@
+################################# Training #################################
+training:
+  enable: true
+  image: images/services/training/security-training-section.jpg
+  image_webp: images/services/training/security-training-section.webp
+  title: Security Training
+  content: "Practical sessions that turn policy into habit — awareness, incident drills, phishing simulations and secure-coding clinics."
+  link: "/services/security-training/"
+  training_domains:
+    # training item loop
+    - title: Security awareness workshops
+      icon: ti-blackboard # themify icon pack : https://themify.me/themify-icons
+      content: Half-day sessions that give every employee the same baseline — how attacks arrive, what to check, and how to report.
+
+    # training item loop
+    - title: Incident-response drills
+      icon: ti-flag
+      content: A simulated breach, injected over a morning, that tests roles, decisions and the runbook before a real incident does.
+
+    # training item loop
+    - title: Phishing simulations
+      icon: ti-email
+      content: Controlled campaigns that measure the baseline, coach the people who click, and retest to show progress.
+
+    # training item loop
+    - title: Secure-coding sessions
+      icon: ti-shortcode
+      content: Developer clinics on the vulnerability classes we find most often, with review habits and a checklist the team keeps.

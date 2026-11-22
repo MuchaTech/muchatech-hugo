@@ -1,0 +1,42 @@
+{{ $data := index site.Data site.Language.Lang }}
+
+{{ if $data.training.training.enable}}
+{{ with $data.training.training}}
+{{"<!-- detailed service -->" | safeHTML}}
+<section class="section section-bg about-2 padding-0" id="security-training">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-6 padding-0 lozad" {{ partial "bg-image.html" (dict "Src" .image_webp "Size" "1400x q75" "Position" "top center" "MinHeight" "400px" "Lazy" true) | safeHTMLAttr }}>
+			</div>
+			<div class="col-lg-6">
+				<div class="content-block">
+					<h2>{{ .title | markdownify }}</h2>
+					<p>{{ .content | markdownify }}</p>
+					<div class="row">
+						{{ range .training_domains }}
+						<div class="col-lg-6">
+							<div class="media">
+								{{with .icon}}
+								<div class="align-self-start mr-3">
+									<i class="{{ . }}"></i>
+								</div>
+								{{ end }}
+								<div class="media-body">
+									<h4 class="media-heading">{{ .title | markdownify }}</h4>
+									<p>{{ .content | markdownify }}</p>
+								</div>
+							</div>
+						</div>
+						{{ end }}
+					</div>
+					{{ with .link }}
+					<a class="btn btn-main page-scroll service-section-link" href="{{ if findRE `^#` . }}{{ . }}{{ else }}{{ . | relLangURL }}{{ end }}">See what is included</a>
+					{{ end }}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{{"<!-- /detailed service -->" | safeHTML}}
+{{ end }}
+{{ end }}
