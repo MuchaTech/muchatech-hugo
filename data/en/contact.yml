@@ -19,8 +19,8 @@ contact:
   # WhatsApp support channel
   whatsapp:
     enable : true
-    number : "276052688820"
-    label : "WhatsApp: +27 60 526 8882"
+    number : "27605268820"
+    label : "WhatsApp: +27 60 526 8820"
     message : "Hi MuchaTech, I'd like to talk about my security needs."
 
 
