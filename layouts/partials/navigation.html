@@ -63,6 +63,15 @@
             {{ end }}
           {{ end }}
         </ul>
+        <a
+          class="btn btn-main nav-cta"
+          href="{{ printf "%s?assessment=1#contact" site.Home.RelPermalink }}"
+          data-assessment="1"
+          aria-label="Get Free Breach Assessment"
+        >
+          <span class="nav-cta-full" aria-hidden="true">Get Free Breach Assessment</span>
+          <span class="nav-cta-short" aria-hidden="true">Free Assessment</span>
+        </a>
         {{ if hugo.IsMultilingual }}
         <select id="select-language" onchange="location = this.value;">
           {{ $siteLanguages := site.Languages }}

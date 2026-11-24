@@ -29,6 +29,14 @@
 							<span>{{ .info }}</span>
 						</div>
 						{{ end }}
+						{{ with .whatsapp }}
+						{{ if .enable }}
+						<a class="con-info con-info--link" href="https://wa.me/{{ .number }}?text={{ .message | urlquery }}" target="_blank" rel="noopener">
+							<i class="ti-comment" aria-hidden="true"></i>
+							<span>{{ .label }}</span>
+						</a>
+						{{ end }}
+						{{ end }}
 					</div>
 				</div>
 
@@ -69,6 +77,7 @@
 					<div class="form-group col-12 col-md-6">
 						<label class="fs-label" for="request-type">Type of Request</label>
 						<select class="fs-select" id="request-type" name="request-type" required>
+							<option value="Free-breach-assessment">Free breach assessment</option>
 							<option value="Product-inquiry">Plans Inquiry</option>
 							<option value="Purchase-request">Purchase Request</option>
 							<option value="General-inquiry">General Inquiry</option>

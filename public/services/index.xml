@@ -2,37 +2,37 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Services on MuchaTech</title>
-    <link>https://www.muchatech.com/services/</link>
+    <link>http://localhost:1313/services/</link>
     <description>Recent content in Services on MuchaTech</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="https://www.muchatech.com/services/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/services/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Automation &amp; Tools</title>
-      <link>https://www.muchatech.com/services/automation-and-tools/</link>
+      <link>http://localhost:1313/services/automation-and-tools/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.muchatech.com/services/automation-and-tools/</guid>
+      <guid>http://localhost:1313/services/automation-and-tools/</guid>
       <description>&lt;h2 id=&#34;manual-work-is-a-security-problem&#34;&gt;Manual work is a security problem&lt;/h2&gt;&#xA;&lt;p&gt;Every hour your team spends copying alerts into a spreadsheet is an hour not spent investigating one. Toil spreads because each workaround is small and individually reasonable — until the process lives in one person&amp;rsquo;s head, at the end of a long week.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Cybersecurity R&amp;D</title>
-      <link>https://www.muchatech.com/services/research-and-development/</link>
+      <link>http://localhost:1313/services/research-and-development/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.muchatech.com/services/research-and-development/</guid>
+      <guid>http://localhost:1313/services/research-and-development/</guid>
       <description>&lt;h2 id=&#34;some-questions-do-not-have-an-answer-yet&#34;&gt;Some questions do not have an answer yet&lt;/h2&gt;&#xA;&lt;p&gt;Most security work assumes the question is known: does this control exist, does that password policy hold, can this attack succeed. Research begins where those assumptions run out — a new AI feature, an unfamiliar industrial protocol, an identity model nobody has measured yet.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Managed Cybersecurity</title>
-      <link>https://www.muchatech.com/services/managed-cybersecurity/</link>
+      <link>http://localhost:1313/services/managed-cybersecurity/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.muchatech.com/services/managed-cybersecurity/</guid>
+      <guid>http://localhost:1313/services/managed-cybersecurity/</guid>
       <description>&lt;h2 id=&#34;where-security-usually-breaks-down&#34;&gt;Where security usually breaks down&lt;/h2&gt;&#xA;&lt;p&gt;Most South African organisations do not end up breached because they bought the wrong firewall. They end up breached because nobody is watching the alerts after hours, and the estate has quietly drifted from the configuration it was built with.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Security Training</title>
-      <link>https://www.muchatech.com/services/security-training/</link>
+      <link>http://localhost:1313/services/security-training/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.muchatech.com/services/security-training/</guid>
+      <guid>http://localhost:1313/services/security-training/</guid>
       <description>&lt;h2 id=&#34;most-security-training-is-forgotten-by-monday&#34;&gt;Most security training is forgotten by Monday&lt;/h2&gt;&#xA;&lt;p&gt;An annual slide deck and a quiz does not change what someone does when an invoice arrives with changed banking details. People fall for the same handful of attacks because the training was something they watched, not something they practised.&lt;/p&gt;</description>
     </item>
   </channel>

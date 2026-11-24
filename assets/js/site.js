@@ -71,6 +71,12 @@
     });
   }
 
+  const requestType = document.getElementById("request-type");
+  const assessmentRequested = new URLSearchParams(window.location.search).get("assessment") === "1";
+  if (requestType && assessmentRequested) {
+    requestType.value = "Free-breach-assessment";
+  }
+
   if (contactForm && window.location.hash === "#contact") {
     const firstContactField = contactForm.querySelector("input:not([type='hidden']), select, textarea, button");
     window.addEventListener("pageshow", () => {
@@ -114,7 +120,7 @@
   const navigationToggle = document.querySelector(".navbar-toggler");
   if (navigationMenu) {
     navigationMenu.addEventListener("click", (event) => {
-      const link = event.target.closest("a.nav-link:not(.dropdown-toggle), a.dropdown-item");
+      const link = event.target.closest("a.nav-link:not(.dropdown-toggle), a.dropdown-item, a.nav-cta");
       if (!link) {
         return;
       }
@@ -153,6 +159,9 @@
     }
 
     event.preventDefault();
+    if (this.dataset.assessment && requestType) {
+      requestType.value = "Free-breach-assessment";
+    }
     const navigationHeight = document.querySelector(".navigation")?.offsetHeight ?? 50;
     const duration = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 650;
     $("html, body").stop().animate({
@@ -174,14 +183,24 @@
 
   const cookieBox = document.getElementById("js-cookie-box");
   const cookieButton = document.getElementById("js-cookie-button");
+  const updateCookieOffset = () => {
+    if (!cookieBox) {
+      return;
+    }
+    const offset = cookieBox.classList.contains("cookie-box-hide") ? 0 : cookieBox.offsetHeight + 12;
+    document.documentElement.style.setProperty("--cookie-offset", `${offset}px`);
+  };
   const cookieAccepted = document.cookie.split("; ").some((cookie) => cookie.startsWith("cookie-box="));
   if (cookieBox && cookieButton && !cookieAccepted) {
     const expireDays = Number(cookieBox.dataset.expireDays);
     cookieBox.classList.remove("cookie-box-hide");
+    updateCookieOffset();
+    window.addEventListener("resize", updateCookieOffset, { passive: true });
     cookieButton.addEventListener("click", () => {
       const expires = new Date(Date.now() + expireDays * 86400000).toUTCString();
       document.cookie = `cookie-box=true; expires=${expires}; path=/; SameSite=Lax`;
       cookieBox.classList.add("cookie-box-hide");
+      updateCookieOffset();
     });
   }
 })();
